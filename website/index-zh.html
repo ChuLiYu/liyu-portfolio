@@ -1,303 +1,693 @@
 <!doctype html>
 <html lang="zh-TW">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    
-    <!-- SEO Meta Tags -->
-    <title>LiYu Chu | Liyu Portfolio — 資料工程與 MLOps 實踐</title>
-    <meta name="description" content="LiYu Chu 的個人作品集，展示了在金融科技、生產級 MLOps 平台以及高併發雲端架構方面的專業實踐。" />
-    <meta name="keywords" content="LiYu Chu, 資料工程師, MLOps, AlphaPulse, Fintech, 金融科技, AWS, Oracle Cloud, ETL, Python, Terraform" />
-    <meta name="author" content="LiYu Chu" />
-    <link rel="canonical" href="https://luichu.dev/index-zh.html" />
-
-    <!-- Language Alternates -->
-    <link rel="alternate" hreflang="en" href="https://luichu.dev/index.html" />
-    <link rel="alternate" hreflang="zh-TW" href="https://luichu.dev/index-zh.html" />
-    <link rel="alternate" hreflang="x-default" href="https://luichu.dev/index.html" />
-
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="profile" />
-    <meta property="og:url" content="https://luichu.dev/index-zh.html" />
-    <meta property="og:title" content="LiYu Chu | Liyu Portfolio — 資料工程師 (Fintech) & MLOps" />
-    <meta property="og:description" content="專注於構建高可靠性的金融資料系統與可擴展的機器學習基礎設施。擅長處理高併發後端與雲端架構。" />
-    <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "LiYu Chu",
-      "jobTitle": "Data Engineer",
-      "url": "https://luichu.dev/index-zh.html",
-      "sameAs": [
-        "https://github.com/ChuLiYu",
-        "https://linkedin.com/in/chuliyu"
-      ],
-      "knowsAbout": ["資料工程", "MLOps", "金融科技", "AWS", "Python", "Terraform", "Apache Airflow"]
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Li-Yu Chu | 軟體開發者 — 銀行應用、後端與全端開發</title>
+  <meta name="description" content="居住於加拿大溫哥華的軟體開發者，具兩年銀行應用開發經驗，使用 Java、Spring Boot、Angular 與 SQL，曾取得 AWS 與 Terraform 證照。尋找北美軟體開發機會，特別關注金融科技。" />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Developer, Software Engineer, Fintech, Java, Spring Boot, Angular, SQL, AWS, Terraform" />
+  <meta name="author" content="Li-Yu Chu" />
+  <link rel="canonical" href="https://luichu.dev/index-zh.html" />
+  <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
+  <link rel="alternate" hreflang="zh-TW" href="https://luichu.dev/index-zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://luichu.dev/index-zh.html" />
+  <meta property="og:title" content="Li-Yu Chu | 軟體開發者 — 銀行應用、後端與全端開發" />
+  <meta property="og:description" content="居住於加拿大溫哥華的軟體開發者，具兩年銀行應用開發經驗，使用 Java、Spring Boot、Angular 與 SQL，曾取得 AWS 與 Terraform 證照。尋找北美軟體開發機會，特別關注金融科技。" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Li-Yu Chu",
+  "alternateName": "Liyu",
+  "jobTitle": "Software Developer",
+  "url": "https://luichu.dev/index-zh.html",
+  "sameAs": [
+    "https://github.com/ChuLiYu",
+    "https://linkedin.com/in/chuliyu"
+  ],
+  "knowsAbout": [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "SQL",
+    "銀行應用開發",
+    "AWS",
+    "Terraform"
+  ]
+}
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        :root {
-            --bg-dark: #0d1117;
-            --bg-card: #161b22;
-            --bg-hover: #21262d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #adbac7;
-            --text-muted: #909dab;
-            --accent-blue: #58a6ff;
-            --accent-green: #3fb950;
-            --accent-orange: #f0883e;
-            --border-color: #30363d;
-            --border-hover: #58a6ff;
-        }
+    :root {
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --bg-hover: #21262d;
+      --text-primary: #f0f6fc;
+      --text-secondary: #adbac7;
+      --text-muted: #909dab;
+      --accent-blue: #58a6ff;
+      --accent-green: #3fb950;
+      --accent-purple: #a5a5ff;
+      --accent-orange: #f0883e;
+      --border-color: #30363d;
+      --border-hover: #58a6ff;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 16px;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-        .header {
-            border-bottom: 1px solid var(--border-color);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            background: rgba(13, 17, 23, 0.8);
-            backdrop-filter: blur(8px);
-            z-index: 100;
-        }
+    /* Header */
+    .header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      background: rgba(13, 17, 23, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
 
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        .nav-links a:hover {
-            color: var(--accent-blue);
-        }
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
 
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-        }
+    /* Language Switcher */
+    .language-switcher {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-blue);
-            margin-bottom: 2rem;
-        }
+    .lang-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        .job-title {
-            font-size: 1.5rem;
-            color: var(--accent-blue);
-            margin: 1rem 0;
-        }
+    .lang-link:hover {
+      color: var(--accent-blue);
+    }
 
-        .section {
-            padding: 3rem 0;
-        }
+    .lang-current {
+      color: var(--accent-blue);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
 
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
+    .lang-separator {
+      color: var(--text-muted);
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0;
+      text-align: center;
+    }
 
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: all 0.2s;
-        }
+    .profile-image-container {
+      margin-bottom: 2rem;
+    }
 
-        .project-card:hover {
-            border-color: var(--border-hover);
-        }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-blue);
+      box-shadow: 0 8px 24px rgba(88, 166, 255, 0.3);
+      transition: all 0.3s ease;
+    }
 
-        .tech-tag {
-            background: var(--bg-hover);
-            color: var(--accent-blue);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
+    .profile-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(88, 166, 255, 0.4);
+    }
 
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin: 0.5rem;
-        }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
 
-        .btn-primary {
-            background: var(--accent-blue);
-            color: var(--bg-dark);
-        }
+    .job-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--accent-blue);
+    }
 
-        .footer {
-            border-top: 1px solid var(--border-color);
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--text-muted);
-        }
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .hero .description {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: 1px solid;
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      border-color: var(--accent-blue);
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--accent-blue);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-green);
+      color: var(--bg-dark);
+    }
+
+    /* Sections */
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--text-primary);
+    }
+
+    /* About Section */
+    .about-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-content p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-status-live,
+    .project-status-building {
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-status-live {
+      background: var(--accent-green);
+      color: var(--bg-dark);
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tag {
+      background: var(--bg-hover);
+      color: var(--accent-blue);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Skills Matrix */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .skill-category h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--accent-blue);
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-item {
+      background: var(--bg-hover);
+      color: var(--text-secondary);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* Keep the existing layout usable with bilingual navigation and longer copy. */
+    .nav { flex-wrap: wrap; gap: 1rem; }
+    .nav-menu { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+    .experience-list { margin: 0 0 0 1.25rem; color: var(--text-secondary); }
+    .experience-list li { margin-bottom: 0.75rem; }
+    .experience-meta { color: var(--accent-blue); margin-bottom: 1rem; }
+    .project-note { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    @media (max-width: 768px) {
+      .nav-links { flex-wrap: wrap; gap: 0.75rem 1rem; }
+      .nav-menu { gap: 1rem; }
+      .header { position: static; }
+      .project-header { flex-wrap: wrap; gap: 0.75rem; }
+      .project-links { flex-wrap: wrap; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="#" class="logo">Liyu Portfolio</a>
-                <div style="display: flex; gap: 2rem; align-items: center;">
-                    <ul class="nav-links">
-                        <li><a href="#about">關於我</a></li>
-                        <li><a href="#projects">專案作品</a></li>
-                        <li><a href="#skills">技術技能</a></li>
-                        <li><a href="#contact">聯絡方式</a></li>
-                    </ul>
-                    <div class="language-switcher">
-                        <a href="index.html" class="lang-link" style="color: var(--text-secondary); text-decoration: none;">English</a>
-                        <span style="color: var(--text-muted);">|</span>
-                        <span style="color: var(--accent-blue); font-weight: 600;">中文</span>
-                    </div>
-                </div>
-            </nav>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">Liyu Portfolio</a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#experience">工作經歷</a></li>
+            <li><a href="#projects">專案作品</a></li>
+            <li><a href="#skills">技術技能</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+          </ul>
+          <div class="language-switcher">
+            <a href="index.html" class="lang-link" lang="en" hreflang="en">English</a>
+            <span class="lang-separator">|</span>
+            <span class="lang-current" lang="zh-TW">中文</span>
+          </div>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <main>
+  <main>
     <section class="hero">
-        <div class="container">
-            <img src="assets/images/profile/avatar.jpg" alt="LiYu Chu 個人照片" class="profile-image" fetchpriority="high">
-            <h1>你好，我是 LiYu Chu</h1>
-            <h2 class="job-title">資料工程師 (Fintech) | MLOps 實踐者</h2>
-            <p>專注於構建 **零成本、生產級** 的 MLOps 平台與金融資料系統</p>
-            <p style="color: var(--text-secondary); margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                電腦科學碩士在讀。擅長架構具備高可擴展性的機器學習基礎設施，
-                並在資源受限的環境下（如 Oracle ARM64）優化資料管線與模型推論服務。
-            </p>
-            <div style="margin-top: 2rem;">
-                <a href="#contact" class="btn btn-primary">與我聯絡</a>
-                <a href="https://github.com/ChuLiYu" class="btn" style="border: 1px solid var(--accent-green); color: var(--accent-green);">GitHub</a>
-            </div>
+      <div class="container">
+        <div class="profile-image-container">
+          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu 個人照片" class="profile-image" fetchpriority="high">
         </div>
+        <h1>你好，我是 Li-Yu Chu（Liyu）</h1>
+        <h2 class="job-title">軟體開發者｜後端與全端應用開發</h2>
+        <p class="subtitle">Java · Spring Boot · Angular · SQL</p>
+        <p class="description">結合銀行應用開發、系統現代化與雲端專案實作經驗。目前居住於加拿大溫哥華，尋找北美軟體開發機會，特別關注金融科技與金融服務領域。</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary">與我聯絡</a>
+          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">關於我</h2>
+        <div class="about-content">
+          <p>我是一位軟體開發者，曾於 HiTRUST 使用 Java、Spring Boot、Angular 與 SQL，累積<strong>兩年銀行應用開發工作經驗</strong>。</p>
+          <p>工作涵蓋<strong>交易流程、單體系統微服務化重構、排程處理與 Hibernate 資料存取</strong>。在一項為期多年的銀行系統現代化專案中，實作與重構扣款請求、回覆電文、交易狀態轉換與重試邏輯。</p>
+          <p>先前的<strong>產品規劃與商業資料分析經驗</strong>，讓我能將業務規則連結至技術規格與應用程式邏輯。個人專案則涵蓋雲端基礎設施、金融資料應用與分散式系統。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">工作經歷</h2>
+        <article class="about-content">
+          <h3>軟體工程師 — HiTRUST</h3>
+          <p class="experience-meta">2023 年 1 月 – 2024 年 12 月｜網路銀行</p>
+          <p>使用 Angular、Java、Spring 與 Spring Boot 開發網路銀行功能，參與為期多年的應用系統現代化專案。</p>
+          <ul class="experience-list">
+            <li>將既有程式重構為微服務，涵蓋<strong>查詢、排程處理、電子郵件通知與資料存取等 4 個功能領域</strong>。</li>
+            <li>實作與重構涉及<strong>外幣交易規則與銀行電文格式</strong>的處理流程。</li>
+            <li>參與排程處理，向<strong>銀行核心系統發出扣款請求</strong>，依回覆電文更新交易狀態，並處理重試與失敗狀態轉換。</li>
+            <li>將 <strong>JDBC 資料存取重構為 Hibernate</strong>，並使用 <strong>Oracle 與 Microsoft SQL Server 兩種資料庫平台</strong>。</li>
+            <li>撰寫單元測試、執行人工測試，並支援修改內容進入 QA 與銀行驗收測試環境。</li>
+          </ul>
+        </article>
+        <article class="about-content">
+          <h3>產品規劃 — Astra Technology</h3>
+          <p class="experience-meta">2019 年 3 月 – 2022 年 6 月</p>
+          <ul class="experience-list">
+            <li>將分析結果轉換為技術規格，支援工程團隊實作。</li>
+            <li>運用 SQL 與金融技術指標，支援產品分析與規劃。</li>
+            <li>參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證專案。</li>
+          </ul>
+        </article>
+        <article class="about-content">
+          <h3>商業資料分析師 — Star to Asia</h3>
+          <p class="experience-meta">2015 年 3 月 – 2018 年 3 月</p>
+          <ul class="experience-list">
+            <li>分析數位廣告與 CRM 資料，透過 A/B 測試與預算分析，支援行銷活動與資源配置決策。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">核心展示專案</h2>
-            <div class="projects-grid">
-                
-                <!-- AlphaPulse -->
-                <div class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
-                    <div style="display: flex; justify-content: space-between;">
-                        <h3 style="margin-bottom: 0.5rem;">AlphaPulse | 生產級 MLOps 平台</h3>
-                        <span style="background: var(--accent-green); color: var(--bg-dark); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem;">線上展示</span>
-                    </div>
-                    <p style="color: var(--accent-orange); font-weight: 600; margin-bottom: 1rem;">$0/月 雲端運算 • Oracle ARM64 • 量化交易金融</p>
-                    <p style="margin-bottom: 1.5rem;">
-                        為加密貨幣量化交易設計的端到端 MLOps 平台。整合 **Apache Airflow** 進行大數據 ETL、**MLflow** 實驗追蹤與模型註冊、
-                        **Terraform** 跨雲資源管理。在 Oracle Cloud 的 ARM64 免費層級下實現 24/7 零成本穩定運行。
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Apache Airflow</span>
-                        <span class="tech-tag">MLflow</span>
-                        <span class="tech-tag">Docker/k3s</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">React (TS)</span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://alphapulse.luichu.dev/" style="color: var(--accent-blue); text-decoration: none; margin-right: 1.5rem;">🌐 立即造訪</a>
-                        <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform" style="color: var(--accent-blue); text-decoration: none;">📁 GitHub 倉庫</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Raft-Recovery | 分散式任務調度</h3>
-                    <p style="margin: 1rem 0;">基於 Raft 共識演算法與 WAL 機制的任務調度系統，確保金融資料處理 100% 崩潰復原，使用 Go 語言實作。</p>
-                    <span class="tech-tag">Go</span>
-                    <span class="tech-tag">Distributed Systems</span>
-                    <span class="tech-tag">Raft</span>
-                </div>
-
-                <div class="project-card">
-                    <h3>Chainy | Serverless ML 推論</h3>
-                    <p style="margin: 1rem 0;">使用 AWS Lambda 與 DynamoDB 建構的彈性推論平台，實現 p95 <100ms 的低延遲服務。</p>
-                    <span class="tech-tag">AWS Lambda</span>
-                    <span class="tech-tag">Terraform</span>
-                    <span class="tech-tag">DynamoDB</span>
-                </div>
-
+      <div class="container">
+        <h2 class="section-title">精選專案</h2>
+        <div class="projects-grid">
+          <article class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Raft-Recovery｜Go 複寫式任務佇列</h3>
+                <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">持久化處理 · 分散式協調 · 故障復原</p>
+              </div>
+              <span class="project-status-live">系統實作專案</span>
             </div>
+            <p class="project-description">結合持久化任務處理、gRPC worker 與自行實作的 Raft 共識機制。包含具校驗碼的預寫式日誌（WAL）、快照、重試、失敗任務處理，以及任務狀態變更的複寫。</p>
+            <p class="project-note">學習與驗證用途的個人專案，提供可執行的三節點示範。單元與整合測試涵蓋 leader 失效、磁碟復原及過期 worker 回覆等情境。</p>
+            <div class="project-tech">
+              <span class="tech-tag">Go</span>
+              <span class="tech-tag">gRPC</span>
+              <span class="tech-tag">Raft</span>
+              <span class="tech-tag">WAL</span>
+              <span class="tech-tag">Snapshots</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/raft-recovery">GitHub 原始碼</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">AlphaPulse｜金融資料與分析應用</h3>
+              </div>
+            </div>
+            <p class="project-description">串接金融資料處理流程、API 與儀表板的個人專案。結合 Python／FastAPI、PostgreSQL 與 React／TypeScript，並使用 Airflow 實作資料匯入與指標計算流程。</p>
+            <p class="project-note">作品集示範；部分 API 可能使用模擬資料備援。包含 Decimal 價格資料結構、API 驗證與交付工具設定。</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Airflow</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform">GitHub 原始碼</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Chainy｜AWS Serverless 應用</h3>
+              </div>
+            </div>
+            <p class="project-description">以 TypeScript 開發的短網址服務，透過 DynamoDB 支援需驗證身分的連結管理與重新導向。包含 JWT 驗證、Google 登入整合、Terraform 定義的 AWS 資源與事件驅動處理。</p>
+            <p class="project-note">包含 S3 事件輸出、結構化日誌，以及事件格式與敏感欄位處理的測試。</p>
+            <div class="project-tech">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">AWS Lambda</span>
+              <span class="tech-tag">API Gateway</span>
+              <span class="tech-tag">DynamoDB</span>
+              <span class="tech-tag">S3</span>
+              <span class="tech-tag">Terraform</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/chainy-backend">GitHub 原始碼</a>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 LiYu Chu | Data Engineer & MLOps Practitioner | Vancouver, BC</p>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">技術技能</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>工作經驗｜應用開發</h3>
+            <div class="skill-items">
+              <span class="skill-item">Java</span>
+              <span class="skill-item">Spring</span>
+              <span class="skill-item">Spring Boot</span>
+              <span class="skill-item">Angular</span>
+              <span class="skill-item">Hibernate</span>
+              <span class="skill-item">微服務重構</span>
+              <span class="skill-item">排程處理</span>
+              <span class="skill-item">單元測試</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>工作經驗｜資料庫與資料存取</h3>
+            <div class="skill-items">
+              <span class="skill-item">SQL</span>
+              <span class="skill-item">JDBC</span>
+              <span class="skill-item">Hibernate</span>
+              <span class="skill-item">Oracle</span>
+              <span class="skill-item">Microsoft SQL Server</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>金融與業務領域</h3>
+            <div class="skill-items">
+              <span class="skill-item">網路銀行</span>
+              <span class="skill-item">外幣交易流程</span>
+              <span class="skill-item">銀行電文格式</span>
+              <span class="skill-item">交易狀態處理</span>
+              <span class="skill-item">產品規劃</span>
+              <span class="skill-item">技術規格</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>個人專案｜應用與資料</h3>
+            <div class="skill-items">
+              <span class="skill-item">Python</span>
+              <span class="skill-item">FastAPI</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">TypeScript</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">Airflow</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>個人專案｜雲端與系統</h3>
+            <div class="skill-items">
+              <span class="skill-item">AWS Lambda</span>
+              <span class="skill-item">API Gateway</span>
+              <span class="skill-item">DynamoDB</span>
+              <span class="skill-item">S3</span>
+              <span class="skill-item">Terraform</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">GitHub Actions</span>
+              <span class="skill-item">Go</span>
+              <span class="skill-item">gRPC</span>
+              <span class="skill-item">Raft</span>
+            </div>
+          </div>
         </div>
-    </footer>
-</body>
+      </div>
+    </section>
 
+    <section id="credentials" class="section">
+      <div class="container">
+        <h2 class="section-title">證照與學歷</h2>
+        <div class="about-content">
+          <h3>曾取得的證照</h3>
+          <ul class="experience-list">
+            <li>AWS Certified Solutions Architect – Associate</li>
+            <li>HashiCorp Certified: Terraform Associate</li>
+          </ul>
+        </div>
+        <div class="about-content">
+          <h3>應用電腦科學碩士（Master of Science — Applied Computer Science）</h3>
+          <p>Fairleigh Dickinson University · <strong>預計 2026 年 12 月畢業</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">與我聯絡</h2>
+        <p>我正在尋找 <strong>Software Developer／Software Engineer</strong> 職缺，特別關注<strong>金融科技與金融服務</strong>領域，希望運用既有經驗投入後端服務、全端應用與系統現代化工作。</p>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">目前居住於加拿大溫哥華。預計 2026 年 12 月畢業，可於畢業後投入下一份全職工作。</p>
+        <div class="contact-links">
+          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">電子郵件</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn btn-secondary">LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Li-Yu Chu | 軟體開發者｜加拿大溫哥華</p>
+    </div>
+  </footer>
+</body>
 </html>
