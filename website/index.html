@@ -1,63 +1,45 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <!-- SEO Meta Tags -->
-  <title>LiYu Chu | Liyu Portfolio — Data Engineer (Fintech) & MLOps</title>
-  <meta name="description"
-    content="LiYu Chu's Portfolio showcases production-grade MLOps, Fintech systems, and high-concurrency cloud infrastructure." />
-  <meta name="keywords"
-    content="LiYu Chu, Data Engineer, MLOps, AlphaPulse, Fintech, AWS, Oracle Cloud, ETL, Python, Terraform, Crypto Trading" />
-  <meta name="author" content="LiYu Chu" />
+  <title>Li-Yu Chu | Software Developer — Banking, Backend &amp; Full-Stack</title>
+  <meta name="description" content="Vancouver-based software developer with two years of banking application experience. Java, Spring Boot, Angular and SQL, with AWS and Terraform credentials. Seeking North American opportunities, particularly in fintech." />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Developer, Software Engineer, Fintech, Java, Spring Boot, Angular, SQL, AWS, Terraform" />
+  <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/" />
-
-  <!-- Language Alternates -->
-  <link rel="alternate" hreflang="en" href="https://luichu.dev/index.html" />
+  <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
   <link rel="alternate" hreflang="zh-TW" href="https://luichu.dev/index-zh.html" />
-  <link rel="alternate" hreflang="x-default" href="https://luichu.dev/index.html" />
-
-  <!-- Open Graph / Facebook / LinkedIn -->
+  <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://luichu.dev/" />
-  <meta property="og:title" content="LiYu Chu | Liyu Portfolio — Data Engineer (Fintech) & MLOps" />
-  <meta property="og:description"
-    content="Building zero-cost, production-grade MLOps platforms and high-concurrency financial systems." />
+  <meta property="og:title" content="Li-Yu Chu | Software Developer — Banking, Backend &amp; Full-Stack" />
+  <meta property="og:description" content="Vancouver-based software developer with two years of banking application experience. Java, Spring Boot, Angular and SQL, with AWS and Terraform credentials. Seeking North American opportunities, particularly in fintech." />
+  <meta property="og:locale" content="en_CA" />
   <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
-
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "LiYu Chu",
-    "jobTitle": "Data Engineer",
-    "url": "https://luichu.dev",
-    "sameAs": [
-      "https://github.com/ChuLiYu",
-      "https://linkedin.com/in/chuliyu"
-    ],
-    "knowsAbout": ["Data Engineering", "MLOps", "Fintech", "AWS", "Python", "Terraform", "Apache Airflow"]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Li-Yu Chu",
+  "alternateName": "Liyu",
+  "jobTitle": "Software Developer",
+  "url": "https://luichu.dev/",
+  "sameAs": [
+    "https://github.com/ChuLiYu",
+    "https://linkedin.com/in/chuliyu"
+  ],
+  "knowsAbout": [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "SQL",
+    "Banking applications",
+    "AWS",
+    "Terraform"
+  ]
+}
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AlphaPulse",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Linux",
-    "author": {
-      "@type": "Person",
-      "name": "LiYu Chu"
-    },
-    "description": "A zero-cost, high-performance MLOps platform for crypto-fintech.",
-    "url": "https://alphapulse.luichu.dev/"
-  }
-  </script>
-
   <style>
     * {
       margin: 0;
@@ -429,197 +411,283 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    /* Keep the existing layout usable with bilingual navigation and longer copy. */
+    .nav { flex-wrap: wrap; gap: 1rem; }
+    .nav-menu { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+    .experience-list { margin: 0 0 0 1.25rem; color: var(--text-secondary); }
+    .experience-list li { margin-bottom: 0.75rem; }
+    .experience-meta { color: var(--accent-blue); margin-bottom: 1rem; }
+    .project-note { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    @media (max-width: 768px) {
+      .nav-links { flex-wrap: wrap; gap: 0.75rem 1rem; }
+      .nav-menu { gap: 1rem; }
+      .header { position: static; }
+      .project-header { flex-wrap: wrap; gap: 0.75rem; }
+      .project-links { flex-wrap: wrap; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
   </style>
 </head>
-
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <nav class="nav">
         <a href="#" class="logo">Liyu Portfolio</a>
-        <div style="display: flex; gap: 2rem; align-items: center;">
+        <div class="nav-menu">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="language-switcher">
-            <span class="lang-current">English</span>
+            <span class="lang-current" lang="en">English</span>
             <span class="lang-separator">|</span>
-            <a href="index-zh.html" class="lang-link">中文</a>
+            <a href="index-zh.html" class="lang-link" lang="zh-TW" hreflang="zh-TW">中文</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main>
-  <section class="hero">
-    <div class="container">
-      <div class="profile-image-container">
-        <img src="assets/images/profile/avatar.jpg" alt="LiYu Chu Profile Photo" class="profile-image" fetchpriority="high">
+    <section class="hero">
+      <div class="container">
+        <div class="profile-image-container">
+          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu profile photo" class="profile-image" fetchpriority="high">
+        </div>
+        <h1>Hi, I'm Li-Yu Chu (Liyu)</h1>
+        <h2 class="job-title">Software Developer | Backend & Full-Stack Applications</h2>
+        <p class="subtitle">Java · Spring Boot · Angular · SQL</p>
+        <p class="description">Banking experience, application modernization and hands-on cloud projects. Based in Vancouver, Canada; seeking software development opportunities across North America, with a particular interest in fintech and financial services.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary">Connect with Me</a>
+          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        </div>
       </div>
-      <h1>Hi, I'm LiYu Chu</h1>
-      <h2 class="job-title">Data Engineer (Fintech) | MLOps Practitioner</h2>
-      <p class="subtitle">Specializing in Zero-Cost, High-Performance MLOps Platforms & Financial Data Systems</p>
-      <p class="description">
-        M.S. in Computer Science. Experienced in architecting production-ready ML infrastructure and high-concurrency 
-        backend systems. I focus on bridging the gap between ML research and stable production environments 
-        with extreme cost efficiency ($0/mo).
-      </p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn btn-primary">Connect with Me</a>
-        <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">Professional Focus</h2>
-      <div class="about-content">
-        <p>
-          I am a <strong>Data Engineer</strong> with a strong foundation in <strong>Fintech</strong> and <strong>MLOps</strong>. 
-          Currently pursuing my M.S. in Computer Science, my expertise lies in building resilient, cost-conscious data 
-          systems that handle mission-critical workloads. I leverage technologies like Apache Airflow, MLflow, and 
-          Kubernetes (k3s) to automate the entire ML lifecycle.
-        </p>
-        <p>
-          I have a proven track record of reducing infrastructure costs (from $11/mo to $0/mo) while maintaining 
-          high performance on ARM64 architectures. My engineering philosophy centers on <strong>Financial Precision</strong>, 
-          <strong>Architectural Decoupling</strong>, and <strong>FinOps Excellence</strong>.
-        </p>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>I’m a software developer with <strong>two years of professional experience building banking applications</strong> using Java, Spring Boot, Angular and SQL at HiTRUST.</p>
+          <p>My work included <strong>transaction workflows, monolith-to-microservices refactoring, scheduled processing and Hibernate-based data access</strong>. I implemented and refactored application logic for debit requests, response messages, transaction-state transitions and retries within a multi-year banking modernization project.</p>
+          <p>Earlier experience in <strong>product planning and business data analysis</strong> helps me connect business rules with technical specifications and application logic. My personal projects explore cloud infrastructure, financial data applications and distributed systems.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        
-        <!-- AlphaPulse (Primary Project) -->
-        <div class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
-          <div class="project-header">
-            <div>
-              <h3 class="project-title">AlphaPulse | Production-Grade MLOps Platform</h3>
-              <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">$0/mo Hosting • Oracle ARM64 • Crypto-Fintech</p>
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <article class="about-content">
+          <h3>Software Engineer — HiTRUST</h3>
+          <p class="experience-meta">Jan 2023 – Dec 2024 | Digital Banking</p>
+          <p>Developed internet banking functionality with Angular, Java, Spring and Spring Boot as part of a multi-year application modernization project.</p>
+          <ul class="experience-list">
+            <li>Refactored existing functionality into microservices across <strong>4 areas: inquiry, scheduled processing, email notifications and data access</strong>.</li>
+            <li>Implemented and refactored workflows involving <strong>foreign-currency transaction rules and bank message formats</strong>.</li>
+            <li>Worked on scheduled processing that submitted <strong>debit requests to core banking systems</strong>, updated transaction statuses from response messages, and handled retries and failure-state transitions.</li>
+            <li>Refactored <strong>JDBC-based data access to Hibernate</strong> and worked with <strong>2 database platforms: Oracle and Microsoft SQL Server</strong>.</li>
+            <li>Wrote unit tests, performed manual testing, and supported changes through QA and bank acceptance testing environments.</li>
+          </ul>
+        </article>
+        <article class="about-content">
+          <h3>Product Planner — Astra Technology</h3>
+          <p class="experience-meta">Mar 2019 – Jun 2022</p>
+          <ul class="experience-list">
+            <li>Translated analytical findings into technical specifications to support engineering implementation.</li>
+            <li>Used SQL and financial technical indicators to inform product analysis and planning.</li>
+            <li>Contributed to a smart warehousing IoT proof of concept with NTT Japan.</li>
+          </ul>
+        </article>
+        <article class="about-content">
+          <h3>Business Data Analyst — Star to Asia</h3>
+          <p class="experience-meta">Mar 2015 – Mar 2018</p>
+          <ul class="experience-list">
+            <li>Analyzed advertising and CRM data, using A/B testing and budget analysis to inform campaign and resource-allocation decisions.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Raft-Recovery | Replicated Job Queue in Go</h3>
+                <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">Durable processing · Distributed coordination · Recovery</p>
+              </div>
+              <span class="project-status-live">Systems Project</span>
             </div>
-            <span class="project-status-live">Live Demo</span>
-          </div>
-          <p class="project-description">
-            A high-performance MLOps platform built for quantitative crypto trading. 
-            Features include <strong>Apache Airflow</strong> for chunked ETL (handling 8+ years of data), 
-            <strong>MLflow</strong> for registry, and <strong>Terraform</strong> for provider-agnostic cloud strategy. 
-            Optimized for 24/7 stability on Oracle Cloud's ARM64 free tier with zero compute costs.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Apache Airflow</span>
-            <span class="tech-tag">MLflow</span>
-            <span class="tech-tag">Docker & k3s</span>
-            <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">React (TS)</span>
-          </div>
-          <div class="project-links">
-            <a href="https://alphapulse.luichu.dev/">🌐 Live Demo</a>
-            <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform">📁 GitHub Repo</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3 class="project-title">Raft-Recovery | Distributed Systems</h3>
-          </div>
-          <p class="project-description">
-            Distributed job orchestration system with <strong>Raft consensus</strong> and <strong>Write-Ahead Logging (WAL)</strong>. 
-            Ensures 100% crash recovery for critical financial processing tasks, built from scratch in Go.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Go</span>
-            <span class="tech-tag">Raft Algorithm</span>
-            <span class="tech-tag">WAL</span>
-            <span class="tech-tag">Distributed Systems</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/ChuLiYu/raft-recovery">📁 GitHub Repo</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3 class="project-title">Chainy | Serverless Inference</h3>
-          </div>
-          <p class="project-description">
-            Scalable ML inference platform using <strong>AWS Lambda</strong> and <strong>DynamoDB</strong>. 
-            Managed via Terraform with isolated Dev/Staging/Prod environments and <100ms p95 latency.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">AWS Lambda</span>
-            <span class="tech-tag">DynamoDB</span>
-            <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">Serverless</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/ChuLiYu/chainy-backend">📁 GitHub Repo</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Technical Matrix</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>📊 Data & Backend</h3>
-          <div class="skill-items">
-            <span class="skill-item">Python 3.12 (FastAPI, Pydantic v2)</span>
-            <span class="skill-item">SQLAlchemy & PostgreSQL</span>
-            <span class="skill-item">Go (High-Performance Systems)</span>
-            <span class="skill-item">Apache Airflow</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>☁️ MLOps & Infra</h3>
-          <div class="skill-items">
-            <span class="skill-item">MLflow & DVC</span>
-            <span class="skill-item">Terraform (IaC)</span>
-            <span class="skill-item">Docker & Kubernetes (k3s)</span>
-            <span class="skill-item">Oracle Cloud & AWS</span>
-          </div>
+            <p class="project-description">A personal systems project combining durable job processing, gRPC workers and a custom Raft implementation. Includes checksummed write-ahead logging, snapshots, retries, dead-letter handling and replicated job-state transitions.</p>
+            <p class="project-note">Educational project with a runnable three-node demo. Unit and integration tests cover leader loss, disk recovery and stale worker acknowledgements.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Go</span>
+              <span class="tech-tag">gRPC</span>
+              <span class="tech-tag">Raft</span>
+              <span class="tech-tag">WAL</span>
+              <span class="tech-tag">Snapshots</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/raft-recovery">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">AlphaPulse | Financial Data & Analytics</h3>
+              </div>
+            </div>
+            <p class="project-description">A personal application connecting financial data workflows with APIs and a dashboard. Combines Python/FastAPI services, PostgreSQL persistence and a React/TypeScript interface, with Airflow ingestion and indicator-calculation workflows.</p>
+            <p class="project-note">Portfolio demo; endpoints may use mock-data fallbacks. Includes Decimal-based price schemas, API validation and delivery-tooling configurations.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Airflow</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Chainy | AWS Serverless Application</h3>
+              </div>
+            </div>
+            <p class="project-description">A TypeScript URL-shortening service with authenticated link management and redirects backed by DynamoDB. Includes JWT validation, Google sign-in integration, Terraform-defined AWS resources and event-driven processing.</p>
+            <p class="project-note">Includes S3 event output, structured logging and tests for event formatting and sensitive-field handling.</p>
+            <div class="project-tech">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">AWS Lambda</span>
+              <span class="tech-tag">API Gateway</span>
+              <span class="tech-tag">DynamoDB</span>
+              <span class="tech-tag">S3</span>
+              <span class="tech-tag">Terraform</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChuLiYu/chainy-backend">GitHub Repo</a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Connect</h2>
-      <p class="section-subtitle">Seeking Data Engineer & MLOps roles in Vancouver, BC</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
-        <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email</a>
-        <a href="https://linkedin.com/in/chuliyu" class="btn btn-secondary">LinkedIn</a>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Professional Application Development</h3>
+            <div class="skill-items">
+              <span class="skill-item">Java</span>
+              <span class="skill-item">Spring</span>
+              <span class="skill-item">Spring Boot</span>
+              <span class="skill-item">Angular</span>
+              <span class="skill-item">Hibernate</span>
+              <span class="skill-item">Microservices refactoring</span>
+              <span class="skill-item">Scheduled processing</span>
+              <span class="skill-item">Unit testing</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Professional Databases & Data Access</h3>
+            <div class="skill-items">
+              <span class="skill-item">SQL</span>
+              <span class="skill-item">JDBC</span>
+              <span class="skill-item">Hibernate</span>
+              <span class="skill-item">Oracle</span>
+              <span class="skill-item">Microsoft SQL Server</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Financial & Business Domain</h3>
+            <div class="skill-items">
+              <span class="skill-item">Internet banking</span>
+              <span class="skill-item">Foreign-currency transaction workflows</span>
+              <span class="skill-item">Bank message formats</span>
+              <span class="skill-item">Transaction-state processing</span>
+              <span class="skill-item">Product planning</span>
+              <span class="skill-item">Technical specifications</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Personal Projects — Applications & Data</h3>
+            <div class="skill-items">
+              <span class="skill-item">Python</span>
+              <span class="skill-item">FastAPI</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">TypeScript</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">Airflow</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Personal Projects — Cloud & Systems</h3>
+            <div class="skill-items">
+              <span class="skill-item">AWS Lambda</span>
+              <span class="skill-item">API Gateway</span>
+              <span class="skill-item">DynamoDB</span>
+              <span class="skill-item">S3</span>
+              <span class="skill-item">Terraform</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">GitHub Actions</span>
+              <span class="skill-item">Go</span>
+              <span class="skill-item">gRPC</span>
+              <span class="skill-item">Raft</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="credentials" class="section">
+      <div class="container">
+        <h2 class="section-title">Certifications & Education</h2>
+        <div class="about-content">
+          <h3>Credentials earned</h3>
+          <ul class="experience-list">
+            <li>AWS Certified Solutions Architect – Associate</li>
+            <li>HashiCorp Certified: Terraform Associate</li>
+          </ul>
+        </div>
+        <div class="about-content">
+          <h3>Master of Science — Applied Computer Science</h3>
+          <p>Fairleigh Dickinson University · <strong>Expected December 2026</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Let’s Connect</h2>
+        <p>I’m interested in <strong>Software Developer and Software Engineer roles</strong>, particularly in <strong>fintech and financial services</strong>, where I can contribute to backend services, full-stack applications and application modernization.</p>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">Based in Vancouver, Canada. Available for full-time opportunities after graduation, expected December 2026.</p>
+        <div class="contact-links">
+          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn btn-secondary">LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 LiYu Chu | Data Engineer & MLOps Practitioner | Vancouver, BC</p>
+      <p>&copy; 2026 Li-Yu Chu | Software Developer | Vancouver, Canada</p>
     </div>
   </footer>
 </body>
-
 </html>
