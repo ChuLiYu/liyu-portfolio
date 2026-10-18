@@ -1,82 +1,51 @@
-# LiYu Chu | Data Engineer (Fintech) & MLOps
+# Li-Yu Chu — Software Developer
 
-<div align="center">
+**Backend & Full-Stack Applications**  
+Java · Spring Boot · Angular · SQL | AWS & Terraform
 
-### Scalable Data Systems & Machine Learning Infrastructure
+[Vancouver, BC](https://github.com/ChuLiYu) · [Portfolio](https://luichu.dev/) · [LinkedIn](https://linkedin.com/in/chuliyu) · [Email](mailto:liyu.chu.work@gmail.com)
 
-[![Website](https://img.shields.io/badge/🌐_Portfolio-luichu.dev-4285F4?style=for-the-badge)](https://luichu.dev/)
-[![AWS](https://img.shields.io/badge/AWS-Certified-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/certification/)
-[![Terraform](https://img.shields.io/badge/Terraform-Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)](https://www.hashicorp.com/certification/terraform-associate)
+## About
 
-**Location:** Vancouver, BC 🇨🇦 | **Status:** Open to Data Engineering & ML Infrastructure opportunities
+Software developer with **two years of professional experience building banking applications** using Java, Spring Boot, Angular and SQL.
 
-[📧 Contact](mailto:liyu.chu.work@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/chuliyu) • [🔗 GitHub](https://github.com/ChuLiYu)
+My work at HiTRUST included transaction workflows, scheduled processing, Hibernate-based data access and implementing existing application functionality as microservices. Earlier product-planning and business-analysis experience helps me translate business rules into technical specifications and application logic.
 
-</div>
+I have earned the **AWS Certified Solutions Architect – Associate** and **HashiCorp Certified: Terraform Associate** credentials. My personal projects extend my application development experience into cloud infrastructure, financial data workflows and distributed systems.
 
----
+For detailed work history, see my [GitHub profile](https://github.com/ChuLiYu).
 
-## 💡 Executive Summary
+## Featured projects
 
-**Senior Data Engineer** with specialized experience in **Fintech systems**, high-concurrency architecture, and **MLOps**. Expertise in architecting resilient backend systems that bridge the gap between rigorous data engineering and scalable machine learning production. Currently focused on **zero-cost, production-grade MLOps infrastructure** on ARM64 architectures.
+### 1. [Raft-Recovery](https://github.com/ChuLiYu/raft-recovery) — Replicated Job Queue
 
----
+A Go systems project combining durable processing, gRPC workers and a custom Raft implementation. Features include leader election, majority replication, snapshots and recovery testing.
 
-## 🏗️ Featured Projects
+**Stack:** Go · gRPC · Raft · WAL · Snapshots  
+Educational project with a runnable three-node demo.
 
-### 1. 🚀 [AlphaPulse](https://github.com/ChuLiYu/alphapulse-mlops-platform) - Production MLOps for Crypto-Fintech
+### 2. [AlphaPulse](https://github.com/ChuLiYu/alphapulse-mlops-platform) — Financial Data & Analytics Application
 
-<div align="center">
+An application connecting Airflow data workflows, FastAPI services, PostgreSQL and a React/TypeScript interface.
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-alphapulse.luichu.dev-success?style=for-the-badge)](https://alphapulse.luichu.dev/)
-![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-ARM64-F80000?logo=oracle)
-![Airflow](https://img.shields.io/badge/Apache_Airflow-Orchestration-017CEE?logo=apache-airflow)
-![MLflow](https://img.shields.io/badge/MLflow-Registry-0194E2?logo=mlflow)
-![Terraform](https://img.shields.io/badge/Terraform-IaC-7B42BC?logo=terraform)
+**Stack:** Python · FastAPI · PostgreSQL · React · TypeScript · Airflow  
+Portfolio demo; some endpoints use mock-data fallbacks.
 
-</div>
+### 3. [Chainy](https://github.com/ChuLiYu/chainy-backend) — AWS Serverless URL Shortener
 
-**Zero-Cost, High-Performance MLOps Platform** built for quantitative crypto trading. Optimized for Oracle Cloud Always Free (ARM64) to achieve **$0/month** hosting costs for a complete production stack.
+A TypeScript application with authenticated link management, redirect handling, DynamoDB persistence and Terraform-defined AWS resources.
 
-#### ⚡ Technical Highlights
-- **🔄 Orchestration**: Apache Airflow DAGs for chunked ETL and data engineering.
-- **📊 Tracking**: MLflow for model registry, experiment tracking, and versioning.
-- **🏗️ Infrastructure**: Provider-agnostic Terraform modules with k3s orchestration.
-- **🛡️ Quality**: Decimal precision for financial data, 100% type-hinted Python (Pydantic v2).
-- **🌐 Frontend**: Strictly-typed React/Vite dashboard with Redux Toolkit.
+**Stack:** TypeScript · AWS Lambda · API Gateway · DynamoDB · S3 · Terraform
 
----
+## Repository guide
 
-### 2. 🔄 [Raft-Recovery](https://github.com/ChuLiYu/raft-recovery) - Distributed Job Scheduler
+| Path | Contents |
+|---|---|
+| [website/](website/) | Portfolio website files |
+| [docs/](docs/) | Documentation and planning |
+| [infrastructure/](infrastructure/) | Infrastructure configuration |
 
-**High-concurrency job scheduler** built in Go with Raft consensus and Write-Ahead Logging (WAL). Ensures 100% fault tolerance and data consistency for critical financial workloads.
-
----
-
-### 3. 🚀 [Chainy](https://github.com/ChuLiYu/chainy-backend) - Serverless ML Platform
-
-**Enterprise-grade serverless inference platform** using AWS Lambda and DynamoDB. achieving <100ms p95 latency with zero idle costs.
-
----
-
-## 📁 Repository Structure
-
-```
-liyu-portfolio/
-├── docs/               # Documentation & Plans
-├── website/            # Portfolio Website (Liyu Portfolio)
-│   ├── index.html      # Main portfolio (English)
-│   ├── index-zh.html   # Chinese version
-├── infrastructure/     # Cloudflare & DNS IaC (Terraform)
-├── .github/workflows/  # CI/CD Deployment Pipelines
-└── README.md           # This file
-```
-
----
-
-## 🚀 Quick Start
-
-Visit: **[https://luichu.dev/](https://luichu.dev/)**
+## Preview locally
 
 ```bash
 git clone https://github.com/ChuLiYu/liyu-portfolio.git
@@ -84,9 +53,11 @@ cd liyu-portfolio/website
 python3 -m http.server 8000
 ```
 
----
+Open `http://localhost:8000`.
 
-<p align="center">
-  <strong>Built by LiYu Chu</strong><br/>
-  <em>Last updated: February 2026</em>
-</p>
+## Education and opportunities
+
+**Master of Science — Applied Computer Science**  
+Fairleigh Dickinson University · Expected December 2026
+
+Interested in **backend and full-stack software development** across financial technology and business applications. Available for my next full-time role after graduation, expected December 2026.
