@@ -68,7 +68,7 @@
             <p class="eyebrow">Java／Spring Boot 後端工程師 · 金融科技 · AI 工具 · 加拿大溫哥華</p>
             <h1>Li-Yu Chu（Liyu）</h1>
             <p class="headline">我用 Java 與 Spring Boot 打造可靠的後端系統，也推出讓人能安全使用的實用 AI 工具。</p>
-            <p class="lead">在 <strong>HiTRUST</strong> 以 <strong>Java、Spring Boot</strong>、Angular 與 SQL 開發網路銀行功能三年，處理扣款請求、交易狀態與重試。我把同樣的嚴謹帶進 AI：<strong>公開的 MCP server</strong> 讓 Claude 安全地管理 Google Tasks、具嚴格邊界的 LLM 工具呼叫，以及每天使用、由測試與審查把關的 <strong>AI 輔助開發流程</strong>。</p>
+            <p class="lead">在 <strong>HiTrust</strong> 以 <strong>Java、Spring Boot</strong>、Angular 與 SQL 開發網路銀行功能三年，處理扣款請求、交易狀態與重試。我把同樣的嚴謹帶進 AI：<strong>公開的 MCP server</strong> 讓 Claude 安全地管理 Google Tasks、具嚴格邊界的 LLM 工具呼叫，以及每天使用、由測試與審查把關的 <strong>AI 輔助開發流程</strong>。</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">寄信給我</a>
               <a href="#projects" class="btn">看專案</a>
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="facts">
-          <div class="fact"><span class="fact-value">3 年</span><span class="fact-label">HiTRUST 銀行軟體工程師</span></div>
+          <div class="fact"><span class="fact-value">3 年</span><span class="fact-label">HiTrust 銀行軟體工程師</span></div>
           <div class="fact"><span class="fact-value">Java · Spring Boot</span><span class="fact-label">核心技術，另有 Go、Python、TypeScript</span></div>
           <div class="fact"><span class="fact-value">MCP · LLM 工具</span><span class="fact-label">已在 GitHub 公開發布 AI 工具</span></div>
           <div class="fact"><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">證照 · 應用電腦科學碩士，2026 年 12 月</span></div>
@@ -93,8 +93,8 @@
         <div class="focus-grid">
           <article class="card focus-card">
             <h3>Java／Spring Boot 後端</h3>
-            <p>三年在銀行使用 Java、Spring Boot、Hibernate 與 SQL：微服務重構、對銀行核心系統的排程扣款處理、交易狀態轉換與重試。</p>
-            <p class="focus-evidence">證據：<span>HiTRUST · Fraud Decision Service（Spring Boot，規劃中）</span></p>
+            <p>三年在銀行使用 Java、Spring Boot、Hibernate／JPA 與 SQL：REST API、對銀行核心系統的排程扣款處理、交易狀態轉換，以及在重試時維持交易一致的復原邏輯。</p>
+            <p class="focus-evidence">證據：<span>HiTrust · Fraud Decision Service（Spring Boot，規劃中）</span></p>
           </article>
           <article class="card focus-card">
             <h3>AI 產品：MCP 與 LLM 工具</h3>
@@ -103,7 +103,7 @@
           </article>
           <article class="card focus-card">
             <h3>AI 輔助開發，結果可驗證</h3>
-            <p>每天搭配 Claude Code、Codex 等 AI coding agent 開發，並維護自己的工作流程：先寫規格、依風險設計測試、合併前由不同模型獨立審查。AI 加快交付；能不能上線由測試與 CI 決定。</p>
+            <p>每天搭配 AI coding agent 開發，以 Codex 為主，也使用 Claude Code、Cursor 與 GitHub Copilot，並維護自己的工作流程：repo 指示文件、測試與程式同步撰寫、合併前由審查 agent 挑戰變更。AI 加快交付；能不能上線由測試與 CI 決定。</p>
             <p class="focus-evidence">證據：<span>下方每個專案的測試與 CI</span></p>
           </article>
           <article class="card focus-card">
@@ -121,26 +121,28 @@
         <div class="timeline">
           <article class="card">
             <div class="role-head">
-              <h3>軟體工程師 — HiTRUST</h3>
-              <span class="role-meta">2022 年 1 月 – 2024 年 12 月 · 網路銀行</span>
+              <h3>軟體工程師 — HiTrust, Inc.</h3>
+              <span class="role-meta">2022 年 1 月 – 2024 年 12 月 · 台北 · 網路銀行</span>
             </div>
-            <p style="margin-bottom: .9rem;">使用 Angular、Java、Spring 與 Spring Boot 開發網路銀行功能，參與為期多年的應用系統現代化專案。</p>
+            <p style="margin-bottom: .9rem;">以 Spring 與 Spring Boot 開發 Java 銀行應用功能，並與 Angular／TypeScript 的網路銀行流程整合。</p>
             <ul class="bullets">
-              <li>將既有程式重構為微服務，涵蓋<strong>查詢、排程處理、電子郵件通知與資料存取 4 個領域</strong>。</li>
-              <li>實作與重構涉及<strong>外幣交易規則與銀行電文格式</strong>的處理流程。</li>
-              <li>參與排程處理，向<strong>銀行核心系統發出扣款請求</strong>，依回覆電文更新交易狀態，並處理<strong>重試與失敗狀態轉換</strong>。</li>
-              <li>在 Oracle 與 Microsoft SQL Server 上將 <strong>JDBC 資料存取重構為 Hibernate</strong>。</li>
-              <li>撰寫單元測試、執行人工測試，並支援修改內容進入 QA 與銀行驗收測試。</li>
+              <li>實作復原與同步邏輯，在銀行請求或回覆失敗、需要重試時維持<strong>交易一致性</strong>。</li>
+              <li>開發外幣邏輯與 SQL，支援<strong>排程付款與扣款流程</strong>：向核心系統發出扣款請求、依回覆更新交易狀態，以及失敗狀態轉換。</li>
+              <li>在 Oracle 與 Microsoft SQL Server 上改善 REST API 的 SQL 查詢與 <strong>Hibernate／JPA</strong> 資料存取，並參與從 JDBC 遷移。</li>
+              <li>參與將查詢、排程處理、電子郵件通知與資料存取的職責拆分為<strong>獨立服務元件</strong>。</li>
+              <li>追蹤既有程式路徑，重繪外幣流程圖，讓團隊釐清付款、扣款與重試邏輯。</li>
+              <li>撰寫 <strong>JUnit</strong> 單元與整合測試、參與 code review，並與 QA 及銀行驗收團隊解決整合問題。</li>
             </ul>
           </article>
           <article class="card">
             <div class="role-head">
-              <h3>產品規劃 — Astra Technology</h3>
-              <span class="role-meta">2019 年 3 月 – 2022 年 6 月</span>
+              <h3>產品規劃（資料）— Astra Technology</h3>
+              <span class="role-meta">2019 年 3 月 – 2021 年 12 月 · 台北</span>
             </div>
             <ul class="bullets">
-              <li>運用 SQL 分析與金融技術指標，轉化為產品需求與工程實作規格。</li>
-              <li>參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證專案。</li>
+              <li>以 Python 與 pandas 進行時間序列分析與人流預測，支援產品規劃。</li>
+              <li>以 SQL 分析資料，將金融技術指標轉化為產品需求與技術規格。</li>
+              <li>規劃 AI 攝影機與 IoT 解決方案，並參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證。</li>
             </ul>
           </article>
         </div>
@@ -216,12 +218,12 @@
             <p class="project-tagline">結合 REST API、Airflow 資料管線與有邊界 LLM 工具呼叫 agent 的金融資料應用。</p>
             <ul class="bullets">
               <li>JWT 驗證並區分讀寫權限；API key 以摘要儲存；具權限提升的回歸測試。</li>
-              <li>價格與回測的現金、成本計算使用 Decimal 型別。</li>
+              <li>Redis cache-aside：TTL、交易提交後失效與 PostgreSQL 備援；價格與回測計算使用 Decimal 型別。</li>
               <li>LLM agent 具工具白名單、嚴格參數與執行預算；數值檢查由程式執行，而非交給模型。</li>
             </ul>
             <p class="evidence"><b>已驗證：</b>36 項容器化整合測試通過；前端 npm audit 已知弱點由 35 降為 0。</p>
             <p class="limits">託管示範目前離線；部分端點使用模擬資料。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">原始碼與驗證紀錄 →</a></div>
           </article>
 
@@ -233,7 +235,7 @@
             <p class="project-tagline">AWS 上的 Serverless 短網址服務，支援需驗證身分的連結管理。</p>
             <ul class="bullets">
               <li>API Gateway 後的 Lambda handler，搭配 JWT authorizer 與 Google 登入。</li>
-              <li>以 DynamoDB 儲存資料；基礎設施以 Terraform 模組定義。</li>
+              <li>以 DynamoDB 條件寫入，確保新短碼不會覆蓋既有短碼；基礎設施以 Terraform 定義。</li>
               <li>S3 事件輸出、結構化日誌，以及敏感欄位處理的測試。</li>
             </ul>
             <p class="limits">未宣稱任何正式環境效能數據。</p>
@@ -259,19 +261,19 @@
         <div class="skills-grid">
           <div class="card skill-group">
             <h3>應用開發 <span class="source">工作經驗</span></h3>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Hibernate</span><span class="chip">微服務重構</span><span class="chip">排程處理</span><span class="chip">單元測試</span></div>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">REST API</span><span class="chip">Hibernate／JPA</span><span class="chip">JUnit</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Code review</span></div>
           </div>
           <div class="card skill-group">
             <h3>資料與銀行領域 <span class="source">工作經驗</span></h3>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">外幣交易流程</span><span class="chip">銀行電文格式</span><span class="chip">交易狀態處理</span><span class="chip">技術規格</span></div>
+            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">外幣交易流程</span><span class="chip">銀行電文格式</span><span class="chip">交易狀態處理</span><span class="chip">Python／pandas 分析</span></div>
           </div>
           <div class="card skill-group">
             <h3>後端與資料 <span class="source">個人專案</span></h3>
-            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Airflow</span><span class="chip">React</span></div>
+            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Redis</span><span class="chip">Airflow</span><span class="chip">React</span></div>
           </div>
           <div class="card skill-group">
             <h3>AI 工具與產品 <span class="source">個人專案＋日常工作流程</span></h3>
-            <div class="chips"><span class="chip">MCP server</span><span class="chip">LLM 工具呼叫</span><span class="chip">Claude Code</span><span class="chip">Codex</span><span class="chip">Ollama</span><span class="chip">AI 輔助 code review</span><span class="chip">Agent 安全邊界</span></div>
+            <div class="chips"><span class="chip">MCP server</span><span class="chip">LLM 工具呼叫</span><span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span><span class="chip">Ollama</span><span class="chip">AI 輔助 code review</span><span class="chip">Agent 安全邊界</span></div>
           </div>
           <div class="card skill-group">
             <h3>分散式系統 <span class="source">個人專案</span></h3>
@@ -290,8 +292,12 @@
         <h2 class="section-title">學歷與證照</h2>
         <div class="edu-grid">
           <div class="card">
-            <h3>應用電腦科學碩士（M.S. Applied Computer Science）</h3>
-            <p>Fairleigh Dickinson University · 預計 2026 年 12 月畢業</p>
+            <h3>學歷</h3>
+            <ul class="bullets">
+              <li><strong>應用電腦科學碩士</strong> — Fairleigh Dickinson University（溫哥華）· 預計 2026 年 12 月畢業</li>
+              <li><strong>地理學系學士</strong> — 國立臺灣師範大學 · 2011–2015</li>
+            </ul>
+            <p style="margin-top: .75rem;">語言：英文、中文、日文</p>
           </div>
           <div class="card">
             <h3>證照</h3>

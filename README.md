@@ -7,9 +7,11 @@ Java · Spring Boot · Angular · SQL | AWS & Terraform
 
 ## About
 
-Software developer with **three years of professional experience building banking applications** using Java, Spring Boot, Angular and SQL.
+Java / Spring Boot backend engineer with **three years of professional experience building banking applications** using Java, Spring Boot, Angular and SQL.
 
-My work at HiTRUST included transaction workflows, scheduled processing, Hibernate-based data access and implementing existing application functionality as microservices. Earlier product-planning and business-analysis experience helps me translate business rules into technical specifications and application logic.
+My work at HiTrust (Jan 2022 – Dec 2024) included transaction-consistency and retry logic, scheduled payment and debit workflows, Hibernate/JPA data access for REST APIs, and separating responsibilities into service components. Earlier product and data experience at Astra Technology (2019 – 2021) helps me translate business rules into technical specifications.
+
+I also build practical AI tools, including a public MCP server for Claude, and develop daily with AI coding agents inside a workflow backed by tests and review.
 
 I have earned the **AWS Certified Solutions Architect – Associate** and **HashiCorp Certified: Terraform Associate** credentials. My personal projects extend my application development experience into cloud infrastructure, financial data workflows and distributed systems.
 

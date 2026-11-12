@@ -68,7 +68,7 @@
             <p class="eyebrow">Java / Spring Boot Backend Engineer · Fintech · AI Tools · Vancouver, BC</p>
             <h1>Li-Yu Chu (Liyu)</h1>
             <p class="headline">I build reliable backend systems with Java and Spring Boot, and ship practical AI tools people can use safely.</p>
-            <p class="lead">Three years building internet banking features at <strong>HiTRUST</strong> with <strong>Java, Spring Boot</strong>, Angular and SQL: debit requests, transaction states and retries. I bring the same discipline to AI: a <strong>public MCP server</strong> that lets Claude manage Google Tasks with safe writes, LLM tool-calling with strict boundaries, and a daily <strong>AI-assisted development workflow</strong> checked by tests and review.</p>
+            <p class="lead">Three years building internet banking features at <strong>HiTrust</strong> with <strong>Java, Spring Boot</strong>, Angular and SQL: debit requests, transaction states and retries. I bring the same discipline to AI: a <strong>public MCP server</strong> that lets Claude manage Google Tasks with safe writes, LLM tool-calling with strict boundaries, and a daily <strong>AI-assisted development workflow</strong> checked by tests and review.</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email me</a>
               <a href="#projects" class="btn">See projects</a>
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="facts">
-          <div class="fact"><span class="fact-value">3 years</span><span class="fact-label">Banking software engineer at HiTRUST</span></div>
+          <div class="fact"><span class="fact-value">3 years</span><span class="fact-label">Banking software engineer at HiTrust</span></div>
           <div class="fact"><span class="fact-value">Java · Spring Boot</span><span class="fact-label">Core stack, plus Go, Python and TypeScript</span></div>
           <div class="fact"><span class="fact-value">MCP · LLM tools</span><span class="fact-label">Public AI tool release on GitHub</span></div>
           <div class="fact"><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified · M.S. Applied CS, Dec 2026</span></div>
@@ -93,8 +93,8 @@
         <div class="focus-grid">
           <article class="card focus-card">
             <h3>Java / Spring Boot backend</h3>
-            <p>Three years of Java, Spring Boot, Hibernate and SQL in banking: microservices refactoring, scheduled debit processing against core banking systems, transaction-state transitions and retries.</p>
-            <p class="focus-evidence">Evidence: <span>HiTRUST · Fraud Decision Service (Spring Boot, planned)</span></p>
+            <p>Three years of Java, Spring Boot, Hibernate/JPA and SQL in banking: REST APIs, scheduled debit processing against core banking systems, transaction-state transitions, and recovery logic that keeps transactions consistent through retries.</p>
+            <p class="focus-evidence">Evidence: <span>HiTrust · Fraud Decision Service (Spring Boot, planned)</span></p>
           </article>
           <article class="card focus-card">
             <h3>AI products: MCP and LLM tools</h3>
@@ -103,7 +103,7 @@
           </article>
           <article class="card focus-card">
             <h3>AI-assisted engineering, verified</h3>
-            <p>I develop daily with AI coding agents such as Claude Code and Codex, inside a workflow I maintain: written specs, risk-based tests, and independent cross-model review before merge. AI speeds up delivery; tests and CI decide what ships.</p>
+            <p>I develop daily with AI coding agents, mainly Codex, alongside Claude Code, Cursor and GitHub Copilot, inside a workflow I maintain: repository instructions, tests built alongside the code, and review agents that challenge changes before merge. AI speeds up delivery; tests and CI decide what ships.</p>
             <p class="focus-evidence">Evidence: <span>test suites and CI in every project below</span></p>
           </article>
           <article class="card focus-card">
@@ -121,26 +121,28 @@
         <div class="timeline">
           <article class="card">
             <div class="role-head">
-              <h3>Software Engineer — HiTRUST</h3>
-              <span class="role-meta">Jan 2022 – Dec 2024 · Digital banking</span>
+              <h3>Software Engineer — HiTrust, Inc.</h3>
+              <span class="role-meta">Jan 2022 – Dec 2024 · Taipei, Taiwan · Internet banking</span>
             </div>
-            <p style="margin-bottom: .9rem;">Built internet banking functionality with Angular, Java, Spring and Spring Boot in a multi-year application modernization project.</p>
+            <p style="margin-bottom: .9rem;">Built Java banking application features with Spring and Spring Boot, integrated with Angular/TypeScript internet banking workflows.</p>
             <ul class="bullets">
-              <li>Refactored existing functionality into <strong>microservices across 4 areas</strong>: inquiry, scheduled processing, email notifications and data access.</li>
-              <li>Implemented and refactored workflows involving <strong>foreign-currency transaction rules and bank message formats</strong>.</li>
-              <li>Worked on scheduled processing that submitted <strong>debit requests to core banking systems</strong>, updated transaction statuses from response messages, and handled <strong>retries and failure-state transitions</strong>.</li>
-              <li>Refactored <strong>JDBC data access to Hibernate</strong> across Oracle and Microsoft SQL Server.</li>
-              <li>Wrote unit tests, performed manual testing, and supported changes through QA and bank acceptance testing.</li>
+              <li>Built recovery and synchronization logic to preserve <strong>transaction consistency</strong> when banking requests or responses failed or needed retries.</li>
+              <li>Developed foreign-currency logic and SQL for <strong>scheduled payment and debit workflows</strong>: core-banking debit requests, response-driven status updates and failure-state transitions.</li>
+              <li>Improved SQL queries and <strong>Hibernate/JPA</strong> data access for REST APIs on Oracle and Microsoft SQL Server, including migration from JDBC.</li>
+              <li>Contributed to separating inquiry, scheduled processing, email notification and data-access responsibilities into <strong>service components</strong>.</li>
+              <li>Traced existing code paths and redrew foreign-currency workflow diagrams to clarify payment, debit and retry logic for the team.</li>
+              <li>Wrote <strong>JUnit</strong> unit and integration tests, took part in code reviews, and worked with QA and bank acceptance-testing teams to resolve integration issues.</li>
             </ul>
           </article>
           <article class="card">
             <div class="role-head">
-              <h3>Product Planner — Astra Technology</h3>
-              <span class="role-meta">Mar 2019 – Jun 2022</span>
+              <h3>Product Planner (Data) — Astra Technology</h3>
+              <span class="role-meta">Mar 2019 – Dec 2021 · Taipei, Taiwan</span>
             </div>
             <ul class="bullets">
-              <li>Translated SQL-based analysis and financial technical indicators into product requirements and technical specifications for engineering.</li>
-              <li>Contributed to a smart-warehousing IoT proof of concept with NTT Japan.</li>
+              <li>Used Python and pandas for time-series analysis and foot-traffic forecasting to support product planning.</li>
+              <li>Analysed data with SQL and translated financial technical indicators into product requirements and technical specifications.</li>
+              <li>Planned AI webcam and IoT solutions, and contributed to a smart-warehouse IoT proof of concept with NTT Japan.</li>
             </ul>
           </article>
         </div>
@@ -216,12 +218,12 @@
             <p class="project-tagline">A financial data application combining REST APIs, Airflow pipelines and a bounded LLM tool-calling agent.</p>
             <ul class="bullets">
               <li>JWT authentication with separate read and write permissions; API keys stored as digests; privilege-escalation regression tests.</li>
-              <li>Decimal types for prices and backtest cash and cost calculations.</li>
+              <li>Redis cache-aside with TTLs, post-commit invalidation and PostgreSQL fallback; Decimal types for prices and backtest calculations.</li>
               <li>LLM agent with a tool allowlist, strict arguments and execution budgets; numeric checks run in code, not in the model.</li>
             </ul>
             <p class="evidence"><b>Verified:</b> 36 containerized integration tests passed; frontend npm audit reduced from 35 to 0 known vulnerabilities.</p>
             <p class="limits">Hosted demo is currently offline; some endpoints use mock data.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">Source and evidence →</a></div>
           </article>
 
@@ -233,7 +235,7 @@
             <p class="project-tagline">A serverless URL shortener on AWS with authenticated link management.</p>
             <ul class="bullets">
               <li>Lambda handlers behind API Gateway with a JWT authorizer and Google sign-in.</li>
-              <li>DynamoDB persistence; infrastructure defined in Terraform modules.</li>
+              <li>Conditional DynamoDB writes so a new short code never overwrites an existing one; infrastructure defined in Terraform.</li>
               <li>S3 event output, structured logging, and tests for sensitive-field handling.</li>
             </ul>
             <p class="limits">No production benchmark is claimed.</p>
@@ -259,19 +261,19 @@
         <div class="skills-grid">
           <div class="card skill-group">
             <h3>Application development <span class="source">Professional</span></h3>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Hibernate</span><span class="chip">Microservices refactoring</span><span class="chip">Scheduled processing</span><span class="chip">Unit testing</span></div>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">Hibernate/JPA</span><span class="chip">JUnit</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Code review</span></div>
           </div>
           <div class="card skill-group">
             <h3>Data and banking domain <span class="source">Professional</span></h3>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">Foreign-currency workflows</span><span class="chip">Bank message formats</span><span class="chip">Transaction-state processing</span><span class="chip">Technical specifications</span></div>
+            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">Foreign-currency workflows</span><span class="chip">Bank message formats</span><span class="chip">Transaction-state processing</span><span class="chip">Python / pandas analysis</span></div>
           </div>
           <div class="card skill-group">
             <h3>Backend and data <span class="source">Projects</span></h3>
-            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Airflow</span><span class="chip">React</span></div>
+            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Redis</span><span class="chip">Airflow</span><span class="chip">React</span></div>
           </div>
           <div class="card skill-group">
             <h3>AI tools and products <span class="source">Projects + daily workflow</span></h3>
-            <div class="chips"><span class="chip">MCP servers</span><span class="chip">LLM tool calling</span><span class="chip">Claude Code</span><span class="chip">Codex</span><span class="chip">Ollama</span><span class="chip">AI-assisted code review</span><span class="chip">Agent safety boundaries</span></div>
+            <div class="chips"><span class="chip">MCP servers</span><span class="chip">LLM tool calling</span><span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span><span class="chip">Ollama</span><span class="chip">AI-assisted code review</span><span class="chip">Agent safety boundaries</span></div>
           </div>
           <div class="card skill-group">
             <h3>Distributed systems <span class="source">Projects</span></h3>
@@ -290,8 +292,12 @@
         <h2 class="section-title">Education and certifications</h2>
         <div class="edu-grid">
           <div class="card">
-            <h3>Master of Science — Applied Computer Science</h3>
-            <p>Fairleigh Dickinson University · Expected December 2026</p>
+            <h3>Education</h3>
+            <ul class="bullets">
+              <li><strong>M.S. Applied Computer Science</strong> — Fairleigh Dickinson University, Vancouver · Expected December 2026</li>
+              <li><strong>B.A. Geography</strong> — National Taiwan Normal University · 2011–2015</li>
+            </ul>
+            <p style="margin-top: .75rem;">Languages: English, Mandarin, Japanese</p>
           </div>
           <div class="card">
             <h3>Certifications</h3>
