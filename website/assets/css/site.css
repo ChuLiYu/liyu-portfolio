@@ -119,7 +119,7 @@ strong { color: var(--text); font-weight: 600; }
 .project-links { display: flex; gap: 1.25rem; margin-top: 1rem; font-size: .9rem; font-weight: 500; }
 .project-links a { text-decoration: none; }
 .project-links a:hover { text-decoration: underline; }
-.building { margin-top: 1.25rem; border-style: dashed; }
+.building { border-style: dashed; }
 
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }

@@ -7,7 +7,7 @@ Java · Spring Boot · Angular · SQL | AWS & Terraform
 
 ## About
 
-Software developer with **two years of professional experience building banking applications** using Java, Spring Boot, Angular and SQL.
+Software developer with **three years of professional experience building banking applications** using Java, Spring Boot, Angular and SQL.
 
 My work at HiTRUST included transaction workflows, scheduled processing, Hibernate-based data access and implementing existing application functionality as microservices. Earlier product-planning and business-analysis experience helps me translate business rules into technical specifications and application logic.
 
