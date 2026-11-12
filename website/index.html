@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Li-Yu Chu | Software Developer — Banking, Backend &amp; Full-Stack</title>
-  <meta name="description" content="Vancouver-based software developer with two years of banking application experience. Java, Spring Boot, Angular and SQL, with AWS and Terraform credentials. Seeking North American opportunities, particularly in fintech." />
-  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Developer, Software Engineer, Fintech, Java, Spring Boot, Angular, SQL, AWS, Terraform" />
+  <title>Li-Yu Chu | Java / Spring Boot Backend Engineer — Banking, Reliable Systems &amp; AI Tools</title>
+  <meta name="description" content="Vancouver-based backend engineer with three years building internet banking software in Java and Spring Boot. Ships practical AI tools, including a public MCP server for Claude, and reliable systems in Go, Python and TypeScript." />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/" />
   <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
@@ -13,443 +13,45 @@
   <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://luichu.dev/" />
-  <meta property="og:title" content="Li-Yu Chu | Software Developer — Banking, Backend &amp; Full-Stack" />
-  <meta property="og:description" content="Vancouver-based software developer with two years of banking application experience. Java, Spring Boot, Angular and SQL, with AWS and Terraform credentials. Seeking North American opportunities, particularly in fintech." />
+  <meta property="og:title" content="Li-Yu Chu | Java / Spring Boot Backend Engineer — Banking, Reliable Systems &amp; AI Tools" />
+  <meta property="og:description" content="Three years building internet banking software in Java and Spring Boot. Ships practical AI tools such as a public MCP server for Claude, plus reliable systems in Go, Python and TypeScript." />
   <meta property="og:locale" content="en_CA" />
   <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <script src="assets/js/hero.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Li-Yu Chu",
   "alternateName": "Liyu",
-  "jobTitle": "Software Developer",
+  "jobTitle": "Software Engineer",
   "url": "https://luichu.dev/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
   "sameAs": [
     "https://github.com/ChuLiYu",
     "https://linkedin.com/in/chuliyu"
   ],
-  "knowsAbout": [
-    "Java",
-    "Spring Boot",
-    "Angular",
-    "SQL",
-    "Banking applications",
-    "AWS",
-    "Terraform"
-  ]
+  "knowsAbout": ["Java", "Spring Boot", "Hibernate", "SQL", "Banking applications", "Large language model tools", "Claude", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform"]
 }
   </script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg-dark: #0d1117;
-      --bg-card: #161b22;
-      --bg-hover: #21262d;
-      --text-primary: #f0f6fc;
-      --text-secondary: #adbac7;
-      --text-muted: #909dab;
-      --accent-blue: #58a6ff;
-      --accent-green: #3fb950;
-      --accent-purple: #a5a5ff;
-      --accent-orange: #f0883e;
-      --border-color: #30363d;
-      --border-hover: #58a6ff;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-primary);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* Header */
-    .header {
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem 0;
-      position: sticky;
-      top: 0;
-      background: rgba(13, 17, 23, 0.8);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--accent-blue);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-blue);
-    }
-
-    /* Language Switcher */
-    .language-switcher {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-
-    .lang-link {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .lang-link:hover {
-      color: var(--accent-blue);
-    }
-
-    .lang-current {
-      color: var(--accent-blue);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .lang-separator {
-      color: var(--text-muted);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .profile-image-container {
-      margin-bottom: 2rem;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent-blue);
-      box-shadow: 0 8px 24px rgba(88, 166, 255, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .profile-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 32px rgba(88, 166, 255, 0.4);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .job-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent-blue);
-    }
-
-    .hero .subtitle {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero .description {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s;
-      border: 1px solid;
-    }
-
-    .btn-primary {
-      background: var(--accent-blue);
-      color: var(--bg-dark);
-      border-color: var(--accent-blue);
-    }
-
-    .btn-primary:hover {
-      background: transparent;
-      color: var(--accent-blue);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent-green);
-      border-color: var(--accent-green);
-    }
-
-    .btn-secondary:hover {
-      background: var(--accent-green);
-      color: var(--bg-dark);
-    }
-
-    /* Sections */
-    .section {
-      padding: 3rem 0;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: var(--text-primary);
-    }
-
-    /* About Section */
-    .about-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .about-content p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-      transition: all 0.2s;
-    }
-
-    .project-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .project-status-live,
-    .project-status-building {
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-status-live {
-      background: var(--accent-green);
-      color: var(--bg-dark);
-    }
-
-    .project-description {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tech-tag {
-      background: var(--bg-hover);
-      color: var(--accent-blue);
-      padding: 0.25rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: 1px solid var(--border-color);
-    }
-
-    .project-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .project-links a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Skills Matrix */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .skill-category {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-    }
-
-    .skill-category h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent-blue);
-    }
-
-    .skill-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill-item {
-      background: var(--bg-hover);
-      color: var(--text-secondary);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      border: 1px solid var(--border-color);
-    }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border-color);
-      padding: 2rem 0;
-      text-align: center;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-    /* Keep the existing layout usable with bilingual navigation and longer copy. */
-    .section[id] { scroll-margin-top: 10rem; }
-    .contact-links .btn { overflow-wrap: anywhere; }
-    .nav { flex-wrap: wrap; gap: 1rem; }
-    .nav-menu { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
-    .experience-list { margin: 0 0 0 1.25rem; color: var(--text-secondary); }
-    .experience-list li { margin-bottom: 0.75rem; }
-    .experience-meta { color: var(--accent-blue); margin-bottom: 1rem; }
-    .project-note { color: var(--text-muted); margin-bottom: 1.5rem; }
-    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
-    @media (max-width: 768px) {
-      .nav-links { flex-wrap: wrap; gap: 0.75rem 1rem; }
-      .nav-menu { gap: 1rem; }
-      .header { position: static; }
-      .section[id] { scroll-margin-top: 0; }
-      .project-header { flex-wrap: wrap; gap: 0.75rem; }
-      .project-links { flex-wrap: wrap; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2rem; }
-    }
-  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="header">
     <div class="container">
-      <nav class="nav">
-        <a href="#" class="logo">Liyu Portfolio</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="logo">Li-Yu Chu</a>
         <div class="nav-menu">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#stack">Stack</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="language-switcher">
             <span class="lang-current" lang="en">English</span>
-            <span class="lang-separator">|</span>
+            <span aria-hidden="true">|</span>
             <a href="index-zh.html" class="lang-link" lang="zh-TW" hreflang="zh-TW">中文</a>
           </div>
         </div>
@@ -457,226 +59,392 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="container">
-        <div class="profile-image-container">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu profile photo" class="profile-image" fetchpriority="high">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="96" height="96" fetchpriority="high">
+            <p class="eyebrow">Backend Engineer · Java / Spring Boot · Vancouver, BC</p>
+            <h1>Li-Yu Chu (Liyu)</h1>
+            <p class="headline">Every transaction accounted for. <strong>Every AI action bounded.</strong></p>
+            <p class="lead">Java / Spring Boot backend engineer with three years in internet banking, now building AI tools with the same controls.</p>
+            <div class="cta-buttons">
+              <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email me</a>
+              <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
+              <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
+            </div>
+          </div>
+          <article class="recovery-card" data-recovery-card aria-label="Recovery log">
+            <div class="recovery-card-head">
+              <p class="recovery-label">Recovery log</p>
+              <div class="recovery-tabs" aria-label="Recovery scenarios">
+                <button type="button" aria-pressed="true" data-scenario-button="0">Bank debit</button>
+                <button type="button" aria-pressed="false" data-scenario-button="1">AI agent write</button>
+                <button type="button" aria-pressed="false" data-scenario-button="2">Node failure</button>
+              </div>
+            </div>
+            <div class="recovery-content" data-recovery-content>
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>debit request → core banking</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>response timed out</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">Illustrative pattern from internet-banking work</p>
+            </div>
+            <template data-recovery-scenario="0">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>debit request → core banking</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>response timed out</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">Illustrative pattern from internet-banking work</p>
+            </template>
+            <template data-recovery-scenario="1">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>Claude: mark task "Pay rent" done</span><span class="recovery-state">REQUEST</span></div>
+                <div class="recovery-line is-amber"><span>task changed since it was read</span><span class="recovery-state">CONFLICT</span></div>
+                <div class="recovery-line is-green"><span>✓ write rejected, nothing overwritten</span><span class="recovery-state">SAFE</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></p>
+            </template>
+            <template data-recovery-scenario="2">
+              <div class="recovery-lines">
+                <div class="recovery-line is-amber"><span>leader node-1 stops responding</span><span class="recovery-state">DOWN</span></div>
+                <div class="recovery-line is-amber"><span>node-2 elected leader</span><span class="recovery-state">ELECTION</span></div>
+                <div class="recovery-line is-green"><span>✓ committed jobs intact</span><span class="recovery-state">COMMITTED</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
+            </template>
+          </article>
         </div>
-        <h1>Hi, I'm Li-Yu Chu (Liyu)</h1>
-        <h2 class="job-title">Software Engineer | Banking Systems & Cloud Applications</h2>
-        <p class="subtitle">2 years building banking software · Java / Spring Boot · Microservices refactoring</p>
-        <p class="description">Hands-on experience with <strong>foreign-currency workflows, debit requests and transaction-state processing</strong>, plus refactoring existing banking functionality into <strong>microservices</strong>. Earned <strong>AWS Solutions Architect – Associate and Terraform Associate</strong> credentials. M.S. in Applied Computer Science expected December 2026. Vancouver-based and pursuing software engineering opportunities across North America, especially fintech and financial services.</p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary">Connect with Me</a>
-          <a href="#credentials" class="btn btn-secondary">Certifications & Education</a>
-          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        <div class="facts">
+          <div class="fact"><div class="fact-icons"><span class="fact-big">3 yrs</span></div><span class="fact-value">Banking backend</span><span class="fact-label">HiTrust, internet banking</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-java"></span><span class="ico i-springboot"></span></div><span class="fact-value">Java · Spring Boot</span><span class="fact-label">Core stack</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-mcp"></span><span class="ico i-claude"></span></div><span class="fact-value">Public MCP server</span><span class="fact-label">AI tool for Claude</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified</span></div>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <p><strong>I bring banking-domain experience to software engineering.</strong> During two years at HiTRUST, I built and refactored internet banking functionality using Java, Spring Boot, Angular and SQL within a multi-year modernization project.</p>
-          <p>My work connected <strong>foreign-currency rules, bank messages, debit requests, transaction-state transitions and failure retries</strong> with application logic. I also refactored existing inquiry, scheduling, notification and data-access functionality into microservices—experience relevant to teams modernizing financial applications.</p>
-          <p><strong>AWS and Terraform credentials, alongside graduate study in Applied Computer Science,</strong> complement that professional background. My personal projects provide additional evidence through AWS infrastructure implementation, financial data applications and a durable Go job queue with recovery mechanisms.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="credentials" class="section">
-      <div class="container">
-        <h2 class="section-title">Certifications & Education</h2>
-        <div class="about-content">
-          <h3>Credentials earned</h3>
-          <ul class="experience-list">
-            <li>AWS Certified Solutions Architect – Associate</li>
-            <li>HashiCorp Certified: Terraform Associate</li>
-          </ul>
-        </div>
-        <div class="about-content">
-          <h3>Master of Science — Applied Computer Science</h3>
-          <p><strong>Expected December 2026</strong></p>
-          <p class="project-note">Fairleigh Dickinson University</p>
+        <div class="controls-strip" aria-label="System controls">
+          <span>Idempotent retries</span>
+          <span>Checkpoint in the same transaction</span>
+          <span>AI read-only by default</span>
+          <span>Majority-commit writes</span>
         </div>
       </div>
     </section>
 
     <section id="experience" class="section">
       <div class="container">
-        <h2 class="section-title">Selected Professional Experience</h2>
-        <article class="about-content">
-          <h3>Software Engineer — HiTRUST</h3>
-          <p class="experience-meta">Jan 2023 – Dec 2024 | Digital Banking</p>
-          <p>Developed internet banking functionality with Angular, Java, Spring and Spring Boot as part of a multi-year application modernization project.</p>
-          <ul class="experience-list">
-            <li>Refactored existing functionality into microservices across <strong>4 areas: inquiry, scheduled processing, email notifications and data access</strong>.</li>
-            <li>Implemented and refactored workflows involving <strong>foreign-currency transaction rules and bank message formats</strong>.</li>
-            <li>Worked on scheduled processing that submitted <strong>debit requests to core banking systems</strong>, updated transaction statuses from response messages, and handled retries and failure-state transitions.</li>
-            <li>Refactored <strong>JDBC-based data access to Hibernate</strong> and worked with <strong>2 database platforms: Oracle and Microsoft SQL Server</strong>.</li>
-            <li>Wrote unit tests, performed manual testing, and supported changes through QA and bank acceptance testing environments.</li>
-          </ul>
-        </article>
-        <article class="about-content">
-          <h3>Product Planner — Astra Technology</h3>
-          <p class="experience-meta">Mar 2019 – Jun 2022</p>
-          <ul class="experience-list">
-            <li>Translated SQL-based analysis and financial technical indicators into product requirements and technical specifications for engineering implementation.</li>
-            <li>Contributed to a smart warehousing IoT proof of concept with NTT Japan.</li>
-          </ul>
-        </article>
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <article class="card role">
+            <div class="role-head">
+              <h3>Software Engineer <span class="role-sub">· HiTrust, Inc.</span></h3>
+              <span class="role-meta">Jan 2022 – Dec 2024 · Taipei · Internet banking</span>
+            </div>
+            <ul class="bullets">
+              <li>Recovery logic that keeps <strong>transactions consistent</strong> when bank requests fail or retry.</li>
+              <li><strong>Scheduled payment and debit</strong> workflows with core-banking status transitions.</li>
+              <li>REST APIs on Oracle and SQL Server; moved data access from JDBC to <strong>Hibernate/JPA</strong>.</li>
+              <li>JUnit tests, code review, and integration fixes with QA and bank acceptance teams.</li>
+            </ul>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+            </div>
+          </article>
+          <article class="card role past">
+            <div class="role-head">
+              <h3>Product Planner (Data) <span class="role-sub">· Astra Technology</span></h3>
+              <span class="role-meta">Mar 2019 – Dec 2021 · Taipei</span>
+            </div>
+            <p>Forecasting and SQL analysis for product planning; AI webcam and IoT planning, including a smart-warehouse PoC with NTT Japan.</p>
+            <div class="techs">
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-pandas"></span>pandas</span>
+              <span class="tech">SQL</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Selected projects</h2>
+        <p class="section-intro">Each card shows the design, what is verified, and what is not done yet.</p>
         <div class="projects-grid">
-          <article class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">Raft-Recovery | Replicated Job Queue in Go</h3>
-                <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">Durable processing · Distributed coordination · Recovery</p>
+
+          <article class="card project-card wide">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
+                <span class="status status-release">Public early release</span>
               </div>
-              <span class="project-status-live">Systems Project</span>
+              <p class="project-tagline">Lets Claude manage Google Tasks from natural language, built to limit what an AI agent can break.</p>
             </div>
-            <p class="project-description">A personal systems project combining durable job processing, gRPC workers and a custom Raft implementation. Includes checksummed write-ahead logging, snapshots, retries, dead-letter handling and replicated job-state transitions.</p>
-            <p class="project-note">Educational project with a runnable three-node demo. Unit and integration tests cover leader loss, disk recovery and stale worker acknowledgements.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">gRPC</span>
-              <span class="tech-tag">Raft</span>
-              <span class="tech-tag">WAL</span>
-              <span class="tech-tag">Snapshots</span>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">Claude<small>Desktop or Web</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">MCP server<small>runs on your machine</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Google Tasks<small>your own OAuth client</small></div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/raft-recovery">GitHub Repo</a>
+            <ul class="guards" aria-label="Safety guarantees">
+              <li>Read-only by default</li>
+              <li>No delete tool</li>
+              <li>Optional approval per write</li>
+              <li>Rejects stale overwrites</li>
+              <li>No silent retry</li>
+              <li>Guided <code>./setup.sh</code></li>
+            </ul>
+            <p class="proof"><span><b>✓ Verified:</b> CI passing; tested with Claude Desktop and Web on macOS</span><span class="limit">Linux, Docker Desktop, ChatGPT not yet confirmed</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-mcp"></span>MCP</span>
+                <span class="tech"><span class="ico i-claude"></span>Claude</span>
+                <span class="tech">OAuth 2.0</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+                <span class="tech"><span class="ico i-vitest"></span>Vitest</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/google-tasks-mcp">Source and setup →</a>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">AlphaPulse | Financial Data & Analytics</h3>
+
+          <article class="card project-card wide">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
+                <span class="status status-proto">Educational systems project</span>
               </div>
+              <p class="project-tagline">A replicated job queue in Go, built in three stages up to a custom Raft implementation.</p>
             </div>
-            <p class="project-description">A personal application connecting financial data workflows with APIs and a dashboard. Combines Python/FastAPI services, PostgreSQL persistence and a React/TypeScript interface, with Airflow ingestion and indicator-calculation workflows.</p>
-            <p class="project-note">Portfolio demo; endpoints may use mock-data fallbacks. Includes Decimal-based price schemas, API validation and delivery-tooling configurations.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Airflow</span>
+            <div class="flow" role="list" aria-label="Build stages">
+              <div class="node" role="listitem">1 · Local queue<small>checksummed WAL, dead letters</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">2 · gRPC workers<small>attempt-fenced acks</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">3 · Raft cluster<small>elections, snapshots, catch-up</small></div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform">GitHub Repo</a>
+            <ul class="guards" aria-label="Guarantees">
+              <li>Success only after majority commit</li>
+              <li>Stale workers can't change reassigned jobs</li>
+              <li>Idempotent job IDs across restarts</li>
+            </ul>
+            <p class="proof"><span><b>✓ Verified:</b> race checks and cross-container tests for leader loss and disk recovery</span><span class="limit">Static 3-node cluster; at-least-once execution</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-go"></span>Go</span>
+                <span class="tech">gRPC</span>
+                <span class="tech">Raft</span>
+                <span class="tech">WAL</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/raft-recovery">Source and docs →</a>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">Chainy | AWS Serverless Application</h3>
+
+          <article class="card project-card">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
+                <span class="status status-proto">Prototype</span>
               </div>
+              <p class="project-tagline">Read-only EVM wallet indexer and monitoring API with rule-based alerts.</p>
             </div>
-            <p class="project-description">A TypeScript URL-shortening service with authenticated link management and redirects backed by DynamoDB. Includes JWT validation, Google sign-in integration, Terraform-defined AWS resources and event-driven processing.</p>
-            <p class="project-note">Includes S3 event output, structured logging and tests for event formatting and sensitive-field handling.</p>
-            <div class="project-tech">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">AWS Lambda</span>
-              <span class="tech-tag">API Gateway</span>
-              <span class="tech-tag">DynamoDB</span>
-              <span class="tech-tag">S3</span>
-              <span class="tech-tag">Terraform</span>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">RPC<small>retry + fallback</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">Indexer<small>lock + lineage check</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">PostgreSQL<small>rows + checkpoint, one txn</small></div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/chainy-backend">GitHub Repo</a>
+            <ul class="guards" aria-label="Guarantees">
+              <li>Safe replays</li>
+              <li>One indexer at a time</li>
+              <li>Fork → recovery state on /health</li>
+            </ul>
+            <p class="proof"><span><b>✓ 249 tests,</b> no skips (Oct 2026)</span><span class="limit">Next: automatic reorg rollback</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+                <span class="tech"><span class="ico i-sqlalchemy"></span>SQLAlchemy</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/arc-sentinel">Source →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
+                <span class="status status-proto">Portfolio demo</span>
+              </div>
+              <p class="project-tagline">Financial data app with REST APIs, data pipelines and a bounded LLM agent.</p>
+            </div>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">Airflow<small>data pipelines</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">FastAPI<small>JWT scopes, Redis cache</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">LLM agent<small>tool allowlist, budgets</small></div>
+            </div>
+            <ul class="guards" aria-label="Highlights">
+              <li>Deployed via Terraform to OCI k3s</li>
+              <li>Decimal prices</li>
+              <li>npm audit 35 → 0</li>
+            </ul>
+            <p class="proof"><span><b>✓ 36</b> integration tests</span><span class="limit">Hosted demo offline; some mock data</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-redis"></span>Redis</span>
+                <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+                <span class="tech"><span class="ico i-react"></span>React</span>
+                <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+                <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/alphapulse">Source →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
+                <span class="status status-proto">Portfolio project</span>
+              </div>
+              <p class="project-tagline">Serverless URL shortener on AWS with signed-in link management.</p>
+            </div>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">API Gateway<small>JWT + Google sign-in</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Lambda<small>handlers</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">DynamoDB<small>conditional writes</small></div>
+            </div>
+            <ul class="guards" aria-label="Highlights">
+              <li>Codes never overwritten</li>
+              <li>Infra in Terraform</li>
+            </ul>
+            <p class="proof"><span class="limit">No production benchmark claimed</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-aws"></span>Lambda · DynamoDB</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/chainy-backend">Source →</a>
+            </div>
+          </article>
+
+          <article class="card project-card building">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
+                <span class="status status-plan">Planning · no code yet</span>
+              </div>
+              <p class="project-tagline">Taking an ML fraud model to production with auditable approve / review / decline decisions.</p>
+            </div>
+            <div class="flow" role="list" aria-label="Planned architecture">
+              <div class="node planned" role="listitem">Decision API<small>Spring Boot</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">Model scoring<small>Python, MLflow</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">Outbox → Kafka<small>decision log</small></div>
+            </div>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-java"></span>Java</span>
+                <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="stack" class="section">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Professional Application Development</h3>
-            <div class="skill-items">
-              <span class="skill-item">Java</span>
-              <span class="skill-item">Spring</span>
-              <span class="skill-item">Spring Boot</span>
-              <span class="skill-item">Angular</span>
-              <span class="skill-item">Hibernate</span>
-              <span class="skill-item">Microservices refactoring</span>
-              <span class="skill-item">Scheduled processing</span>
-              <span class="skill-item">Unit testing</span>
+        <h2 class="section-title">Stack</h2>
+        <div class="stack-grid">
+          <div class="card stack-group">
+            <h3>At work <span class="source">HiTrust</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-spring"></span>Spring</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate/JPA</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+              <span class="tech">REST APIs</span>
+            </div>
+            <p class="note">Domain: foreign-currency payments, scheduled debits, bank message formats.</p>
+          </div>
+          <div class="card stack-group">
+            <h3>AI tools <span class="source">Products + daily workflow</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-mcp"></span>MCP servers</span>
+              <span class="tech">LLM tool calling</span>
+              <span class="tech"><span class="ico i-openai"></span>Codex</span>
+              <span class="tech"><span class="ico i-claude"></span>Claude Code</span>
+              <span class="tech"><span class="ico i-cursor"></span>Cursor</span>
+              <span class="tech"><span class="ico i-copilot"></span>GitHub Copilot</span>
+              <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+            </div>
+            <p class="note">AI agents speed up delivery; tests, CI and review agents decide what ships.</p>
+          </div>
+          <div class="card stack-group">
+            <h3>Projects <span class="source">Backend and systems</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-go"></span>Go</span>
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+              <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              <span class="tech"><span class="ico i-redis"></span>Redis</span>
+              <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+              <span class="tech"><span class="ico i-react"></span>React</span>
+              <span class="tech">gRPC</span>
+              <span class="tech">Raft</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Professional Databases & Data Access</h3>
-            <div class="skill-items">
-              <span class="skill-item">SQL</span>
-              <span class="skill-item">JDBC</span>
-              <span class="skill-item">Hibernate</span>
-              <span class="skill-item">Oracle</span>
-              <span class="skill-item">Microsoft SQL Server</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Financial & Business Domain</h3>
-            <div class="skill-items">
-              <span class="skill-item">Internet banking</span>
-              <span class="skill-item">Foreign-currency transaction workflows</span>
-              <span class="skill-item">Bank message formats</span>
-              <span class="skill-item">Transaction-state processing</span>
-              <span class="skill-item">Product planning</span>
-              <span class="skill-item">Technical specifications</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Personal Projects — Applications & Data</h3>
-            <div class="skill-items">
-              <span class="skill-item">Python</span>
-              <span class="skill-item">FastAPI</span>
-              <span class="skill-item">PostgreSQL</span>
-              <span class="skill-item">TypeScript</span>
-              <span class="skill-item">React</span>
-              <span class="skill-item">Airflow</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Personal Projects — Cloud & Systems</h3>
-            <div class="skill-items">
-              <span class="skill-item">AWS Lambda</span>
-              <span class="skill-item">API Gateway</span>
-              <span class="skill-item">DynamoDB</span>
-              <span class="skill-item">S3</span>
-              <span class="skill-item">Terraform</span>
-              <span class="skill-item">Docker</span>
-              <span class="skill-item">GitHub Actions</span>
-              <span class="skill-item">Go</span>
-              <span class="skill-item">gRPC</span>
-              <span class="skill-item">Raft</span>
+          <div class="card stack-group">
+            <h3>Cloud and delivery <span class="source">Projects + certified</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-aws"></span>AWS</span>
+              <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              <span class="tech"><span class="ico i-githubactions"></span>GitHub Actions</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <section id="contact" class="section">
+    <section id="credentials" class="section">
       <div class="container">
-        <h2 class="section-title">Let’s Connect</h2>
-        <p>I’m interested in <strong>Software Developer and Software Engineer roles</strong>, particularly in <strong>fintech and financial services</strong>, where I can contribute to backend services, full-stack applications and application modernization.</p>
-        <p style="color: var(--text-secondary); margin-top: 1rem;">Based in Vancouver, Canada. Available for full-time opportunities after graduation, expected December 2026.</p>
-        <div class="contact-links">
-          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email: liyu.chu.work@gmail.com</a>
-          <a href="https://linkedin.com/in/chuliyu" class="btn btn-secondary">LinkedIn</a>
-          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        <h2 class="section-title">Education and certifications</h2>
+        <div class="creds">
+          <div class="cred"><span class="cred-kind">Degree</span><span class="cred-name">M.S. Applied Computer Science</span><span class="cred-meta">Fairleigh Dickinson University, Vancouver · Dec 2026</span></div>
+          <div class="cred"><span class="cred-kind">Degree</span><span class="cred-name">B.A. Geography</span><span class="cred-meta">National Taiwan Normal University · 2015</span></div>
+          <div class="cred"><span class="cred-kind">Certification</span><span class="cred-name">AWS Solutions Architect – Associate</span><span class="cred-meta">Amazon Web Services</span></div>
+          <div class="cred"><span class="cred-kind">Certification</span><span class="cred-name">Terraform Associate</span><span class="cred-meta">HashiCorp</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-intro">Looking for <strong>Java / Spring Boot backend or full-stack roles</strong>, especially in fintech and AI-enabled products. Vancouver-based, full-time from December 2026. English · Mandarin · Japanese.</p>
+        <div class="cta-buttons">
+          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">liyu.chu.work@gmail.com</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
         </div>
       </div>
     </section>
@@ -684,7 +452,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Li-Yu Chu | Software Developer | Vancouver, Canada</p>
+      <p>&copy; 2026 Li-Yu Chu · Software Engineer · Vancouver, Canada</p>
     </div>
   </footer>
 </body>
