@@ -71,6 +71,7 @@ strong { color: var(--text); font-weight: 600; }
 .i-mcp { --i: url(../icons/mcp.svg); --c: #f0f6fc; }
 .i-github { --i: url(../icons/github.svg); --c: #f0f6fc; }
 .i-linkedin { --i: url(../icons/linkedin.svg); --c: #0a66c2; }
+.i-download { --i: url(../icons/download.svg); }
 
 /* Header */
 .header {
@@ -98,6 +99,8 @@ strong { color: var(--text); font-weight: 600; }
 .headline { font-size: 1.3rem; font-weight: 500; color: var(--text-2); line-height: 1.5; margin-bottom: .65rem; max-width: 600px; }
 .headline strong { color: var(--text); }
 .lead { color: var(--text-3); max-width: 600px; margin-bottom: 1.5rem; }
+.availability { color: var(--text-2); font-size: .9rem; margin: -.75rem 0 1.25rem; }
+.availability .dot { display: inline-block; width: .5rem; height: .5rem; margin-right: .5rem; border-radius: 50%; background: var(--green); vertical-align: .08em; }
 .cta-buttons { display: flex; gap: .65rem; flex-wrap: wrap; }
 .btn {
   display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1.15rem; border-radius: 8px; text-decoration: none;
