@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Li-Yu Chu | 軟體開發者 — 銀行應用、後端與全端開發</title>
-  <meta name="description" content="居住於加拿大溫哥華的軟體開發者，具兩年銀行應用開發經驗，使用 Java、Spring Boot、Angular 與 SQL，曾取得 AWS 與 Terraform 證照。尋找北美軟體開發機會，特別關注金融科技。" />
-  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Developer, Software Engineer, Fintech, Java, Spring Boot, Angular, SQL, AWS, Terraform" />
+  <title>Li-Yu Chu | 軟體工程師 — 後端、銀行系統與可靠系統</title>
+  <meta name="description" content="居住於加拿大溫哥華的軟體工程師，具兩年以 Java 與 Spring Boot 開發網路銀行軟體的經驗。個人專案以 Go、Python、TypeScript 實作複寫式任務佇列、一致性資料索引與安全的 AI 工具整合。" />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Fintech, Java, Spring Boot, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/index-zh.html" />
   <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
@@ -13,443 +13,45 @@
   <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://luichu.dev/index-zh.html" />
-  <meta property="og:title" content="Li-Yu Chu | 軟體開發者 — 銀行應用、後端與全端開發" />
-  <meta property="og:description" content="居住於加拿大溫哥華的軟體開發者，具兩年銀行應用開發經驗，使用 Java、Spring Boot、Angular 與 SQL，曾取得 AWS 與 Terraform 證照。尋找北美軟體開發機會，特別關注金融科技。" />
+  <meta property="og:title" content="Li-Yu Chu | 軟體工程師 — 後端、銀行系統與可靠系統" />
+  <meta property="og:description" content="兩年網路銀行軟體開發經驗（Java、Spring Boot）。個人專案以 Go、Python、TypeScript 實作複寫式任務佇列、一致性資料索引與安全的 AI 工具整合。" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
+  <link rel="stylesheet" href="assets/css/site.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Li-Yu Chu",
   "alternateName": "Liyu",
-  "jobTitle": "Software Developer",
-  "url": "https://luichu.dev/index-zh.html",
+  "jobTitle": "Software Engineer",
+  "url": "https://luichu.dev/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
   "sameAs": [
     "https://github.com/ChuLiYu",
     "https://linkedin.com/in/chuliyu"
   ],
-  "knowsAbout": [
-    "Java",
-    "Spring Boot",
-    "Angular",
-    "SQL",
-    "銀行應用開發",
-    "AWS",
-    "Terraform"
-  ]
+  "knowsAbout": ["Java", "Spring Boot", "SQL", "Banking applications", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform"]
 }
   </script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg-dark: #0d1117;
-      --bg-card: #161b22;
-      --bg-hover: #21262d;
-      --text-primary: #f0f6fc;
-      --text-secondary: #adbac7;
-      --text-muted: #909dab;
-      --accent-blue: #58a6ff;
-      --accent-green: #3fb950;
-      --accent-purple: #a5a5ff;
-      --accent-orange: #f0883e;
-      --border-color: #30363d;
-      --border-hover: #58a6ff;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-primary);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* Header */
-    .header {
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem 0;
-      position: sticky;
-      top: 0;
-      background: rgba(13, 17, 23, 0.8);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--accent-blue);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-blue);
-    }
-
-    /* Language Switcher */
-    .language-switcher {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-
-    .lang-link {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .lang-link:hover {
-      color: var(--accent-blue);
-    }
-
-    .lang-current {
-      color: var(--accent-blue);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .lang-separator {
-      color: var(--text-muted);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .profile-image-container {
-      margin-bottom: 2rem;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent-blue);
-      box-shadow: 0 8px 24px rgba(88, 166, 255, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .profile-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 32px rgba(88, 166, 255, 0.4);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .job-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent-blue);
-    }
-
-    .hero .subtitle {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero .description {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s;
-      border: 1px solid;
-    }
-
-    .btn-primary {
-      background: var(--accent-blue);
-      color: var(--bg-dark);
-      border-color: var(--accent-blue);
-    }
-
-    .btn-primary:hover {
-      background: transparent;
-      color: var(--accent-blue);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent-green);
-      border-color: var(--accent-green);
-    }
-
-    .btn-secondary:hover {
-      background: var(--accent-green);
-      color: var(--bg-dark);
-    }
-
-    /* Sections */
-    .section {
-      padding: 3rem 0;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: var(--text-primary);
-    }
-
-    /* About Section */
-    .about-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .about-content p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-      transition: all 0.2s;
-    }
-
-    .project-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .project-status-live,
-    .project-status-building {
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-status-live {
-      background: var(--accent-green);
-      color: var(--bg-dark);
-    }
-
-    .project-description {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tech-tag {
-      background: var(--bg-hover);
-      color: var(--accent-blue);
-      padding: 0.25rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: 1px solid var(--border-color);
-    }
-
-    .project-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .project-links a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Skills Matrix */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .skill-category {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2rem;
-    }
-
-    .skill-category h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent-blue);
-    }
-
-    .skill-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill-item {
-      background: var(--bg-hover);
-      color: var(--text-secondary);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      border: 1px solid var(--border-color);
-    }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border-color);
-      padding: 2rem 0;
-      text-align: center;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-    /* Keep the existing layout usable with bilingual navigation and longer copy. */
-    .section[id] { scroll-margin-top: 10rem; }
-    .contact-links .btn { overflow-wrap: anywhere; }
-    .nav { flex-wrap: wrap; gap: 1rem; }
-    .nav-menu { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
-    .experience-list { margin: 0 0 0 1.25rem; color: var(--text-secondary); }
-    .experience-list li { margin-bottom: 0.75rem; }
-    .experience-meta { color: var(--accent-blue); margin-bottom: 1rem; }
-    .project-note { color: var(--text-muted); margin-bottom: 1.5rem; }
-    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
-    @media (max-width: 768px) {
-      .nav-links { flex-wrap: wrap; gap: 0.75rem 1rem; }
-      .nav-menu { gap: 1rem; }
-      .header { position: static; }
-      .section[id] { scroll-margin-top: 0; }
-      .project-header { flex-wrap: wrap; gap: 0.75rem; }
-      .project-links { flex-wrap: wrap; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2rem; }
-    }
-  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
   <header class="header">
     <div class="container">
-      <nav class="nav">
-        <a href="#" class="logo">Liyu Portfolio</a>
+      <nav class="nav" aria-label="主選單">
+        <a href="#" class="logo">Li-Yu Chu</a>
         <div class="nav-menu">
           <ul class="nav-links">
-            <li><a href="#about">關於我</a></li>
-            <li><a href="#experience">工作經歷</a></li>
-            <li><a href="#projects">專案作品</a></li>
-            <li><a href="#skills">技術技能</a></li>
-            <li><a href="#contact">聯絡方式</a></li>
+            <li><a href="#focus">專長</a></li>
+            <li><a href="#experience">經歷</a></li>
+            <li><a href="#projects">專案</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">聯絡</a></li>
           </ul>
           <div class="language-switcher">
             <a href="index.html" class="lang-link" lang="en" hreflang="en">English</a>
-            <span class="lang-separator">|</span>
+            <span aria-hidden="true">|</span>
             <span class="lang-current" lang="zh-TW">中文</span>
           </div>
         </div>
@@ -457,226 +59,254 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="container">
-        <div class="profile-image-container">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu 個人照片" class="profile-image" fetchpriority="high">
+        <div class="hero-grid">
+          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="160" height="160" fetchpriority="high">
+          <div>
+            <p class="eyebrow">軟體工程師 · 後端與金融科技 · 加拿大溫哥華</p>
+            <h1>Li-Yu Chu（Liyu）</h1>
+            <p class="headline">我打造能正確處理重試、故障與狀態變化的後端系統。</p>
+            <p class="lead">曾在 <strong>HiTRUST</strong> 以 Java、Spring Boot、Angular 與 SQL 開發網路銀行功能兩年。近期以 <strong>Go、Python 與 TypeScript</strong> 開發的個人專案，延續並深入同一類問題：持久化任務處理、一致的資料索引，以及有明確安全邊界的 AI 工具整合。</p>
+            <div class="cta-buttons">
+              <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">寄信給我</a>
+              <a href="#projects" class="btn">看專案</a>
+              <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
+              <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
+            </div>
+          </div>
         </div>
-        <h1>你好，我是 Li-Yu Chu（Liyu）</h1>
-        <h2 class="job-title">軟體工程師｜銀行系統經驗 × 雲端實作</h2>
-        <p class="subtitle">兩年銀行軟體開發經驗 · Java／Spring Boot · 微服務重構</p>
-        <p class="description">具備<strong>外幣交易、扣款請求與交易狀態處理</strong>的實務經驗，並將既有銀行功能重構為<strong>微服務</strong>。曾取得 <strong>AWS Solutions Architect – Associate 與 Terraform Associate</strong> 證照；應用電腦科學碩士預計 2026 年 12 月畢業。立足溫哥華，尋找北美軟體工程機會，特別關注金融科技與金融服務。</p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary">與我聯絡</a>
-          <a href="#credentials" class="btn btn-secondary">證照與碩士背景</a>
-          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">關於我</h2>
-        <div class="about-content">
-          <p><strong>我的優勢，是理解銀行交易規則，也能把規則實作成可測試的應用程式邏輯。</strong>在 HiTRUST 的兩年軟體工程經驗中，我使用 Java、Spring Boot、Angular 與 SQL，參與網路銀行系統現代化專案。</p>
-          <p>實作內容包含<strong>外幣交易規則、銀行電文、扣款請求、交易狀態轉換與失敗重試</strong>，也將查詢、排程、通知與資料存取等既有功能重構為微服務。這些經驗讓我能在金融業務需求與工程實作之間建立連結。</p>
-          <p><strong>AWS 與 Terraform 證照，以及應用電腦科學碩士訓練</strong>，補充了我的銀行開發背景。個人專案進一步展示 AWS 基礎設施實作、金融資料應用，以及具持久化與故障復原能力的 Go 任務佇列。</p>
+        <div class="facts">
+          <div class="fact"><span class="fact-value">2 年</span><span class="fact-label">HiTRUST 銀行軟體工程師</span></div>
+          <div class="fact"><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Associate 等級證照</span></div>
+          <div class="fact"><span class="fact-value">應用電腦科學碩士</span><span class="fact-label">Fairleigh Dickinson University，2026 年 12 月</span></div>
+          <div class="fact"><span class="fact-value">加拿大溫哥華</span><span class="fact-label">尋找北美全職職缺</span></div>
         </div>
       </div>
     </section>
 
-    <section id="credentials" class="section">
+    <section id="focus" class="section">
       <div class="container">
-        <h2 class="section-title">證照與學歷</h2>
-        <div class="about-content">
-          <h3>曾取得的證照</h3>
-          <ul class="experience-list">
-            <li>AWS Certified Solutions Architect – Associate</li>
-            <li>HashiCorp Certified: Terraform Associate</li>
-          </ul>
-        </div>
-        <div class="about-content">
-          <h3>應用電腦科學碩士（Master of Science — Applied Computer Science）</h3>
-          <p><strong>預計 2026 年 12 月畢業</strong></p>
-          <p class="project-note">Fairleigh Dickinson University</p>
+        <h2 class="section-title">我專注的事</h2>
+        <p class="section-intro">銀行工作與近期專案，處理的是同一組工程問題。</p>
+        <div class="focus-grid">
+          <article class="card focus-card">
+            <h3>交易與狀態正確性</h3>
+            <p>向銀行核心系統發出扣款請求、依回覆電文更新交易狀態、處理重試與失敗狀態轉換。個人專案中延伸為：複寫的任務狀態、冪等的任務 ID，以及以 fencing 防止過期 worker 回覆。</p>
+            <p class="focus-evidence">證據：<span>HiTRUST · Raft-Recovery</span></p>
+          </article>
+          <article class="card focus-card">
+            <h3>故障處理與復原</h3>
+            <p>預寫式日誌、快照與重播；索引進度與資料在同一個交易中提交；RPC 退避重試與備援供應商。</p>
+            <p class="focus-evidence">證據：<span>Raft-Recovery · Arc Sentinel</span></p>
+          </article>
+          <article class="card focus-card">
+            <h3>有邊界的 AI 整合</h3>
+            <p>LLM 工具預設唯讀、使用白名單與嚴格參數、不提供破壞性操作，寫入前檢查資料是否已被他人變更。</p>
+            <p class="focus-evidence">證據：<span>Google Tasks MCP · AlphaPulse</span></p>
+          </article>
+          <article class="card focus-card">
+            <h3>以測試支撐說法</h3>
+            <p>對真實依賴做整合測試（PostgreSQL 容器、多節點叢集），每個 repo 都有 CI，README 清楚寫出已實作與未實作的範圍。</p>
+            <p class="focus-evidence">證據：<span>下方每個專案</span></p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="experience" class="section">
       <div class="container">
-        <h2 class="section-title">精選工作經歷</h2>
-        <article class="about-content">
-          <h3>軟體工程師 — HiTRUST</h3>
-          <p class="experience-meta">2023 年 1 月 – 2024 年 12 月｜網路銀行</p>
-          <p>使用 Angular、Java、Spring 與 Spring Boot 開發網路銀行功能，參與為期多年的應用系統現代化專案。</p>
-          <ul class="experience-list">
-            <li>將既有程式重構為微服務，涵蓋<strong>查詢、排程處理、電子郵件通知與資料存取等 4 個功能領域</strong>。</li>
-            <li>實作與重構涉及<strong>外幣交易規則與銀行電文格式</strong>的處理流程。</li>
-            <li>參與排程處理，向<strong>銀行核心系統發出扣款請求</strong>，依回覆電文更新交易狀態，並處理重試與失敗狀態轉換。</li>
-            <li>將 <strong>JDBC 資料存取重構為 Hibernate</strong>，並使用 <strong>Oracle 與 Microsoft SQL Server 兩種資料庫平台</strong>。</li>
-            <li>撰寫單元測試、執行人工測試，並支援修改內容進入 QA 與銀行驗收測試環境。</li>
-          </ul>
-        </article>
-        <article class="about-content">
-          <h3>產品規劃 — Astra Technology</h3>
-          <p class="experience-meta">2019 年 3 月 – 2022 年 6 月</p>
-          <ul class="experience-list">
-            <li>運用 SQL 與金融技術指標進行分析，將分析結果轉化為產品需求及工程實作規格。</li>
-            <li>參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證專案。</li>
-          </ul>
-        </article>
+        <h2 class="section-title">工作經歷</h2>
+        <div class="timeline">
+          <article class="card">
+            <div class="role-head">
+              <h3>軟體工程師 — HiTRUST</h3>
+              <span class="role-meta">2023 年 1 月 – 2024 年 12 月 · 網路銀行</span>
+            </div>
+            <p style="margin-bottom: .9rem;">使用 Angular、Java、Spring 與 Spring Boot 開發網路銀行功能，參與為期多年的應用系統現代化專案。</p>
+            <ul class="bullets">
+              <li>將既有程式重構為微服務，涵蓋<strong>查詢、排程處理、電子郵件通知與資料存取 4 個領域</strong>。</li>
+              <li>實作與重構涉及<strong>外幣交易規則與銀行電文格式</strong>的處理流程。</li>
+              <li>參與排程處理，向<strong>銀行核心系統發出扣款請求</strong>，依回覆電文更新交易狀態，並處理<strong>重試與失敗狀態轉換</strong>。</li>
+              <li>在 Oracle 與 Microsoft SQL Server 上將 <strong>JDBC 資料存取重構為 Hibernate</strong>。</li>
+              <li>撰寫單元測試、執行人工測試，並支援修改內容進入 QA 與銀行驗收測試。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="role-head">
+              <h3>產品規劃 — Astra Technology</h3>
+              <span class="role-meta">2019 年 3 月 – 2022 年 6 月</span>
+            </div>
+            <ul class="bullets">
+              <li>運用 SQL 分析與金融技術指標，轉化為產品需求與工程實作規格。</li>
+              <li>參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證專案。</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">精選專案</h2>
+        <p class="section-intro">皆為個人專案，並標示目前狀態。驗證說明摘要自各 repo 記錄的結果。</p>
         <div class="projects-grid">
-          <article class="project-card" style="grid-column: 1 / -1; border-color: var(--accent-blue);">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">Raft-Recovery｜Go 複寫式任務佇列</h3>
-                <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">持久化處理 · 分散式協調 · 故障復原</p>
-              </div>
-              <span class="project-status-live">系統實作專案</span>
+
+          <article class="card project-card wide">
+            <div class="project-top">
+              <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
+              <span class="status status-proto">系統實作學習專案</span>
             </div>
-            <p class="project-description">結合持久化任務處理、gRPC worker 與自行實作的 Raft 共識機制。包含具校驗碼的預寫式日誌（WAL）、快照、重試、失敗任務處理，以及任務狀態變更的複寫。</p>
-            <p class="project-note">學習與驗證用途的個人專案，提供可執行的三節點示範。單元與整合測試涵蓋 leader 失效、磁碟復原及過期 worker 回覆等情境。</p>
-            <div class="project-tech">
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">gRPC</span>
-              <span class="tech-tag">Raft</span>
-              <span class="tech-tag">WAL</span>
-              <span class="tech-tag">Snapshots</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/raft-recovery">GitHub 原始碼</a>
-            </div>
+            <p class="project-tagline">以 Go 開發的複寫式任務佇列，分三階段完成：本機持久化執行、遠端 gRPC worker，再到自行實作的 Raft。</p>
+            <ul class="bullets">
+              <li>自行實作 Raft：隨機選舉、持久化 term／vote／log、多數複寫、衝突修復、快照、日誌壓縮與 InstallSnapshot 追趕。</li>
+              <li>寫入必須<strong>經多數節點提交並套用到本機狀態機</strong>後才回傳成功。</li>
+              <li>以<strong>嘗試編號（attempt fencing）驗證回覆</strong>，過期 worker 無法改動已重新指派的任務。</li>
+              <li>任務 ID 在重試、壓縮與重啟後仍保持冪等；具校驗碼的 WAL、逾時與 dead letter。</li>
+            </ul>
+            <p class="evidence"><b>已驗證：</b>CI 執行 race 檢查與 <code>go vet</code>；單元、整合與跨容器測試涵蓋 leader 失效、磁碟復原與過期 worker 回覆。</p>
+            <p class="limits">範圍：單一 Linux VM 上的固定三節點叢集；worker 執行語意為至少一次。</p>
+            <div class="tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Protobuf</span><span class="tag">Raft</span><span class="tag">WAL</span><span class="tag">Docker</span></div>
+            <div class="project-links"><a href="https://github.com/ChuLiYu/raft-recovery">原始碼與文件 →</a></div>
           </article>
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">AlphaPulse｜金融資料與分析應用</h3>
-              </div>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
+              <span class="status status-release">公開早期版本</span>
             </div>
-            <p class="project-description">串接金融資料處理流程、API 與儀表板的個人專案。結合 Python／FastAPI、PostgreSQL 與 React／TypeScript，並使用 Airflow 實作資料匯入與指標計算流程。</p>
-            <p class="project-note">作品集示範；部分 API 可能使用模擬資料備援。包含 Decimal 價格資料結構、API 驗證與交付工具設定。</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Airflow</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/alphapulse-mlops-platform">GitHub 原始碼</a>
-            </div>
+            <p class="project-tagline">自架的 MCP server，讓 Claude 把口語轉成 Google Tasks，並刻意限制 AI agent 能造成的破壞。</p>
+            <ul class="bullets">
+              <li>在使用者自己的電腦上、以使用者自己的 Google OAuth client 執行；沒有託管後端，本機不保存任務內容。</li>
+              <li>預設唯讀、不提供刪除工具，可選擇逐筆核准寫入。</li>
+              <li>任務在讀取後若已被變更就拒絕覆寫；寫入結果不明時不會靜默重試。</li>
+              <li>以 <code>./setup.sh</code> 引導非工程背景的使用者完成設定。</li>
+            </ul>
+            <p class="evidence"><b>已驗證：</b>CI 通過；已在 macOS 搭配 Claude Desktop 與 Claude Web 測試。</p>
+            <p class="limits">Docker Desktop、Linux 與 ChatGPT 尚未確認。</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.0</span><span class="tag">Docker</span><span class="tag">Vitest</span></div>
+            <div class="project-links"><a href="https://github.com/ChuLiYu/google-tasks-mcp">原始碼與安裝 →</a></div>
           </article>
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">Chainy｜AWS Serverless 應用</h3>
-              </div>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
+              <span class="status status-proto">原型</span>
             </div>
-            <p class="project-description">以 TypeScript 開發的短網址服務，透過 DynamoDB 支援需驗證身分的連結管理與重新導向。包含 JWT 驗證、Google 登入整合、Terraform 定義的 AWS 資源與事件驅動處理。</p>
-            <p class="project-note">包含 S3 事件輸出、結構化日誌，以及事件格式與敏感欄位處理的測試。</p>
-            <div class="project-tech">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">AWS Lambda</span>
-              <span class="tech-tag">API Gateway</span>
-              <span class="tech-tag">DynamoDB</span>
-              <span class="tech-tag">S3</span>
-              <span class="tech-tag">Terraform</span>
+            <p class="project-tagline">唯讀的 EVM 錢包活動索引器與監控 API，具規則式警示。</p>
+            <ul class="bullets">
+              <li>索引進度與索引資料<strong>在同一個交易中提交</strong>；以衝突處理避免重複資料。</li>
+              <li>確認區塊緩衝與有上限的追趕批次。</li>
+              <li>RPC 退避重試、獨立處理限流，並支援備援供應商。</li>
+              <li>預算、收款方與異常規則；寫入端點以雜湊 API key 保護。</li>
+            </ul>
+            <p class="evidence"><b>已驗證：</b>154 項測試通過，含對臨時 PostgreSQL 的整合測試；依賴弱點掃描無已知問題（2026 年 11 月）。</p>
+            <p class="limits">下一步：鏈重組回滾，以及多個索引器之間的單一寫入者租約。</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
+            <div class="project-links"><a href="https://github.com/ChuLiYu/arc-sentinel">原始碼與文件 →</a></div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
+              <span class="status status-proto">作品集示範</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/ChuLiYu/chainy-backend">GitHub 原始碼</a>
+            <p class="project-tagline">結合 REST API、Airflow 資料管線與有邊界 LLM 工具呼叫 agent 的金融資料應用。</p>
+            <ul class="bullets">
+              <li>JWT 驗證並區分讀寫權限；API key 以摘要儲存；具權限提升的回歸測試。</li>
+              <li>價格與回測的現金、成本計算使用 Decimal 型別。</li>
+              <li>LLM agent 具工具白名單、嚴格參數與執行預算；數值檢查由程式執行，而非交給模型。</li>
+            </ul>
+            <p class="evidence"><b>已驗證：</b>36 項容器化整合測試通過；前端 npm audit 已知弱點由 35 降為 0。</p>
+            <p class="limits">託管示範目前離線；部分端點使用模擬資料。</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
+            <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">原始碼與驗證紀錄 →</a></div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
+              <span class="status status-proto">作品集專案</span>
             </div>
+            <p class="project-tagline">AWS 上的 Serverless 短網址服務，支援需驗證身分的連結管理。</p>
+            <ul class="bullets">
+              <li>API Gateway 後的 Lambda handler，搭配 JWT authorizer 與 Google 登入。</li>
+              <li>以 DynamoDB 儲存資料；基礎設施以 Terraform 模組定義。</li>
+              <li>S3 事件輸出、結構化日誌，以及敏感欄位處理的測試。</li>
+            </ul>
+            <p class="limits">未宣稱任何正式環境效能數據。</p>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span><span class="tag">Terraform</span></div>
+            <div class="project-links"><a href="https://github.com/ChuLiYu/chainy-backend">原始碼 →</a></div>
           </article>
         </div>
+
+        <article class="card project-card building">
+          <div class="project-top">
+            <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">規劃中：Fraud Decision Service</a></h3>
+            <span class="status status-plan">規劃階段 · 尚無程式碼</span>
+          </div>
+          <p>把 ML 詐欺模型帶到正式環境：版本化評分、依政策做出核准／審查／拒絕決策、可稽核的決策紀錄，以及 shadow 與 canary 模型上線。預計技術：Java/Spring Boot 決策服務、Python 推論、PostgreSQL outbox 搭配 Kafka、MLflow。</p>
+        </article>
       </div>
     </section>
 
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">技術技能</h2>
+        <h2 class="section-title">技能</h2>
+        <p class="section-intro">依使用情境分組：工作經驗或個人專案。</p>
         <div class="skills-grid">
-          <div class="skill-category">
-            <h3>工作經驗｜應用開發</h3>
-            <div class="skill-items">
-              <span class="skill-item">Java</span>
-              <span class="skill-item">Spring</span>
-              <span class="skill-item">Spring Boot</span>
-              <span class="skill-item">Angular</span>
-              <span class="skill-item">Hibernate</span>
-              <span class="skill-item">微服務重構</span>
-              <span class="skill-item">排程處理</span>
-              <span class="skill-item">單元測試</span>
-            </div>
+          <div class="card skill-group">
+            <h3>應用開發 <span class="source">工作經驗</span></h3>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Hibernate</span><span class="chip">微服務重構</span><span class="chip">排程處理</span><span class="chip">單元測試</span></div>
           </div>
-          <div class="skill-category">
-            <h3>工作經驗｜資料庫與資料存取</h3>
-            <div class="skill-items">
-              <span class="skill-item">SQL</span>
-              <span class="skill-item">JDBC</span>
-              <span class="skill-item">Hibernate</span>
-              <span class="skill-item">Oracle</span>
-              <span class="skill-item">Microsoft SQL Server</span>
-            </div>
+          <div class="card skill-group">
+            <h3>資料與銀行領域 <span class="source">工作經驗</span></h3>
+            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">外幣交易流程</span><span class="chip">銀行電文格式</span><span class="chip">交易狀態處理</span><span class="chip">技術規格</span></div>
           </div>
-          <div class="skill-category">
-            <h3>金融與業務領域</h3>
-            <div class="skill-items">
-              <span class="skill-item">網路銀行</span>
-              <span class="skill-item">外幣交易流程</span>
-              <span class="skill-item">銀行電文格式</span>
-              <span class="skill-item">交易狀態處理</span>
-              <span class="skill-item">產品規劃</span>
-              <span class="skill-item">技術規格</span>
-            </div>
+          <div class="card skill-group">
+            <h3>後端與資料 <span class="source">個人專案</span></h3>
+            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">gRPC</span><span class="chip">Airflow</span><span class="chip">React</span></div>
           </div>
-          <div class="skill-category">
-            <h3>個人專案｜應用與資料</h3>
-            <div class="skill-items">
-              <span class="skill-item">Python</span>
-              <span class="skill-item">FastAPI</span>
-              <span class="skill-item">PostgreSQL</span>
-              <span class="skill-item">TypeScript</span>
-              <span class="skill-item">React</span>
-              <span class="skill-item">Airflow</span>
-            </div>
+          <div class="card skill-group">
+            <h3>分散式系統與 AI <span class="source">個人專案</span></h3>
+            <div class="chips"><span class="chip">Raft</span><span class="chip">WAL 與快照</span><span class="chip">冪等設計</span><span class="chip">MCP server</span><span class="chip">LLM 工具呼叫</span><span class="chip">Ollama</span></div>
           </div>
-          <div class="skill-category">
-            <h3>個人專案｜雲端與系統</h3>
-            <div class="skill-items">
-              <span class="skill-item">AWS Lambda</span>
-              <span class="skill-item">API Gateway</span>
-              <span class="skill-item">DynamoDB</span>
-              <span class="skill-item">S3</span>
-              <span class="skill-item">Terraform</span>
-              <span class="skill-item">Docker</span>
-              <span class="skill-item">GitHub Actions</span>
-              <span class="skill-item">Go</span>
-              <span class="skill-item">gRPC</span>
-              <span class="skill-item">Raft</span>
-            </div>
+          <div class="card skill-group">
+            <h3>雲端與交付 <span class="source">個人專案＋證照</span></h3>
+            <div class="chips"><span class="chip">AWS Lambda</span><span class="chip">API Gateway</span><span class="chip">DynamoDB</span><span class="chip">S3</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="credentials" class="section">
+      <div class="container">
+        <h2 class="section-title">學歷與證照</h2>
+        <div class="edu-grid">
+          <div class="card">
+            <h3>應用電腦科學碩士（M.S. Applied Computer Science）</h3>
+            <p>Fairleigh Dickinson University · 預計 2026 年 12 月畢業</p>
+          </div>
+          <div class="card">
+            <h3>證照</h3>
+            <ul class="bullets">
+              <li>AWS Certified Solutions Architect – Associate</li>
+              <li>HashiCorp Certified: Terraform Associate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section contact">
       <div class="container">
         <h2 class="section-title">與我聯絡</h2>
-        <p>我正在尋找 <strong>Software Developer／Software Engineer</strong> 職缺，特別關注<strong>金融科技與金融服務</strong>領域，希望運用既有經驗投入後端服務、全端應用與系統現代化工作。</p>
-        <p style="color: var(--text-secondary); margin-top: 1rem;">目前居住於加拿大溫哥華。預計 2026 年 12 月畢業，可於畢業後投入下一份全職工作。</p>
-        <div class="contact-links">
-          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">電子郵件：liyu.chu.work@gmail.com</a>
-          <a href="https://linkedin.com/in/chuliyu" class="btn btn-secondary">LinkedIn</a>
-          <a href="https://github.com/ChuLiYu" class="btn btn-secondary">GitHub</a>
+        <p class="section-intro">我正在尋找<strong>後端或全端軟體工程師</strong>職缺，特別關注金融科技與金融服務。目前居住於溫哥華，2026 年 12 月畢業後可投入全職工作。</p>
+        <div class="cta-buttons">
+          <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">liyu.chu.work@gmail.com</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
         </div>
       </div>
     </section>
@@ -684,7 +314,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Li-Yu Chu | 軟體開發者｜加拿大溫哥華</p>
+      <p>&copy; 2026 Li-Yu Chu · 軟體工程師 · 加拿大溫哥華</p>
     </div>
   </footer>
 </body>

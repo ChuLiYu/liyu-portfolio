@@ -1,4 +1,4 @@
-# Li-Yu Chu — Software Developer
+# Li-Yu Chu — Software Engineer
 
 **Backend & Full-Stack Applications**  
 Java · Spring Boot · Angular · SQL | AWS & Terraform
@@ -17,25 +17,16 @@ For detailed work history, see my [GitHub profile](https://github.com/ChuLiYu).
 
 ## Featured projects
 
-### 1. [Raft-Recovery](https://github.com/ChuLiYu/raft-recovery) — Replicated Job Queue
+| Project | What it shows | Stack | Status |
+|---|---|---|---|
+| [Raft-Recovery](https://github.com/ChuLiYu/raft-recovery) | Replicated job queue with a custom Raft, WAL, snapshots and fenced worker acknowledgements | Go · gRPC · Raft | Educational systems project |
+| [Google Tasks MCP](https://github.com/ChuLiYu/google-tasks-mcp) | Self-hosted MCP server letting Claude manage Google Tasks with read-only defaults and safe writes | TypeScript · MCP · OAuth 2.0 | Public early release |
+| [Arc Sentinel](https://github.com/ChuLiYu/arc-sentinel) | EVM wallet indexer with transactional checkpoints, RPC retry/fallback and rule-based alerts | Python · FastAPI · PostgreSQL | Prototype |
+| [AlphaPulse](https://github.com/ChuLiYu/alphapulse) | Financial data APIs, Airflow pipelines and a bounded LLM tool-calling agent | Python · FastAPI · Airflow · React | Portfolio demo |
+| [Chainy](https://github.com/ChuLiYu/chainy-backend) | AWS serverless URL shortener with JWT auth and Terraform | TypeScript · Lambda · DynamoDB | Portfolio project |
+| [Fraud Decision Service](https://github.com/ChuLiYu/fraud-decision-service) | Taking an ML fraud model to production with versioned policy and safe rollout | Java · Python · Kafka (planned) | Planning |
 
-A Go systems project combining durable processing, gRPC workers and a custom Raft implementation. Features include leader election, majority replication, snapshots and recovery testing.
-
-**Stack:** Go · gRPC · Raft · WAL · Snapshots  
-Educational project with a runnable three-node demo.
-
-### 2. [AlphaPulse](https://github.com/ChuLiYu/alphapulse-mlops-platform) — Financial Data & Analytics Application
-
-An application connecting Airflow data workflows, FastAPI services, PostgreSQL and a React/TypeScript interface.
-
-**Stack:** Python · FastAPI · PostgreSQL · React · TypeScript · Airflow  
-Portfolio demo; some endpoints use mock-data fallbacks.
-
-### 3. [Chainy](https://github.com/ChuLiYu/chainy-backend) — AWS Serverless URL Shortener
-
-A TypeScript application with authenticated link management, redirect handling, DynamoDB persistence and Terraform-defined AWS resources.
-
-**Stack:** TypeScript · AWS Lambda · API Gateway · DynamoDB · S3 · Terraform
+Verification details and limitations live in each repository's README.
 
 ## Repository guide
 
