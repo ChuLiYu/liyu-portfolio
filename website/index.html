@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Li-Yu Chu | Java / Spring Boot Backend Engineer — Banking, Reliable Systems &amp; AI Tools</title>
-  <meta name="description" content="Vancouver-based backend engineer with three years building internet banking software in Java and Spring Boot. Ships practical AI tools, including a public MCP server for Claude, and reliable systems in Go, Python and TypeScript." />
+  <title>Li-Yu Chu | Java / Spring Boot Backend Engineer in Vancouver</title>
+  <meta name="description" content="Backend engineer in Vancouver with three years building internet banking software in Java and Spring Boot. Applies the same controls to AI tools and distributed systems. Available mid-December 2026." />
   <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/" />
@@ -13,10 +13,17 @@
   <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://luichu.dev/" />
-  <meta property="og:title" content="Li-Yu Chu | Java / Spring Boot Backend Engineer — Banking, Reliable Systems &amp; AI Tools" />
-  <meta property="og:description" content="Three years building internet banking software in Java and Spring Boot. Ships practical AI tools such as a public MCP server for Claude, plus reliable systems in Go, Python and TypeScript." />
+  <meta property="og:title" content="Li-Yu Chu — Every transaction accounted for. Every AI action bounded." />
+  <meta property="og:description" content="Java / Spring Boot backend engineer with three years in internet banking, now building AI tools with the same controls. Vancouver, available mid-December 2026." />
   <meta property="og:locale" content="en_CA" />
-  <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
+  <meta property="og:image" content="https://luichu.dev/assets/images/og-en.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Li-Yu Chu, backend engineer: every transaction accounted for, every AI action bounded." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/site.css" />
   <script src="assets/js/hero.js" defer></script>
   <script type="application/ld+json">
@@ -77,13 +84,13 @@
               <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
-          <article class="recovery-card" data-recovery-card aria-label="Recovery log">
+          <article class="recovery-card" data-recovery-card aria-label="What happens when something fails">
             <div class="recovery-card-head">
-              <p class="recovery-label">Recovery log</p>
-              <div class="recovery-tabs" aria-label="Recovery scenarios">
-                <button type="button" aria-pressed="true" data-scenario-button="0">Bank debit</button>
-                <button type="button" aria-pressed="false" data-scenario-button="1">AI agent write</button>
-                <button type="button" aria-pressed="false" data-scenario-button="2">Node failure</button>
+              <p class="recovery-label">When something fails</p>
+              <div class="recovery-tabs" aria-label="Failure scenarios">
+                <button type="button" aria-pressed="true" data-scenario-button="0">Bank payment</button>
+                <button type="button" aria-pressed="false" data-scenario-button="1">AI edit</button>
+                <button type="button" aria-pressed="false" data-scenario-button="2">Server crash</button>
               </div>
             </div>
             <div class="recovery-content" data-recovery-content>
@@ -93,6 +100,7 @@
                 <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
                 <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
               </div>
+              <p class="recovery-outcome"><b>Why it matters:</b> The customer is charged once, never twice, even when the bank’s system times out.</p>
               <p class="recovery-source">Illustrative pattern from internet-banking work</p>
             </div>
             <template data-recovery-scenario="0">
@@ -102,6 +110,7 @@
                 <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
                 <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
               </div>
+              <p class="recovery-outcome"><b>Why it matters:</b> The customer is charged once, never twice, even when the bank’s system times out.</p>
               <p class="recovery-source">Illustrative pattern from internet-banking work</p>
             </template>
             <template data-recovery-scenario="1">
@@ -110,6 +119,7 @@
                 <div class="recovery-line is-amber"><span>task changed since it was read</span><span class="recovery-state">CONFLICT</span></div>
                 <div class="recovery-line is-green"><span>✓ write rejected, nothing overwritten</span><span class="recovery-state">SAFE</span></div>
               </div>
+              <p class="recovery-outcome"><b>Why it matters:</b> The AI cannot overwrite a change you made after it last looked.</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></p>
             </template>
             <template data-recovery-scenario="2">
@@ -118,6 +128,7 @@
                 <div class="recovery-line is-amber"><span>node-2 elected leader</span><span class="recovery-state">ELECTION</span></div>
                 <div class="recovery-line is-green"><span>✓ committed jobs intact</span><span class="recovery-state">COMMITTED</span></div>
               </div>
+              <p class="recovery-outcome"><b>Why it matters:</b> One server going down does not lose work that was already finished.</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
             </template>
           </article>

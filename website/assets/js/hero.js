@@ -24,6 +24,29 @@ document.querySelectorAll('[data-recovery-card]').forEach((card) => {
     return Array.from(content.querySelectorAll('.recovery-line'));
   };
 
+  // Reserve the tallest scenario's height so the card never jumps between scenarios.
+  const lockHeight = () => {
+    const content = card.querySelector('[data-recovery-content]');
+    if (!content) return;
+    const current = Array.from(content.childNodes);
+    content.style.minHeight = '';
+    let tallest = 0;
+    templates.forEach((template) => {
+      content.replaceChildren(template.content.cloneNode(true));
+      tallest = Math.max(tallest, content.offsetHeight);
+    });
+    content.replaceChildren(...current);
+    content.style.minHeight = `${tallest}px`;
+  };
+
+  lockHeight();
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(lockHeight, 150);
+  });
+  if (document.fonts) document.fonts.ready.then(lockHeight);
+
   const waitWhileVisible = (duration, currentSequence) => new Promise((resolve) => {
     let remaining = duration;
     let previous = performance.now();

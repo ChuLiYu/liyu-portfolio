@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Li-Yu Chu | Java／Spring Boot 後端工程師 — 銀行系統、可靠系統與 AI 工具</title>
-  <meta name="description" content="居住於加拿大溫哥華的後端工程師，具三年以 Java 與 Spring Boot 開發網路銀行軟體的經驗。實際推出 AI 工具（包含公開的 Claude MCP server），並以 Go、Python、TypeScript 打造可靠系統。" />
+  <title>Li-Yu Chu | 溫哥華 Java／Spring Boot 後端工程師</title>
+  <meta name="description" content="人在溫哥華的後端工程師，三年以 Java 與 Spring Boot 開發網路銀行系統，用同樣的控管標準打造 AI 工具與分散式系統。2026 年 12 月中可到職。" />
   <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/index-zh.html" />
@@ -13,10 +13,17 @@
   <link rel="alternate" hreflang="x-default" href="https://luichu.dev/" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://luichu.dev/index-zh.html" />
-  <meta property="og:title" content="Li-Yu Chu | Java／Spring Boot 後端工程師 — 銀行系統、可靠系統與 AI 工具" />
-  <meta property="og:description" content="三年網路銀行軟體開發經驗（Java、Spring Boot）。實際推出 AI 工具，例如公開的 Claude MCP server，並以 Go、Python、TypeScript 打造可靠系統。" />
+  <meta property="og:title" content="Li-Yu Chu — 每筆交易都對得上，每個 AI 動作都有邊界。" />
+  <meta property="og:description" content="三年網路銀行 Java／Spring Boot 後端經驗，用同樣的控管標準打造 AI 工具。人在溫哥華，2026 年 12 月中可到職。" />
   <meta property="og:locale" content="zh_TW" />
-  <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
+  <meta property="og:image" content="https://luichu.dev/assets/images/og-zh.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Li-Yu Chu，後端工程師：每筆交易都對得上，每個 AI 動作都有邊界。" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/site.css" />
   <script src="assets/js/hero.js" defer></script>
   <script type="application/ld+json">
@@ -77,13 +84,13 @@
               <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
-          <article class="recovery-card" data-recovery-card aria-label="復原紀錄">
+          <article class="recovery-card" data-recovery-card aria-label="出錯時，系統怎麼處理">
             <div class="recovery-card-head">
-              <p class="recovery-label">復原紀錄</p>
-              <div class="recovery-tabs" aria-label="復原情境">
+              <p class="recovery-label">出錯時，系統怎麼處理</p>
+              <div class="recovery-tabs" aria-label="出錯情境">
                 <button type="button" aria-pressed="true" data-scenario-button="0">銀行扣款</button>
-                <button type="button" aria-pressed="false" data-scenario-button="1">AI 寫入</button>
-                <button type="button" aria-pressed="false" data-scenario-button="2">節點故障</button>
+                <button type="button" aria-pressed="false" data-scenario-button="1">AI 修改資料</button>
+                <button type="button" aria-pressed="false" data-scenario-button="2">伺服器當機</button>
               </div>
             </div>
             <div class="recovery-content" data-recovery-content>
@@ -93,6 +100,7 @@
                 <div class="recovery-line is-amber"><span>以相同請求 ID 重試</span><span class="recovery-state">RETRY</span></div>
                 <div class="recovery-line is-green"><span>✓ 只扣款一次</span><span class="recovery-state">SETTLED</span></div>
               </div>
+              <p class="recovery-outcome"><b>重點：</b> 銀行系統沒回應時，客戶也只會被扣一次款，不會重複扣。</p>
               <p class="recovery-source">依網路銀行工作經驗示意</p>
             </div>
             <template data-recovery-scenario="0">
@@ -102,6 +110,7 @@
                 <div class="recovery-line is-amber"><span>以相同請求 ID 重試</span><span class="recovery-state">RETRY</span></div>
                 <div class="recovery-line is-green"><span>✓ 只扣款一次</span><span class="recovery-state">SETTLED</span></div>
               </div>
+              <p class="recovery-outcome"><b>重點：</b> 銀行系統沒回應時，客戶也只會被扣一次款，不會重複扣。</p>
               <p class="recovery-source">依網路銀行工作經驗示意</p>
             </template>
             <template data-recovery-scenario="1">
@@ -110,6 +119,7 @@
                 <div class="recovery-line is-amber"><span>任務在讀取後已被修改</span><span class="recovery-state">CONFLICT</span></div>
                 <div class="recovery-line is-green"><span>✓ 拒絕寫入，未覆蓋任何資料</span><span class="recovery-state">SAFE</span></div>
               </div>
+              <p class="recovery-outcome"><b>重點：</b> 你剛改過的資料，AI 不會拿舊版本蓋掉。</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></p>
             </template>
             <template data-recovery-scenario="2">
@@ -118,6 +128,7 @@
                 <div class="recovery-line is-amber"><span>node-2 當選 leader</span><span class="recovery-state">ELECTION</span></div>
                 <div class="recovery-line is-green"><span>✓ 已提交的工作完整保留</span><span class="recovery-state">COMMITTED</span></div>
               </div>
+              <p class="recovery-outcome"><b>重點：</b> 一台伺服器掛掉，已完成的工作也不會遺失。</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
             </template>
           </article>
