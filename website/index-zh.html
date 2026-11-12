@@ -199,13 +199,13 @@
             </div>
             <p class="project-tagline">唯讀的 EVM 錢包活動索引器與監控 API，具規則式警示。</p>
             <ul class="bullets">
-              <li>索引進度與索引資料<strong>在同一個交易中提交</strong>；以衝突處理避免重複資料。</li>
-              <li>確認區塊緩衝與有上限的追趕批次。</li>
-              <li>RPC 退避重試、獨立處理限流，並支援備援供應商。</li>
-              <li>預算、收款方與異常規則；寫入端點以雜湊 API key 保護。</li>
+              <li>索引進度與索引資料<strong>在同一個交易中提交</strong>；以資料庫唯一性確保重播安全。</li>
+              <li>以 <strong>PostgreSQL advisory lock</strong> 阻止多個索引器同時寫入；每輪檢查 chain ID 與區塊 hash／parent 連續性。</li>
+              <li>偵測到分叉時，進行有上限的共同祖先診斷，並記錄持久的 <strong>recovery-required</strong> 狀態，由 <code>/health</code> 對外揭露。</li>
+              <li>RPC 退避重試與備援供應商；預算、收款方與異常規則；寫入端點以雜湊 API key 保護。</li>
             </ul>
-            <p class="evidence"><b>已驗證：</b>154 項測試通過，含對臨時 PostgreSQL 的整合測試；依賴弱點掃描無已知問題（2026 年 11 月）。</p>
-            <p class="limits">下一步：鏈重組回滾，以及多個索引器之間的單一寫入者租約。</p>
+            <p class="evidence"><b>已驗證：</b>249 項測試全數通過、無略過，含對臨時 PostgreSQL 與真實並行連線的整合測試（2026 年 10 月）。</p>
+            <p class="limits">下一步：自動的鏈重組回滾與重播。尚未做真實鏈上或負載測試。</p>
             <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/arc-sentinel">原始碼與文件 →</a></div>
           </article>
@@ -218,12 +218,13 @@
             <p class="project-tagline">結合 REST API、Airflow 資料管線與有邊界 LLM 工具呼叫 agent 的金融資料應用。</p>
             <ul class="bullets">
               <li>JWT 驗證並區分讀寫權限；API key 以摘要儲存；具權限提升的回歸測試。</li>
+              <li>以 <strong>Terraform</strong> 部署到 Oracle Cloud（OCI ARM64、單節點 k3s）。</li>
               <li>Redis cache-aside：TTL、交易提交後失效與 PostgreSQL 備援；價格與回測計算使用 Decimal 型別。</li>
               <li>LLM agent 具工具白名單、嚴格參數與執行預算；數值檢查由程式執行，而非交給模型。</li>
             </ul>
             <p class="evidence"><b>已驗證：</b>36 項容器化整合測試通過；前端 npm audit 已知弱點由 35 降為 0。</p>
-            <p class="limits">託管示範目前離線；部分端點使用模擬資料。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
+            <p class="limits">部署環境目前已離線；部分端點使用模擬資料。</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span><span class="tag">Terraform</span><span class="tag">OCI</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">原始碼與驗證紀錄 →</a></div>
           </article>
 

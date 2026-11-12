@@ -199,13 +199,13 @@
             </div>
             <p class="project-tagline">A read-only EVM wallet activity indexer and monitoring API with rule-based alerts.</p>
             <ul class="bullets">
-              <li>Indexing checkpoint <strong>committed in the same transaction</strong> as the indexed rows; conflict handling prevents duplicate rows.</li>
-              <li>Confirmation buffer and bounded catch-up batches.</li>
-              <li>RPC retries with backoff, separate throttling handling and a fallback provider.</li>
-              <li>Budget, recipient and anomaly rules; write endpoints protected by hashed API keys.</li>
+              <li>Indexing checkpoint <strong>committed in the same transaction</strong> as the indexed rows; database uniqueness makes replays safe.</li>
+              <li><strong>PostgreSQL advisory lock</strong> stops competing indexers; chain ID and block hash/parent lineage are checked every cycle.</li>
+              <li>A detected fork triggers bounded ancestor diagnosis and a persistent <strong>recovery-required</strong> state exposed by <code>/health</code>.</li>
+              <li>RPC retries with backoff and a fallback provider; budget, recipient and anomaly rules; hashed API keys for writes.</li>
             </ul>
-            <p class="evidence"><b>Verified:</b> 154 tests passed, including integration tests against disposable PostgreSQL; dependency audit clean (Nov 2026).</p>
-            <p class="limits">Next: chain-reorg rollback and a single-writer lease for multiple indexers.</p>
+            <p class="evidence"><b>Verified:</b> 249 tests passed with no skips, including integration tests against disposable PostgreSQL and real competing sessions (Oct 2026).</p>
+            <p class="limits">Next: automatic reorg rollback and replay. No live-chain or load benchmark yet.</p>
             <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/arc-sentinel">Source and docs →</a></div>
           </article>
@@ -218,12 +218,13 @@
             <p class="project-tagline">A financial data application combining REST APIs, Airflow pipelines and a bounded LLM tool-calling agent.</p>
             <ul class="bullets">
               <li>JWT authentication with separate read and write permissions; API keys stored as digests; privilege-escalation regression tests.</li>
+              <li>Deployed with <strong>Terraform</strong> to Oracle Cloud (OCI ARM64, single-node k3s).</li>
               <li>Redis cache-aside with TTLs, post-commit invalidation and PostgreSQL fallback; Decimal types for prices and backtest calculations.</li>
               <li>LLM agent with a tool allowlist, strict arguments and execution budgets; numeric checks run in code, not in the model.</li>
             </ul>
             <p class="evidence"><b>Verified:</b> 36 containerized integration tests passed; frontend npm audit reduced from 35 to 0 known vulnerabilities.</p>
-            <p class="limits">Hosted demo is currently offline; some endpoints use mock data.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span></div>
+            <p class="limits">Hosted deployment is currently offline; some endpoints use mock data.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span><span class="tag">Terraform</span><span class="tag">OCI</span></div>
             <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">Source and evidence →</a></div>
           </article>
 
