@@ -43,10 +43,9 @@
         <a href="#" class="logo">Li-Yu Chu</a>
         <div class="nav-menu">
           <ul class="nav-links">
-            <li><a href="#focus">Focus</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#stack">Stack</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="language-switcher">
@@ -63,54 +62,23 @@
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="160" height="160" fetchpriority="high">
+          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="168" height="168" fetchpriority="high">
           <div>
-            <p class="eyebrow">Java / Spring Boot Backend Engineer · Fintech · AI Tools · Vancouver, BC</p>
+            <p class="eyebrow">Backend Engineer · Java / Spring Boot · Vancouver, BC</p>
             <h1>Li-Yu Chu (Liyu)</h1>
-            <p class="headline">I build reliable backend systems with Java and Spring Boot, and ship practical AI tools people can use safely.</p>
-            <p class="lead">Three years building internet banking features at <strong>HiTrust</strong> with <strong>Java, Spring Boot</strong>, Angular and SQL: debit requests, transaction states and retries. I bring the same discipline to AI: a <strong>public MCP server</strong> that lets Claude manage Google Tasks with safe writes, LLM tool-calling with strict boundaries, and a daily <strong>AI-assisted development workflow</strong> checked by tests and review.</p>
+            <p class="headline">I build <strong>reliable backend systems</strong> with Java and Spring Boot, and <strong>AI tools</strong> people can use safely.</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email me</a>
-              <a href="#projects" class="btn">See projects</a>
-              <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
-              <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
+              <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
+              <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
         </div>
         <div class="facts">
-          <div class="fact"><span class="fact-value">3 years</span><span class="fact-label">Banking software engineer at HiTrust</span></div>
-          <div class="fact"><span class="fact-value">Java · Spring Boot</span><span class="fact-label">Core stack, plus Go, Python and TypeScript</span></div>
-          <div class="fact"><span class="fact-value">MCP · LLM tools</span><span class="fact-label">Public AI tool release on GitHub</span></div>
-          <div class="fact"><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified · M.S. Applied CS, Dec 2026</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="section">
-      <div class="container">
-        <h2 class="section-title">What I focus on</h2>
-        <p class="section-intro">Professional Java backend experience, extended by AI products and systems work in my recent projects.</p>
-        <div class="focus-grid">
-          <article class="card focus-card">
-            <h3>Java / Spring Boot backend</h3>
-            <p>Three years of Java, Spring Boot, Hibernate/JPA and SQL in banking: REST APIs, scheduled debit processing against core banking systems, transaction-state transitions, and recovery logic that keeps transactions consistent through retries.</p>
-            <p class="focus-evidence">Evidence: <span>HiTrust · Fraud Decision Service (Spring Boot, planned)</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>AI products: MCP and LLM tools</h3>
-            <p>Released a public MCP server that connects Claude to Google Tasks, with read-only defaults, no delete tool and concurrency checks before writes. Built an LLM tool-calling agent with allowlists, strict arguments and execution budgets.</p>
-            <p class="focus-evidence">Evidence: <span>Google Tasks MCP · AlphaPulse</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>AI-assisted engineering, verified</h3>
-            <p>I develop daily with AI coding agents, mainly Codex, alongside Claude Code, Cursor and GitHub Copilot, inside a workflow I maintain: repository instructions, tests built alongside the code, and review agents that challenge changes before merge. AI speeds up delivery; tests and CI decide what ships.</p>
-            <p class="focus-evidence">Evidence: <span>test suites and CI in every project below</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>Failure handling and recovery</h3>
-            <p>Write-ahead logs, snapshots and replay; idempotent job IDs and fenced worker acknowledgements; indexing checkpoints committed in the same transaction as the data.</p>
-            <p class="focus-evidence">Evidence: <span>Raft-Recovery · Arc Sentinel</span></p>
-          </article>
+          <div class="fact"><div class="fact-icons"><span class="fact-big">3 yrs</span></div><span class="fact-value">Banking backend</span><span class="fact-label">HiTrust, internet banking</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-java"></span><span class="ico i-springboot"></span></div><span class="fact-value">Java · Spring Boot</span><span class="fact-label">Core stack</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-mcp"></span><span class="ico i-claude"></span></div><span class="fact-value">Public MCP server</span><span class="fact-label">AI tool for Claude</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified</span></div>
         </div>
       </div>
     </section>
@@ -119,31 +87,38 @@
       <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="timeline">
-          <article class="card">
+          <article class="card role">
             <div class="role-head">
-              <h3>Software Engineer — HiTrust, Inc.</h3>
-              <span class="role-meta">Jan 2022 – Dec 2024 · Taipei, Taiwan · Internet banking</span>
+              <h3>Software Engineer <span class="role-sub">· HiTrust, Inc.</span></h3>
+              <span class="role-meta">Jan 2022 – Dec 2024 · Taipei · Internet banking</span>
             </div>
-            <p style="margin-bottom: .9rem;">Built Java banking application features with Spring and Spring Boot, integrated with Angular/TypeScript internet banking workflows.</p>
             <ul class="bullets">
-              <li>Built recovery and synchronization logic to preserve <strong>transaction consistency</strong> when banking requests or responses failed or needed retries.</li>
-              <li>Developed foreign-currency logic and SQL for <strong>scheduled payment and debit workflows</strong>: core-banking debit requests, response-driven status updates and failure-state transitions.</li>
-              <li>Improved SQL queries and <strong>Hibernate/JPA</strong> data access for REST APIs on Oracle and Microsoft SQL Server, including migration from JDBC.</li>
-              <li>Contributed to separating inquiry, scheduled processing, email notification and data-access responsibilities into <strong>service components</strong>.</li>
-              <li>Traced existing code paths and redrew foreign-currency workflow diagrams to clarify payment, debit and retry logic for the team.</li>
-              <li>Wrote <strong>JUnit</strong> unit and integration tests, took part in code reviews, and worked with QA and bank acceptance-testing teams to resolve integration issues.</li>
+              <li>Recovery logic that keeps <strong>transactions consistent</strong> when bank requests fail or retry.</li>
+              <li><strong>Scheduled payment and debit</strong> workflows with core-banking status transitions.</li>
+              <li>REST APIs on Oracle and SQL Server; moved data access from JDBC to <strong>Hibernate/JPA</strong>.</li>
+              <li>JUnit tests, code review, and integration fixes with QA and bank acceptance teams.</li>
             </ul>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+            </div>
           </article>
-          <article class="card">
+          <article class="card role past">
             <div class="role-head">
-              <h3>Product Planner (Data) — Astra Technology</h3>
-              <span class="role-meta">Mar 2019 – Dec 2021 · Taipei, Taiwan</span>
+              <h3>Product Planner (Data) <span class="role-sub">· Astra Technology</span></h3>
+              <span class="role-meta">Mar 2019 – Dec 2021 · Taipei</span>
             </div>
-            <ul class="bullets">
-              <li>Used Python and pandas for time-series analysis and foot-traffic forecasting to support product planning.</li>
-              <li>Analysed data with SQL and translated financial technical indicators into product requirements and technical specifications.</li>
-              <li>Planned AI webcam and IoT solutions, and contributed to a smart-warehouse IoT proof of concept with NTT Japan.</li>
-            </ul>
+            <p>Forecasting and SQL analysis for product planning; AI webcam and IoT planning, including a smart-warehouse PoC with NTT Japan.</p>
+            <div class="techs">
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-pandas"></span>pandas</span>
+              <span class="tech">SQL</span>
+            </div>
           </article>
         </div>
       </div>
@@ -152,137 +127,247 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Selected projects</h2>
-        <p class="section-intro">Personal projects, each labeled with its current status. Verification notes summarize results recorded in each repository.</p>
+        <p class="section-intro">Each card shows the design, what is verified, and what is not done yet.</p>
         <div class="projects-grid">
 
+          <article class="card project-card wide">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
+                <span class="status status-release">Public early release</span>
+              </div>
+              <p class="project-tagline">Lets Claude manage Google Tasks from natural language, built to limit what an AI agent can break.</p>
+            </div>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">Claude<small>Desktop or Web</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">MCP server<small>runs on your machine</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Google Tasks<small>your own OAuth client</small></div>
+            </div>
+            <ul class="guards" aria-label="Safety guarantees">
+              <li>Read-only by default</li>
+              <li>No delete tool</li>
+              <li>Optional approval per write</li>
+              <li>Rejects stale overwrites</li>
+              <li>No silent retry</li>
+              <li>Guided <code>./setup.sh</code></li>
+            </ul>
+            <p class="proof"><span><b>✓ Verified:</b> CI passing; tested with Claude Desktop and Web on macOS</span><span class="limit">Linux, Docker Desktop, ChatGPT not yet confirmed</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-mcp"></span>MCP</span>
+                <span class="tech"><span class="ico i-claude"></span>Claude</span>
+                <span class="tech">OAuth 2.0</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+                <span class="tech"><span class="ico i-vitest"></span>Vitest</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/google-tasks-mcp">Source and setup →</a>
+            </div>
+          </article>
 
           <article class="card project-card wide">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
-              <span class="status status-release">Public early release</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
+                <span class="status status-proto">Educational systems project</span>
+              </div>
+              <p class="project-tagline">A replicated job queue in Go, built in three stages up to a custom Raft implementation.</p>
             </div>
-            <p class="project-tagline">A self-hosted MCP server that lets Claude turn natural language into Google Tasks, designed to limit what an AI agent can break.</p>
-            <ul class="bullets">
-              <li>Runs on the user's machine with their own Google OAuth client; no hosted backend, and task content is not stored locally.</li>
-              <li>Read-only by default, no delete tool, optional per-write approval.</li>
-              <li>Refuses to overwrite a task changed since it was read; no silent retry after an unknown write result.</li>
-              <li>Guided <code>./setup.sh</code> onboarding for non-developers.</li>
-            </ul>
-            <p class="evidence"><b>Verified:</b> CI passing; tested on macOS with Claude Desktop and Claude Web.</p>
-            <p class="limits">Docker Desktop, Linux and ChatGPT are not yet confirmed.</p>
-            <div class="tags"><span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">Claude</span><span class="tag">OAuth 2.0</span><span class="tag">Docker</span><span class="tag">Vitest</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Source and setup →</a></div>
-          </article>
-
-          <article class="card project-card wide">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
-              <span class="status status-proto">Educational systems project</span>
+            <div class="flow" role="list" aria-label="Build stages">
+              <div class="node" role="listitem">1 · Local queue<small>checksummed WAL, dead letters</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">2 · gRPC workers<small>attempt-fenced acks</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">3 · Raft cluster<small>elections, snapshots, catch-up</small></div>
             </div>
-            <p class="project-tagline">A replicated job queue in Go, built in three stages: durable local execution, remote gRPC workers, then a custom Raft implementation.</p>
-            <ul class="bullets">
-              <li>Custom Raft: randomized elections, persistent term/vote/log, majority replication, conflict repair, snapshots, log compaction and InstallSnapshot catch-up.</li>
-              <li>A write returns success only after <strong>majority commit and local state-machine application</strong>.</li>
-              <li><strong>Attempt-fenced acknowledgements</strong> stop a stale worker from changing a reassigned job.</li>
-              <li>Job IDs stay idempotent across retries, compaction and restarts; checksummed WAL, timeouts and dead letters.</li>
+            <ul class="guards" aria-label="Guarantees">
+              <li>Success only after majority commit</li>
+              <li>Stale workers can't change reassigned jobs</li>
+              <li>Idempotent job IDs across restarts</li>
             </ul>
-            <p class="evidence"><b>Verified:</b> CI runs race checks and <code>go vet</code>; unit, integration and cross-container tests cover leader loss, disk recovery and stale worker acknowledgements.</p>
-            <p class="limits">Scope: static three-node cluster on one Linux VM; worker execution is at least once.</p>
-            <div class="tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Protobuf</span><span class="tag">Raft</span><span class="tag">WAL</span><span class="tag">Docker</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/raft-recovery">Source and docs →</a></div>
+            <p class="proof"><span><b>✓ Verified:</b> race checks and cross-container tests for leader loss and disk recovery</span><span class="limit">Static 3-node cluster; at-least-once execution</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-go"></span>Go</span>
+                <span class="tech">gRPC</span>
+                <span class="tech">Raft</span>
+                <span class="tech">WAL</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/raft-recovery">Source and docs →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
-              <span class="status status-proto">Prototype</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
+                <span class="status status-proto">Prototype</span>
+              </div>
+              <p class="project-tagline">Read-only EVM wallet indexer and monitoring API with rule-based alerts.</p>
             </div>
-            <p class="project-tagline">A read-only EVM wallet activity indexer and monitoring API with rule-based alerts.</p>
-            <ul class="bullets">
-              <li>Indexing checkpoint <strong>committed in the same transaction</strong> as the indexed rows; database uniqueness makes replays safe.</li>
-              <li><strong>PostgreSQL advisory lock</strong> stops competing indexers; chain ID and block hash/parent lineage are checked every cycle.</li>
-              <li>A detected fork triggers bounded ancestor diagnosis and a persistent <strong>recovery-required</strong> state exposed by <code>/health</code>.</li>
-              <li>RPC retries with backoff and a fallback provider; budget, recipient and anomaly rules; hashed API keys for writes.</li>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">RPC<small>retry + fallback</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">Indexer<small>lock + lineage check</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">PostgreSQL<small>rows + checkpoint, one txn</small></div>
+            </div>
+            <ul class="guards" aria-label="Guarantees">
+              <li>Safe replays</li>
+              <li>One indexer at a time</li>
+              <li>Fork → recovery state on /health</li>
             </ul>
-            <p class="evidence"><b>Verified:</b> 249 tests passed with no skips, including integration tests against disposable PostgreSQL and real competing sessions (Oct 2026).</p>
-            <p class="limits">Next: automatic reorg rollback and replay. No live-chain or load benchmark yet.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/arc-sentinel">Source and docs →</a></div>
+            <p class="proof"><span><b>✓ 249 tests,</b> no skips (Oct 2026)</span><span class="limit">Next: automatic reorg rollback</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+                <span class="tech"><span class="ico i-sqlalchemy"></span>SQLAlchemy</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/arc-sentinel">Source →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
-              <span class="status status-proto">Portfolio demo</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
+                <span class="status status-proto">Portfolio demo</span>
+              </div>
+              <p class="project-tagline">Financial data app with REST APIs, data pipelines and a bounded LLM agent.</p>
             </div>
-            <p class="project-tagline">A financial data application combining REST APIs, Airflow pipelines and a bounded LLM tool-calling agent.</p>
-            <ul class="bullets">
-              <li>JWT authentication with separate read and write permissions; API keys stored as digests; privilege-escalation regression tests.</li>
-              <li>Deployed with <strong>Terraform</strong> to Oracle Cloud (OCI ARM64, single-node k3s).</li>
-              <li>Redis cache-aside with TTLs, post-commit invalidation and PostgreSQL fallback; Decimal types for prices and backtest calculations.</li>
-              <li>LLM agent with a tool allowlist, strict arguments and execution budgets; numeric checks run in code, not in the model.</li>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">Airflow<small>data pipelines</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">FastAPI<small>JWT scopes, Redis cache</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">LLM agent<small>tool allowlist, budgets</small></div>
+            </div>
+            <ul class="guards" aria-label="Highlights">
+              <li>Deployed via Terraform to OCI k3s</li>
+              <li>Decimal prices</li>
+              <li>npm audit 35 → 0</li>
             </ul>
-            <p class="evidence"><b>Verified:</b> 36 containerized integration tests passed; frontend npm audit reduced from 35 to 0 known vulnerabilities.</p>
-            <p class="limits">Hosted deployment is currently offline; some endpoints use mock data.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span><span class="tag">Terraform</span><span class="tag">OCI</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">Source and evidence →</a></div>
+            <p class="proof"><span><b>✓ 36</b> integration tests</span><span class="limit">Hosted demo offline; some mock data</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-redis"></span>Redis</span>
+                <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+                <span class="tech"><span class="ico i-react"></span>React</span>
+                <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+                <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/alphapulse">Source →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
-              <span class="status status-proto">Portfolio project</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
+                <span class="status status-proto">Portfolio project</span>
+              </div>
+              <p class="project-tagline">Serverless URL shortener on AWS with signed-in link management.</p>
             </div>
-            <p class="project-tagline">A serverless URL shortener on AWS with authenticated link management.</p>
-            <ul class="bullets">
-              <li>Lambda handlers behind API Gateway with a JWT authorizer and Google sign-in.</li>
-              <li>Conditional DynamoDB writes so a new short code never overwrites an existing one; infrastructure defined in Terraform.</li>
-              <li>S3 event output, structured logging, and tests for sensitive-field handling.</li>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">API Gateway<small>JWT + Google sign-in</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Lambda<small>handlers</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">DynamoDB<small>conditional writes</small></div>
+            </div>
+            <ul class="guards" aria-label="Highlights">
+              <li>Codes never overwritten</li>
+              <li>Infra in Terraform</li>
             </ul>
-            <p class="limits">No production benchmark is claimed.</p>
-            <div class="tags"><span class="tag">TypeScript</span><span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span><span class="tag">Terraform</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/chainy-backend">Source →</a></div>
+            <p class="proof"><span class="limit">No production benchmark claimed</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-aws"></span>Lambda · DynamoDB</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/chainy-backend">Source →</a>
+            </div>
           </article>
 
           <article class="card project-card building">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Now planning: Fraud Decision Service</a></h3>
-              <span class="status status-plan">Planning · no code yet</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
+                <span class="status status-plan">Planning · no code yet</span>
+              </div>
+              <p class="project-tagline">Taking an ML fraud model to production with auditable approve / review / decline decisions.</p>
             </div>
-            <p>Taking an ML fraud model to production: versioned scoring, policy-based approve / review / decline decisions, an auditable decision log, and shadow and canary model rollout. Planned stack: Java/Spring Boot decision service, Python inference, PostgreSQL outbox with Kafka, MLflow.</p>
+            <div class="flow" role="list" aria-label="Planned architecture">
+              <div class="node planned" role="listitem">Decision API<small>Spring Boot</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">Model scoring<small>Python, MLflow</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">Outbox → Kafka<small>decision log</small></div>
+            </div>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-java"></span>Java</span>
+                <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="stack" class="section">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-intro">Grouped by where I used them: professional work or personal projects.</p>
-        <div class="skills-grid">
-          <div class="card skill-group">
-            <h3>Application development <span class="source">Professional</span></h3>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">Hibernate/JPA</span><span class="chip">JUnit</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Code review</span></div>
+        <h2 class="section-title">Stack</h2>
+        <div class="stack-grid">
+          <div class="card stack-group">
+            <h3>At work <span class="source">HiTrust</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-spring"></span>Spring</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate/JPA</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+              <span class="tech">REST APIs</span>
+            </div>
+            <p class="note">Domain: foreign-currency payments, scheduled debits, bank message formats.</p>
           </div>
-          <div class="card skill-group">
-            <h3>Data and banking domain <span class="source">Professional</span></h3>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">Foreign-currency workflows</span><span class="chip">Bank message formats</span><span class="chip">Transaction-state processing</span><span class="chip">Python / pandas analysis</span></div>
+          <div class="card stack-group">
+            <h3>AI tools <span class="source">Products + daily workflow</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-mcp"></span>MCP servers</span>
+              <span class="tech">LLM tool calling</span>
+              <span class="tech"><span class="ico i-openai"></span>Codex</span>
+              <span class="tech"><span class="ico i-claude"></span>Claude Code</span>
+              <span class="tech"><span class="ico i-cursor"></span>Cursor</span>
+              <span class="tech"><span class="ico i-copilot"></span>GitHub Copilot</span>
+              <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+            </div>
+            <p class="note">AI agents speed up delivery; tests, CI and review agents decide what ships.</p>
           </div>
-          <div class="card skill-group">
-            <h3>Backend and data <span class="source">Projects</span></h3>
-            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Redis</span><span class="chip">Airflow</span><span class="chip">React</span></div>
+          <div class="card stack-group">
+            <h3>Projects <span class="source">Backend and systems</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-go"></span>Go</span>
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+              <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              <span class="tech"><span class="ico i-redis"></span>Redis</span>
+              <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+              <span class="tech"><span class="ico i-react"></span>React</span>
+              <span class="tech">gRPC</span>
+              <span class="tech">Raft</span>
+            </div>
           </div>
-          <div class="card skill-group">
-            <h3>AI tools and products <span class="source">Projects + daily workflow</span></h3>
-            <div class="chips"><span class="chip">MCP servers</span><span class="chip">LLM tool calling</span><span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span><span class="chip">Ollama</span><span class="chip">AI-assisted code review</span><span class="chip">Agent safety boundaries</span></div>
-          </div>
-          <div class="card skill-group">
-            <h3>Distributed systems <span class="source">Projects</span></h3>
-            <div class="chips"><span class="chip">Raft</span><span class="chip">WAL and snapshots</span><span class="chip">Idempotency</span><span class="chip">gRPC</span><span class="chip">Retries and fencing</span></div>
-          </div>
-          <div class="card skill-group">
+          <div class="card stack-group">
             <h3>Cloud and delivery <span class="source">Projects + certified</span></h3>
-            <div class="chips"><span class="chip">AWS Lambda</span><span class="chip">API Gateway</span><span class="chip">DynamoDB</span><span class="chip">S3</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span></div>
+            <div class="techs">
+              <span class="tech"><span class="ico i-aws"></span>AWS</span>
+              <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              <span class="tech"><span class="ico i-githubactions"></span>GitHub Actions</span>
+            </div>
           </div>
         </div>
       </div>
@@ -291,22 +376,11 @@
     <section id="credentials" class="section">
       <div class="container">
         <h2 class="section-title">Education and certifications</h2>
-        <div class="edu-grid">
-          <div class="card">
-            <h3>Education</h3>
-            <ul class="bullets">
-              <li><strong>M.S. Applied Computer Science</strong> — Fairleigh Dickinson University, Vancouver · Expected December 2026</li>
-              <li><strong>B.A. Geography</strong> — National Taiwan Normal University · 2011–2015</li>
-            </ul>
-            <p style="margin-top: .75rem;">Languages: English, Mandarin, Japanese</p>
-          </div>
-          <div class="card">
-            <h3>Certifications</h3>
-            <ul class="bullets">
-              <li>AWS Certified Solutions Architect – Associate</li>
-              <li>HashiCorp Certified: Terraform Associate</li>
-            </ul>
-          </div>
+        <div class="creds">
+          <div class="cred"><span class="cred-kind">Degree</span><span class="cred-name">M.S. Applied Computer Science</span><span class="cred-meta">Fairleigh Dickinson University, Vancouver · Dec 2026</span></div>
+          <div class="cred"><span class="cred-kind">Degree</span><span class="cred-name">B.A. Geography</span><span class="cred-meta">National Taiwan Normal University · 2015</span></div>
+          <div class="cred"><span class="cred-kind">Certification</span><span class="cred-name">AWS Solutions Architect – Associate</span><span class="cred-meta">Amazon Web Services</span></div>
+          <div class="cred"><span class="cred-kind">Certification</span><span class="cred-name">Terraform Associate</span><span class="cred-meta">HashiCorp</span></div>
         </div>
       </div>
     </section>
@@ -314,11 +388,11 @@
     <section id="contact" class="section contact">
       <div class="container">
         <h2 class="section-title">Let's talk</h2>
-        <p class="section-intro">I'm looking for <strong>Java / Spring Boot backend or full-stack roles</strong>, including teams building AI-enabled products, especially in fintech and financial services. Based in Vancouver and available for full-time work after graduating in December 2026.</p>
+        <p class="section-intro">Looking for <strong>Java / Spring Boot backend or full-stack roles</strong>, especially in fintech and AI-enabled products. Vancouver-based, full-time from December 2026. English · Mandarin · Japanese.</p>
         <div class="cta-buttons">
           <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">liyu.chu.work@gmail.com</a>
-          <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
-          <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
         </div>
       </div>
     </section>

@@ -43,10 +43,9 @@
         <a href="#" class="logo">Li-Yu Chu</a>
         <div class="nav-menu">
           <ul class="nav-links">
-            <li><a href="#focus">專長</a></li>
             <li><a href="#experience">經歷</a></li>
             <li><a href="#projects">專案</a></li>
-            <li><a href="#skills">技能</a></li>
+            <li><a href="#stack">技術</a></li>
             <li><a href="#contact">聯絡</a></li>
           </ul>
           <div class="language-switcher">
@@ -63,54 +62,23 @@
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="160" height="160" fetchpriority="high">
+          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="168" height="168" fetchpriority="high">
           <div>
-            <p class="eyebrow">Java／Spring Boot 後端工程師 · 金融科技 · AI 工具 · 加拿大溫哥華</p>
+            <p class="eyebrow">後端工程師 · Java／Spring Boot · 加拿大溫哥華</p>
             <h1>Li-Yu Chu（Liyu）</h1>
-            <p class="headline">我用 Java 與 Spring Boot 打造可靠的後端系統，也推出讓人能安全使用的實用 AI 工具。</p>
-            <p class="lead">在 <strong>HiTrust</strong> 以 <strong>Java、Spring Boot</strong>、Angular 與 SQL 開發網路銀行功能三年，處理扣款請求、交易狀態與重試。我把同樣的嚴謹帶進 AI：<strong>公開的 MCP server</strong> 讓 Claude 安全地管理 Google Tasks、具嚴格邊界的 LLM 工具呼叫，以及每天使用、由測試與審查把關的 <strong>AI 輔助開發流程</strong>。</p>
+            <p class="headline">我用 Java 與 Spring Boot 打造<strong>可靠的後端系統</strong>，也做讓人能安全使用的 <strong>AI 工具</strong>。</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">寄信給我</a>
-              <a href="#projects" class="btn">看專案</a>
-              <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
-              <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
+              <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
+              <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
         </div>
         <div class="facts">
-          <div class="fact"><span class="fact-value">3 年</span><span class="fact-label">HiTrust 銀行軟體工程師</span></div>
-          <div class="fact"><span class="fact-value">Java · Spring Boot</span><span class="fact-label">核心技術，另有 Go、Python、TypeScript</span></div>
-          <div class="fact"><span class="fact-value">MCP · LLM 工具</span><span class="fact-label">已在 GitHub 公開發布 AI 工具</span></div>
-          <div class="fact"><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">證照 · 應用電腦科學碩士，2026 年 12 月</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="section">
-      <div class="container">
-        <h2 class="section-title">我專注的事</h2>
-        <p class="section-intro">以 Java 後端工作經驗為基礎，近期專案延伸到 AI 產品與系統實作。</p>
-        <div class="focus-grid">
-          <article class="card focus-card">
-            <h3>Java／Spring Boot 後端</h3>
-            <p>三年在銀行使用 Java、Spring Boot、Hibernate／JPA 與 SQL：REST API、對銀行核心系統的排程扣款處理、交易狀態轉換，以及在重試時維持交易一致的復原邏輯。</p>
-            <p class="focus-evidence">證據：<span>HiTrust · Fraud Decision Service（Spring Boot，規劃中）</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>AI 產品：MCP 與 LLM 工具</h3>
-            <p>公開發布 MCP server，把 Claude 連到 Google Tasks：預設唯讀、不提供刪除工具、寫入前檢查並行變更。另實作具白名單、嚴格參數與執行預算的 LLM 工具呼叫 agent。</p>
-            <p class="focus-evidence">證據：<span>Google Tasks MCP · AlphaPulse</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>AI 輔助開發，結果可驗證</h3>
-            <p>每天搭配 AI coding agent 開發，以 Codex 為主，也使用 Claude Code、Cursor 與 GitHub Copilot，並維護自己的工作流程：repo 指示文件、測試與程式同步撰寫、合併前由審查 agent 挑戰變更。AI 加快交付；能不能上線由測試與 CI 決定。</p>
-            <p class="focus-evidence">證據：<span>下方每個專案的測試與 CI</span></p>
-          </article>
-          <article class="card focus-card">
-            <h3>故障處理與復原</h3>
-            <p>預寫式日誌、快照與重播；冪等任務 ID 與 fencing 驗證 worker 回覆；索引進度與資料在同一個交易中提交。</p>
-            <p class="focus-evidence">證據：<span>Raft-Recovery · Arc Sentinel</span></p>
-          </article>
+          <div class="fact"><div class="fact-icons"><span class="fact-big">3 年</span></div><span class="fact-value">銀行系統後端</span><span class="fact-label">HiTrust 網路銀行</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-java"></span><span class="ico i-springboot"></span></div><span class="fact-value">Java · Spring Boot</span><span class="fact-label">核心技術</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-mcp"></span><span class="ico i-claude"></span></div><span class="fact-value">公開 MCP server</span><span class="fact-label">給 Claude 用的 AI 工具</span></div>
+          <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">已取得認證</span></div>
         </div>
       </div>
     </section>
@@ -119,31 +87,38 @@
       <div class="container">
         <h2 class="section-title">工作經歷</h2>
         <div class="timeline">
-          <article class="card">
+          <article class="card role">
             <div class="role-head">
-              <h3>軟體工程師 — HiTrust, Inc.</h3>
+              <h3>軟體工程師 <span class="role-sub">· HiTrust, Inc.</span></h3>
               <span class="role-meta">2022 年 1 月 – 2024 年 12 月 · 台北 · 網路銀行</span>
             </div>
-            <p style="margin-bottom: .9rem;">以 Spring 與 Spring Boot 開發 Java 銀行應用功能，並與 Angular／TypeScript 的網路銀行流程整合。</p>
             <ul class="bullets">
-              <li>實作復原與同步邏輯，在銀行請求或回覆失敗、需要重試時維持<strong>交易一致性</strong>。</li>
-              <li>開發外幣邏輯與 SQL，支援<strong>排程付款與扣款流程</strong>：向核心系統發出扣款請求、依回覆更新交易狀態，以及失敗狀態轉換。</li>
-              <li>在 Oracle 與 Microsoft SQL Server 上改善 REST API 的 SQL 查詢與 <strong>Hibernate／JPA</strong> 資料存取，並參與從 JDBC 遷移。</li>
-              <li>參與將查詢、排程處理、電子郵件通知與資料存取的職責拆分為<strong>獨立服務元件</strong>。</li>
-              <li>追蹤既有程式路徑，重繪外幣流程圖，讓團隊釐清付款、扣款與重試邏輯。</li>
-              <li>撰寫 <strong>JUnit</strong> 單元與整合測試、參與 code review，並與 QA 及銀行驗收團隊解決整合問題。</li>
+              <li>銀行請求失敗或重試時，以復原邏輯維持<strong>交易一致性</strong>。</li>
+              <li><strong>預約付款與扣款</strong>流程，依核心系統回應轉換交易狀態。</li>
+              <li>Oracle 與 SQL Server 上的 REST API；資料存取由 JDBC 遷移至 <strong>Hibernate/JPA</strong>。</li>
+              <li>JUnit 測試、code review，並與 QA 及銀行驗收團隊排除整合問題。</li>
             </ul>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+            </div>
           </article>
-          <article class="card">
+          <article class="card role past">
             <div class="role-head">
-              <h3>產品規劃（資料）— Astra Technology</h3>
+              <h3>產品規劃（資料） <span class="role-sub">· Astra Technology</span></h3>
               <span class="role-meta">2019 年 3 月 – 2021 年 12 月 · 台北</span>
             </div>
-            <ul class="bullets">
-              <li>以 Python 與 pandas 進行時間序列分析與人流預測，支援產品規劃。</li>
-              <li>以 SQL 分析資料，將金融技術指標轉化為產品需求與技術規格。</li>
-              <li>規劃 AI 攝影機與 IoT 解決方案，並參與與日本 NTT 合作的智慧倉儲 IoT 概念驗證。</li>
-            </ul>
+            <p>以預測模型與 SQL 分析支援產品規劃；規劃 AI 攝影機與 IoT 方案，參與 NTT Japan 智慧倉儲 PoC。</p>
+            <div class="techs">
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-pandas"></span>pandas</span>
+              <span class="tech">SQL</span>
+            </div>
           </article>
         </div>
       </div>
@@ -152,137 +127,247 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">精選專案</h2>
-        <p class="section-intro">皆為個人專案，並標示目前狀態。驗證說明摘要自各 repo 記錄的結果。</p>
+        <p class="section-intro">每張卡片列出設計、已驗證的部分，以及尚未完成的部分。</p>
         <div class="projects-grid">
 
+          <article class="card project-card wide">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
+                <span class="status status-release">公開早期版本</span>
+              </div>
+              <p class="project-tagline">讓 Claude 用自然語言管理 Google Tasks，設計重點是限制 AI agent 能造成的破壞。</p>
+            </div>
+            <div class="flow" role="list" aria-label="架構">
+              <div class="node" role="listitem">Claude<small>Desktop 或 Web</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">MCP server<small>跑在你的電腦上</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Google Tasks<small>使用你自己的 OAuth client</small></div>
+            </div>
+            <ul class="guards" aria-label="安全保證">
+              <li>預設唯讀</li>
+              <li>沒有刪除工具</li>
+              <li>可逐筆核准寫入</li>
+              <li>拒絕覆寫已變更的任務</li>
+              <li>不靜默重試</li>
+              <li>引導式 <code>./setup.sh</code></li>
+            </ul>
+            <p class="proof"><span><b>✓ 已驗證：</b>CI 通過；在 macOS 上以 Claude Desktop 與 Web 測試</span><span class="limit">Linux、Docker Desktop、ChatGPT 尚未確認</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-mcp"></span>MCP</span>
+                <span class="tech"><span class="ico i-claude"></span>Claude</span>
+                <span class="tech">OAuth 2.0</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+                <span class="tech"><span class="ico i-vitest"></span>Vitest</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/google-tasks-mcp">原始碼與安裝 →</a>
+            </div>
+          </article>
 
           <article class="card project-card wide">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></h3>
-              <span class="status status-release">公開早期版本</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
+                <span class="status status-proto">教學型系統專案</span>
+              </div>
+              <p class="project-tagline">用 Go 寫的複寫式工作佇列，分三階段做到自行實作的 Raft。</p>
             </div>
-            <p class="project-tagline">自架的 MCP server，讓 Claude 把口語轉成 Google Tasks，並刻意限制 AI agent 能造成的破壞。</p>
-            <ul class="bullets">
-              <li>在使用者自己的電腦上、以使用者自己的 Google OAuth client 執行；沒有託管後端，本機不保存任務內容。</li>
-              <li>預設唯讀、不提供刪除工具，可選擇逐筆核准寫入。</li>
-              <li>任務在讀取後若已被變更就拒絕覆寫；寫入結果不明時不會靜默重試。</li>
-              <li>以 <code>./setup.sh</code> 引導非工程背景的使用者完成設定。</li>
-            </ul>
-            <p class="evidence"><b>已驗證：</b>CI 通過；已在 macOS 搭配 Claude Desktop 與 Claude Web 測試。</p>
-            <p class="limits">Docker Desktop、Linux 與 ChatGPT 尚未確認。</p>
-            <div class="tags"><span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">Claude</span><span class="tag">OAuth 2.0</span><span class="tag">Docker</span><span class="tag">Vitest</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/google-tasks-mcp">原始碼與安裝 →</a></div>
-          </article>
-
-          <article class="card project-card wide">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></h3>
-              <span class="status status-proto">系統實作學習專案</span>
+            <div class="flow" role="list" aria-label="建置階段">
+              <div class="node" role="listitem">1 · 本機佇列<small>含 checksum 的 WAL、dead letter</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">2 · gRPC workers<small>以 attempt 隔離的 ack</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">3 · Raft 叢集<small>選舉、快照、追趕同步</small></div>
             </div>
-            <p class="project-tagline">以 Go 開發的複寫式任務佇列，分三階段完成：本機持久化執行、遠端 gRPC worker，再到自行實作的 Raft。</p>
-            <ul class="bullets">
-              <li>自行實作 Raft：隨機選舉、持久化 term／vote／log、多數複寫、衝突修復、快照、日誌壓縮與 InstallSnapshot 追趕。</li>
-              <li>寫入必須<strong>經多數節點提交並套用到本機狀態機</strong>後才回傳成功。</li>
-              <li>以<strong>嘗試編號（attempt fencing）驗證回覆</strong>，過期 worker 無法改動已重新指派的任務。</li>
-              <li>任務 ID 在重試、壓縮與重啟後仍保持冪等；具校驗碼的 WAL、逾時與 dead letter。</li>
+            <ul class="guards" aria-label="保證">
+              <li>多數節點 commit 後才回報成功</li>
+              <li>過期 worker 無法改動已重派的工作</li>
+              <li>Job ID 在重啟後仍維持冪等</li>
             </ul>
-            <p class="evidence"><b>已驗證：</b>CI 執行 race 檢查與 <code>go vet</code>；單元、整合與跨容器測試涵蓋 leader 失效、磁碟復原與過期 worker 回覆。</p>
-            <p class="limits">範圍：單一 Linux VM 上的固定三節點叢集；worker 執行語意為至少一次。</p>
-            <div class="tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Protobuf</span><span class="tag">Raft</span><span class="tag">WAL</span><span class="tag">Docker</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/raft-recovery">原始碼與文件 →</a></div>
+            <p class="proof"><span><b>✓ 已驗證：</b>race 檢查，以及跨容器的 leader 失效與磁碟復原測試</span><span class="limit">固定三節點叢集；至少執行一次</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-go"></span>Go</span>
+                <span class="tech">gRPC</span>
+                <span class="tech">Raft</span>
+                <span class="tech">WAL</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/raft-recovery">原始碼與文件 →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
-              <span class="status status-proto">原型</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/arc-sentinel">Arc Sentinel</a></h3>
+                <span class="status status-proto">原型</span>
+              </div>
+              <p class="project-tagline">唯讀的 EVM 錢包索引器與監控 API，含規則式警示。</p>
             </div>
-            <p class="project-tagline">唯讀的 EVM 錢包活動索引器與監控 API，具規則式警示。</p>
-            <ul class="bullets">
-              <li>索引進度與索引資料<strong>在同一個交易中提交</strong>；以資料庫唯一性確保重播安全。</li>
-              <li>以 <strong>PostgreSQL advisory lock</strong> 阻止多個索引器同時寫入；每輪檢查 chain ID 與區塊 hash／parent 連續性。</li>
-              <li>偵測到分叉時，進行有上限的共同祖先診斷，並記錄持久的 <strong>recovery-required</strong> 狀態，由 <code>/health</code> 對外揭露。</li>
-              <li>RPC 退避重試與備援供應商；預算、收款方與異常規則；寫入端點以雜湊 API key 保護。</li>
+            <div class="flow" role="list" aria-label="架構">
+              <div class="node" role="listitem">RPC<small>重試 + 備援</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">Indexer<small>鎖 + 鏈系檢查</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">PostgreSQL<small>資料與 checkpoint 同一交易</small></div>
+            </div>
+            <ul class="guards" aria-label="保證">
+              <li>可安全重播</li>
+              <li>同時只有一個 indexer</li>
+              <li>偵測分叉 → /health 顯示待復原</li>
             </ul>
-            <p class="evidence"><b>已驗證：</b>249 項測試全數通過、無略過，含對臨時 PostgreSQL 與真實並行連線的整合測試（2026 年 10 月）。</p>
-            <p class="limits">下一步：自動的鏈重組回滾與重播。尚未做真實鏈上或負載測試。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/arc-sentinel">原始碼與文件 →</a></div>
+            <p class="proof"><span><b>✓ 249 項測試</b>通過，無略過（2026 年 10 月）</span><span class="limit">下一步：自動 reorg 回滾</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+                <span class="tech"><span class="ico i-sqlalchemy"></span>SQLAlchemy</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/arc-sentinel">原始碼 →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
-              <span class="status status-proto">作品集示範</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/alphapulse">AlphaPulse</a></h3>
+                <span class="status status-proto">作品集展示</span>
+              </div>
+              <p class="project-tagline">金融資料應用：REST API、資料管線與受限的 LLM agent。</p>
             </div>
-            <p class="project-tagline">結合 REST API、Airflow 資料管線與有邊界 LLM 工具呼叫 agent 的金融資料應用。</p>
-            <ul class="bullets">
-              <li>JWT 驗證並區分讀寫權限；API key 以摘要儲存；具權限提升的回歸測試。</li>
-              <li>以 <strong>Terraform</strong> 部署到 Oracle Cloud（OCI ARM64、單節點 k3s）。</li>
-              <li>Redis cache-aside：TTL、交易提交後失效與 PostgreSQL 備援；價格與回測計算使用 Decimal 型別。</li>
-              <li>LLM agent 具工具白名單、嚴格參數與執行預算；數值檢查由程式執行，而非交給模型。</li>
+            <div class="flow" role="list" aria-label="架構">
+              <div class="node" role="listitem">Airflow<small>資料管線</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">FastAPI<small>JWT 權限、Redis 快取</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">LLM agent<small>工具白名單、執行預算</small></div>
+            </div>
+            <ul class="guards" aria-label="重點">
+              <li>以 Terraform 部署至 OCI k3s</li>
+              <li>價格使用 Decimal</li>
+              <li>npm audit 35 → 0</li>
             </ul>
-            <p class="evidence"><b>已驗證：</b>36 項容器化整合測試通過；前端 npm audit 已知弱點由 35 降為 0。</p>
-            <p class="limits">部署環境目前已離線；部分端點使用模擬資料。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">React</span><span class="tag">Ollama</span><span class="tag">Terraform</span><span class="tag">OCI</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/alphapulse">原始碼與驗證紀錄 →</a></div>
+            <p class="proof"><span><b>✓ 36 項</b>整合測試通過</span><span class="limit">線上展示目前離線；部分資料為 mock</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-redis"></span>Redis</span>
+                <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+                <span class="tech"><span class="ico i-react"></span>React</span>
+                <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+                <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/alphapulse">原始碼 →</a>
+            </div>
           </article>
 
           <article class="card project-card">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
-              <span class="status status-proto">作品集專案</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/chainy-backend">Chainy</a></h3>
+                <span class="status status-proto">作品集專案</span>
+              </div>
+              <p class="project-tagline">AWS 上的 serverless 短網址服務，登入後可管理連結。</p>
             </div>
-            <p class="project-tagline">AWS 上的 Serverless 短網址服務，支援需驗證身分的連結管理。</p>
-            <ul class="bullets">
-              <li>API Gateway 後的 Lambda handler，搭配 JWT authorizer 與 Google 登入。</li>
-              <li>以 DynamoDB 條件寫入，確保新短碼不會覆蓋既有短碼；基礎設施以 Terraform 定義。</li>
-              <li>S3 事件輸出、結構化日誌，以及敏感欄位處理的測試。</li>
+            <div class="flow" role="list" aria-label="架構">
+              <div class="node" role="listitem">API Gateway<small>JWT + Google 登入</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Lambda<small>handlers</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">DynamoDB<small>條件式寫入</small></div>
+            </div>
+            <ul class="guards" aria-label="重點">
+              <li>短碼不會被覆寫</li>
+              <li>基礎設施以 Terraform 定義</li>
             </ul>
-            <p class="limits">未宣稱任何正式環境效能數據。</p>
-            <div class="tags"><span class="tag">TypeScript</span><span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span><span class="tag">Terraform</span></div>
-            <div class="project-links"><a href="https://github.com/ChuLiYu/chainy-backend">原始碼 →</a></div>
+            <p class="proof"><span class="limit">未宣稱正式環境效能數據</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+                <span class="tech"><span class="ico i-aws"></span>Lambda · DynamoDB</span>
+                <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/chainy-backend">原始碼 →</a>
+            </div>
           </article>
 
           <article class="card project-card building">
-            <div class="project-top">
-              <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">規劃中：Fraud Decision Service</a></h3>
-              <span class="status status-plan">規劃階段 · 尚無程式碼</span>
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
+                <span class="status status-plan">規劃中 · 尚無程式碼</span>
+              </div>
+              <p class="project-tagline">把 ML 詐欺模型推上正式環境，做出可稽核的核准／審查／拒絕決策。</p>
             </div>
-            <p>把 ML 詐欺模型帶到正式環境：版本化評分、依政策做出核准／審查／拒絕決策、可稽核的決策紀錄，以及 shadow 與 canary 模型上線。預計技術：Java/Spring Boot 決策服務、Python 推論、PostgreSQL outbox 搭配 Kafka、MLflow。</p>
+            <div class="flow" role="list" aria-label="規劃架構">
+              <div class="node planned" role="listitem">決策 API<small>Spring Boot</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">模型評分<small>Python、MLflow</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node planned" role="listitem">Outbox → Kafka<small>決策紀錄</small></div>
+            </div>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-java"></span>Java</span>
+                <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="stack" class="section">
       <div class="container">
-        <h2 class="section-title">技能</h2>
-        <p class="section-intro">依使用情境分組：工作經驗或個人專案。</p>
-        <div class="skills-grid">
-          <div class="card skill-group">
-            <h3>應用開發 <span class="source">工作經驗</span></h3>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Spring Boot</span><span class="chip">REST API</span><span class="chip">Hibernate／JPA</span><span class="chip">JUnit</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Code review</span></div>
+        <h2 class="section-title">技術</h2>
+        <div class="stack-grid">
+          <div class="card stack-group">
+            <h3>工作中使用 <span class="source">HiTrust</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-java"></span>Java</span>
+              <span class="tech"><span class="ico i-spring"></span>Spring</span>
+              <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
+              <span class="tech"><span class="ico i-hibernate"></span>Hibernate/JPA</span>
+              <span class="tech"><span class="ico i-junit"></span>JUnit</span>
+              <span class="tech"><span class="ico i-angular"></span>Angular</span>
+              <span class="tech"><span class="ico i-typescript"></span>TypeScript</span>
+              <span class="tech">Oracle</span>
+              <span class="tech"><span class="ico i-sqlserver"></span>SQL Server</span>
+              <span class="tech">REST APIs</span>
+            </div>
+            <p class="note">領域：外幣付款、預約扣款、銀行電文格式。</p>
           </div>
-          <div class="card skill-group">
-            <h3>資料與銀行領域 <span class="source">工作經驗</span></h3>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">JDBC</span><span class="chip">外幣交易流程</span><span class="chip">銀行電文格式</span><span class="chip">交易狀態處理</span><span class="chip">Python／pandas 分析</span></div>
+          <div class="card stack-group">
+            <h3>AI 工具 <span class="source">產品 + 日常開發</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-mcp"></span>MCP servers</span>
+              <span class="tech">LLM tool calling</span>
+              <span class="tech"><span class="ico i-openai"></span>Codex</span>
+              <span class="tech"><span class="ico i-claude"></span>Claude Code</span>
+              <span class="tech"><span class="ico i-cursor"></span>Cursor</span>
+              <span class="tech"><span class="ico i-copilot"></span>GitHub Copilot</span>
+              <span class="tech"><span class="ico i-ollama"></span>Ollama</span>
+            </div>
+            <p class="note">AI agent 加快交付；測試、CI 與審查 agent 決定什麼能上線。</p>
           </div>
-          <div class="card skill-group">
-            <h3>後端與資料 <span class="source">個人專案</span></h3>
-            <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Redis</span><span class="chip">Airflow</span><span class="chip">React</span></div>
+          <div class="card stack-group">
+            <h3>專案 <span class="source">後端與系統</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-go"></span>Go</span>
+              <span class="tech"><span class="ico i-python"></span>Python</span>
+              <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+              <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
+              <span class="tech"><span class="ico i-redis"></span>Redis</span>
+              <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
+              <span class="tech"><span class="ico i-react"></span>React</span>
+              <span class="tech">gRPC</span>
+              <span class="tech">Raft</span>
+            </div>
           </div>
-          <div class="card skill-group">
-            <h3>AI 工具與產品 <span class="source">個人專案＋日常工作流程</span></h3>
-            <div class="chips"><span class="chip">MCP server</span><span class="chip">LLM 工具呼叫</span><span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span><span class="chip">Ollama</span><span class="chip">AI 輔助 code review</span><span class="chip">Agent 安全邊界</span></div>
-          </div>
-          <div class="card skill-group">
-            <h3>分散式系統 <span class="source">個人專案</span></h3>
-            <div class="chips"><span class="chip">Raft</span><span class="chip">WAL 與快照</span><span class="chip">冪等設計</span><span class="chip">gRPC</span><span class="chip">重試與 fencing</span></div>
-          </div>
-          <div class="card skill-group">
-            <h3>雲端與交付 <span class="source">個人專案＋證照</span></h3>
-            <div class="chips"><span class="chip">AWS Lambda</span><span class="chip">API Gateway</span><span class="chip">DynamoDB</span><span class="chip">S3</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span></div>
+          <div class="card stack-group">
+            <h3>雲端與交付 <span class="source">專案 + 認證</span></h3>
+            <div class="techs">
+              <span class="tech"><span class="ico i-aws"></span>AWS</span>
+              <span class="tech"><span class="ico i-terraform"></span>Terraform</span>
+              <span class="tech"><span class="ico i-docker"></span>Docker</span>
+              <span class="tech"><span class="ico i-k3s"></span>k3s</span>
+              <span class="tech"><span class="ico i-githubactions"></span>GitHub Actions</span>
+            </div>
           </div>
         </div>
       </div>
@@ -290,35 +375,24 @@
 
     <section id="credentials" class="section">
       <div class="container">
-        <h2 class="section-title">學歷與證照</h2>
-        <div class="edu-grid">
-          <div class="card">
-            <h3>學歷</h3>
-            <ul class="bullets">
-              <li><strong>應用電腦科學碩士</strong> — Fairleigh Dickinson University（溫哥華）· 預計 2026 年 12 月畢業</li>
-              <li><strong>地理學系學士</strong> — 國立臺灣師範大學 · 2011–2015</li>
-            </ul>
-            <p style="margin-top: .75rem;">語言：英文、中文、日文</p>
-          </div>
-          <div class="card">
-            <h3>證照</h3>
-            <ul class="bullets">
-              <li>AWS Certified Solutions Architect – Associate</li>
-              <li>HashiCorp Certified: Terraform Associate</li>
-            </ul>
-          </div>
+        <h2 class="section-title">學歷與認證</h2>
+        <div class="creds">
+          <div class="cred"><span class="cred-kind">碩士</span><span class="cred-name">應用資訊科學碩士</span><span class="cred-meta">Fairleigh Dickinson University 溫哥華校區 · 2026 年 12 月</span></div>
+          <div class="cred"><span class="cred-kind">學士</span><span class="cred-name">地理學士</span><span class="cred-meta">國立臺灣師範大學 · 2015</span></div>
+          <div class="cred"><span class="cred-kind">認證</span><span class="cred-name">AWS Solutions Architect – Associate</span><span class="cred-meta">Amazon Web Services</span></div>
+          <div class="cred"><span class="cred-kind">認證</span><span class="cred-name">Terraform Associate</span><span class="cred-meta">HashiCorp</span></div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="container">
-        <h2 class="section-title">與我聯絡</h2>
-        <p class="section-intro">我正在尋找 <strong>Java／Spring Boot 後端或全端</strong>職缺，也包含打造 AI 產品的團隊，特別關注金融科技與金融服務。目前居住於溫哥華，2026 年 12 月畢業後可投入全職工作。</p>
+        <h2 class="section-title">聯絡我</h2>
+        <p class="section-intro">正在尋找 <strong>Java／Spring Boot 後端或全端職位</strong>，特別是金融科技與 AI 產品團隊。人在溫哥華，2026 年 12 月起可全職。英文 · 中文 · 日文。</p>
         <div class="cta-buttons">
           <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">liyu.chu.work@gmail.com</a>
-          <a href="https://linkedin.com/in/chuliyu" class="btn">LinkedIn</a>
-          <a href="https://github.com/ChuLiYu" class="btn">GitHub</a>
+          <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
+          <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
         </div>
       </div>
     </section>
