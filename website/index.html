@@ -18,6 +18,7 @@
   <meta property="og:locale" content="en_CA" />
   <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
   <link rel="stylesheet" href="assets/css/site.css" />
+  <script src="assets/js/hero.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,23 +63,74 @@
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="168" height="168" fetchpriority="high">
-          <div>
+          <div class="hero-copy">
+            <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="96" height="96" fetchpriority="high">
             <p class="eyebrow">Backend Engineer · Java / Spring Boot · Vancouver, BC</p>
             <h1>Li-Yu Chu (Liyu)</h1>
-            <p class="headline">I build <strong>reliable backend systems</strong> with Java and Spring Boot, and <strong>AI tools</strong> people can use safely.</p>
+            <p class="headline">Every transaction accounted for. <strong>Every AI action bounded.</strong></p>
+            <p class="lead">Java / Spring Boot backend engineer with three years in internet banking, now building AI tools with the same controls.</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">Email me</a>
               <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
               <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
+          <article class="recovery-card" data-recovery-card aria-label="Recovery log">
+            <div class="recovery-card-head">
+              <p class="recovery-label">Recovery log</p>
+              <div class="recovery-tabs" aria-label="Recovery scenarios">
+                <button type="button" aria-pressed="true" data-scenario-button="0">Bank debit</button>
+                <button type="button" aria-pressed="false" data-scenario-button="1">AI agent write</button>
+                <button type="button" aria-pressed="false" data-scenario-button="2">Node failure</button>
+              </div>
+            </div>
+            <div class="recovery-content" data-recovery-content>
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>debit request → core banking</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>response timed out</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">Illustrative pattern from internet-banking work</p>
+            </div>
+            <template data-recovery-scenario="0">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>debit request → core banking</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>response timed out</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>retry with same request ID</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ settled once</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">Illustrative pattern from internet-banking work</p>
+            </template>
+            <template data-recovery-scenario="1">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>Claude: mark task "Pay rent" done</span><span class="recovery-state">REQUEST</span></div>
+                <div class="recovery-line is-amber"><span>task changed since it was read</span><span class="recovery-state">CONFLICT</span></div>
+                <div class="recovery-line is-green"><span>✓ write rejected, nothing overwritten</span><span class="recovery-state">SAFE</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></p>
+            </template>
+            <template data-recovery-scenario="2">
+              <div class="recovery-lines">
+                <div class="recovery-line is-amber"><span>leader node-1 stops responding</span><span class="recovery-state">DOWN</span></div>
+                <div class="recovery-line is-amber"><span>node-2 elected leader</span><span class="recovery-state">ELECTION</span></div>
+                <div class="recovery-line is-green"><span>✓ committed jobs intact</span><span class="recovery-state">COMMITTED</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
+            </template>
+          </article>
         </div>
         <div class="facts">
           <div class="fact"><div class="fact-icons"><span class="fact-big">3 yrs</span></div><span class="fact-value">Banking backend</span><span class="fact-label">HiTrust, internet banking</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-java"></span><span class="ico i-springboot"></span></div><span class="fact-value">Java · Spring Boot</span><span class="fact-label">Core stack</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-mcp"></span><span class="ico i-claude"></span></div><span class="fact-value">Public MCP server</span><span class="fact-label">AI tool for Claude</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified</span></div>
+        </div>
+        <div class="controls-strip" aria-label="System controls">
+          <span>Idempotent retries</span>
+          <span>Checkpoint in the same transaction</span>
+          <span>AI read-only by default</span>
+          <span>Majority-commit writes</span>
         </div>
       </div>
     </section>

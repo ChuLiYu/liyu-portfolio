@@ -18,6 +18,7 @@
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:image" content="https://luichu.dev/assets/images/profile/avatar.jpg" />
   <link rel="stylesheet" href="assets/css/site.css" />
+  <script src="assets/js/hero.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,23 +63,74 @@
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="168" height="168" fetchpriority="high">
-          <div>
+          <div class="hero-copy">
+            <img src="assets/images/profile/avatar.jpg" alt="Li-Yu Chu" class="profile-image" width="96" height="96" fetchpriority="high">
             <p class="eyebrow">後端工程師 · Java／Spring Boot · 加拿大溫哥華</p>
             <h1>Li-Yu Chu（Liyu）</h1>
-            <p class="headline">我用 Java 與 Spring Boot 打造<strong>可靠的後端系統</strong>，也做讓人能安全使用的 <strong>AI 工具</strong>。</p>
+            <p class="headline">每筆交易都對得上，<strong>每個 AI 動作都有邊界。</strong></p>
+            <p class="lead">三年網路銀行 Java／Spring Boot 後端經驗，用同樣的控管標準打造 AI 工具。</p>
             <div class="cta-buttons">
               <a href="mailto:liyu.chu.work@gmail.com" class="btn btn-primary">寄信給我</a>
               <a href="https://github.com/ChuLiYu" class="btn"><span class="ico i-github" aria-hidden="true"></span>GitHub</a>
               <a href="https://linkedin.com/in/chuliyu" class="btn"><span class="ico i-linkedin" aria-hidden="true"></span>LinkedIn</a>
             </div>
           </div>
+          <article class="recovery-card" data-recovery-card aria-label="復原紀錄">
+            <div class="recovery-card-head">
+              <p class="recovery-label">復原紀錄</p>
+              <div class="recovery-tabs" aria-label="復原情境">
+                <button type="button" aria-pressed="true" data-scenario-button="0">銀行扣款</button>
+                <button type="button" aria-pressed="false" data-scenario-button="1">AI 寫入</button>
+                <button type="button" aria-pressed="false" data-scenario-button="2">節點故障</button>
+              </div>
+            </div>
+            <div class="recovery-content" data-recovery-content>
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>扣款請求 → 核心系統</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>回應逾時</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>以相同請求 ID 重試</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ 只扣款一次</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">依網路銀行工作經驗示意</p>
+            </div>
+            <template data-recovery-scenario="0">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>扣款請求 → 核心系統</span><span class="recovery-state">SENT</span></div>
+                <div class="recovery-line is-amber"><span>回應逾時</span><span class="recovery-state">PENDING</span></div>
+                <div class="recovery-line is-amber"><span>以相同請求 ID 重試</span><span class="recovery-state">RETRY</span></div>
+                <div class="recovery-line is-green"><span>✓ 只扣款一次</span><span class="recovery-state">SETTLED</span></div>
+              </div>
+              <p class="recovery-source">依網路銀行工作經驗示意</p>
+            </template>
+            <template data-recovery-scenario="1">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>Claude：將「繳房租」標為完成</span><span class="recovery-state">REQUEST</span></div>
+                <div class="recovery-line is-amber"><span>任務在讀取後已被修改</span><span class="recovery-state">CONFLICT</span></div>
+                <div class="recovery-line is-green"><span>✓ 拒絕寫入，未覆蓋任何資料</span><span class="recovery-state">SAFE</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/google-tasks-mcp">Google Tasks MCP</a></p>
+            </template>
+            <template data-recovery-scenario="2">
+              <div class="recovery-lines">
+                <div class="recovery-line is-amber"><span>leader node-1 無回應</span><span class="recovery-state">DOWN</span></div>
+                <div class="recovery-line is-amber"><span>node-2 當選 leader</span><span class="recovery-state">ELECTION</span></div>
+                <div class="recovery-line is-green"><span>✓ 已提交的工作完整保留</span><span class="recovery-state">COMMITTED</span></div>
+              </div>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
+            </template>
+          </article>
         </div>
         <div class="facts">
           <div class="fact"><div class="fact-icons"><span class="fact-big">3 年</span></div><span class="fact-value">銀行系統後端</span><span class="fact-label">HiTrust 網路銀行</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-java"></span><span class="ico i-springboot"></span></div><span class="fact-value">Java · Spring Boot</span><span class="fact-label">核心技術</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-mcp"></span><span class="ico i-claude"></span></div><span class="fact-value">公開 MCP server</span><span class="fact-label">給 Claude 用的 AI 工具</span></div>
           <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">已取得認證</span></div>
+        </div>
+        <div class="controls-strip" aria-label="系統控管">
+          <span>冪等重試</span>
+          <span>checkpoint 與資料同一交易</span>
+          <span>AI 預設唯讀</span>
+          <span>多數節點 commit 才寫入</span>
         </div>
       </div>
     </section>
