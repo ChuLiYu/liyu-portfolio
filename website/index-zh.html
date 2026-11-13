@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Li-Yu Chu | 溫哥華 Java／Spring Boot 後端工程師</title>
   <meta name="description" content="人在溫哥華的後端工程師，三年以 Java 與 Spring Boot 開發網路銀行系統，用同樣的控管標準打造 AI 工具與分散式系統。2026 年 12 月中可到職。" />
-  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform, Fraud detection, Machine learning, LightGBM" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/index-zh.html" />
   <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
@@ -39,7 +39,7 @@
     "https://github.com/ChuLiYu",
     "https://linkedin.com/in/chuliyu"
   ],
-  "knowsAbout": ["Java", "Spring Boot", "Hibernate", "SQL", "Banking applications", "Large language model tools", "Claude", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform"]
+  "knowsAbout": ["Java", "Spring Boot", "Hibernate", "SQL", "Banking applications", "Large language model tools", "Claude", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform", "Fraud detection", "Machine learning in production", "LightGBM"]
 }
   </script>
 </head>
@@ -91,6 +91,7 @@
                 <button type="button" aria-pressed="true" data-scenario-button="0">銀行扣款</button>
                 <button type="button" aria-pressed="false" data-scenario-button="1">AI 修改資料</button>
                 <button type="button" aria-pressed="false" data-scenario-button="2">伺服器當機</button>
+                <button type="button" aria-pressed="false" data-scenario-button="3">詐欺評分</button>
               </div>
             </div>
             <div class="recovery-content" data-recovery-content>
@@ -131,6 +132,15 @@
               <p class="recovery-outcome"><b>重點：</b> 一台伺服器掛掉，已完成的工作也不會遺失。</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
             </template>
+            <template data-recovery-scenario="3">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>評分 $950.00 刷卡交易</span><span class="recovery-state">SCORING</span></div>
+                <div class="recovery-line is-amber"><span>詐欺模型逾時</span><span class="recovery-state">TIMEOUT</span></div>
+                <div class="recovery-line is-green"><span>✓ 送人工審查，不自動核准</span><span class="recovery-state">REVIEW</span></div>
+              </div>
+              <p class="recovery-outcome"><b>為什麼重要：</b>模型故障時，未經檢查的付款也不會被放行。</p>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></p>
+            </template>
           </article>
         </div>
         <div class="facts">
@@ -140,6 +150,7 @@
           <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">已取得認證</span></div>
         </div>
         <div class="controls-strip" aria-label="系統控管">
+          <span>模型故障 → 送審查，不核准</span>
           <span>冪等重試</span>
           <span>checkpoint 與資料同一交易</span>
           <span>AI 預設唯讀</span>
@@ -194,6 +205,52 @@
         <h2 class="section-title">精選專案</h2>
         <p class="section-intro">每張卡片列出設計、已驗證的部分，以及尚未完成的部分。</p>
         <div class="projects-grid">
+
+          <article class="card project-card wide featured">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
+                <span class="status status-release">可執行 MVP</span>
+              </div>
+              <p class="project-tagline">把 LightGBM 詐欺模型一路做成決策 API：每筆交易都得到核准、審查或拒絕的結果，並可追溯到模型與政策版本。</p>
+            </div>
+            <div class="flow" role="list" aria-label="架構">
+              <div class="node" role="listitem">交易請求<small>欄位驗證、冪等鍵</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">LightGBM 評分<small>與訓練相同的特徵程式</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">版本化政策<small>門檻在驗證集上擬合</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">決策紀錄<small>模型、政策、延遲</small></div>
+            </div>
+            <div class="project-result">
+              <figure class="project-figure">
+                <a href="https://github.com/ChuLiYu/fraud-decision-service/blob/main/ml/reports/decision/decision.md"><img src="assets/images/projects/fraud-decision-cost.webp" alt="長條圖：不同審查容量下每 1,000 筆測試交易的成本。以 LightGBM 機率乘金額決策在每種容量都最低，2% 容量時為 $2,083，全部核准為 $5,301。" width="1200" height="660" loading="lazy"></a>
+                <figcaption>在假設的詐欺與審查成本下，每 1,000 筆保留測試交易的成本</figcaption>
+              </figure>
+              <div class="metrics">
+                <div class="metric"><span class="metric-value">−61%</span><span class="metric-label">相較全部核准的損失加審查成本（2% 審查容量）</span></div>
+                <div class="metric"><span class="metric-value">0.58</span><span class="metric-label">LightGBM 測試 PR-AUC；邏輯迴歸 0.36、MLP 0.43</span></div>
+                <div class="metric"><span class="metric-value">88,581</span><span class="metric-label">依時間切分的保留測試交易，調參時從未使用</span></div>
+              </div>
+            </div>
+            <ul class="guards" aria-label="保證">
+              <li>模型錯誤或逾時 → 送審查，絕不自動核准</li>
+              <li>重送請求 → 只存一筆決策</li>
+              <li>每筆決策標明模型與政策版本</li>
+              <li>負面結果也公開</li>
+            </ul>
+            <p class="proof"><span><b>✓ 已驗證：</b>CI 執行測試、建置 Docker image 並跑 demo；成本節省在 95% bootstrap 區間內仍成立（<a href="https://github.com/ChuLiYu/fraud-decision-service/blob/main/ml/reports/decision/decision.md">報告</a>）</span><span class="limit">成本為假設值，資料為公開 IEEE-CIS；Java 與 Kafka 階段規劃中</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+                <span class="tech">LightGBM</span>
+                <span class="tech">scikit-learn</span>
+                <span class="tech"><span class="ico i-pandas"></span>pandas</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+                <span class="tech"><span class="ico i-githubactions"></span>GitHub Actions</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/fraud-decision-service">原始碼、報告與 model card →</a>
+            </div>
+          </article>
 
           <article class="card project-card wide">
             <div>
@@ -352,27 +409,6 @@
             </div>
           </article>
 
-          <article class="card project-card building">
-            <div>
-              <div class="project-top">
-                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
-                <span class="status status-plan">規劃中 · 尚無程式碼</span>
-              </div>
-              <p class="project-tagline">把 ML 詐欺模型推上正式環境，做出可稽核的核准／審查／拒絕決策。</p>
-            </div>
-            <div class="flow" role="list" aria-label="規劃架構">
-              <div class="node planned" role="listitem">決策 API<small>Spring Boot</small></div><span class="arrow" aria-hidden="true"></span>
-              <div class="node planned" role="listitem">模型評分<small>Python、MLflow</small></div><span class="arrow" aria-hidden="true"></span>
-              <div class="node planned" role="listitem">Outbox → Kafka<small>決策紀錄</small></div>
-            </div>
-            <div class="project-foot">
-              <div class="techs">
-                <span class="tech"><span class="ico i-java"></span>Java</span>
-                <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
-                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -416,6 +452,8 @@
               <span class="tech"><span class="ico i-go"></span>Go</span>
               <span class="tech"><span class="ico i-python"></span>Python</span>
               <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+              <span class="tech">LightGBM</span>
+              <span class="tech">scikit-learn</span>
               <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
               <span class="tech"><span class="ico i-redis"></span>Redis</span>
               <span class="tech"><span class="ico i-airflow"></span>Airflow</span>

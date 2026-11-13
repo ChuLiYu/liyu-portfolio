@@ -233,6 +233,19 @@ strong { color: var(--text); font-weight: 600; }
 .project-link:hover { text-decoration: underline; }
 .building { border-style: dashed; }
 
+/* Featured project: result figure + headline metrics */
+.project-card.featured { border-color: rgba(63, 185, 80, .45); }
+.project-result { display: grid; grid-template-columns: 3fr 2fr; gap: 1.25rem; align-items: center; }
+.project-figure img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
+.project-figure figcaption { font-size: .78rem; color: var(--text-3); margin-top: .4rem; }
+.metrics { display: flex; flex-direction: column; gap: .9rem; }
+.metric { display: flex; flex-direction: column; border-left: 3px solid var(--green); padding-left: .8rem; }
+.metric-value { font-size: 1.7rem; font-weight: 700; color: var(--text); line-height: 1.15; }
+.metric-label { font-size: .85rem; color: var(--text-2); }
+@media (max-width: 760px) {
+  .project-result { grid-template-columns: 1fr; }
+}
+
 /* Stack */
 .stack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
 .stack-group h3 { font-size: .95rem; color: var(--blue); margin-bottom: .85rem; }

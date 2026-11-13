@@ -21,12 +21,12 @@ For detailed work history, see my [GitHub profile](https://github.com/ChuLiYu).
 
 | Project | What it shows | Stack | Status |
 |---|---|---|---|
+| [Fraud Decision Service](https://github.com/ChuLiYu/fraud-decision-service) | LightGBM fraud model served as an approve / review / decline API with versioned policy, idempotency and fail-to-review; 61% lower cost than approving everything under assumed costs | Python · FastAPI · LightGBM · Docker | Runnable MVP |
 | [Raft-Recovery](https://github.com/ChuLiYu/raft-recovery) | Replicated job queue with a custom Raft, WAL, snapshots and fenced worker acknowledgements | Go · gRPC · Raft | Educational systems project |
 | [Google Tasks MCP](https://github.com/ChuLiYu/google-tasks-mcp) | Self-hosted MCP server letting Claude manage Google Tasks with read-only defaults and safe writes | TypeScript · MCP · OAuth 2.0 | Public early release |
 | [Arc Sentinel](https://github.com/ChuLiYu/arc-sentinel) | EVM wallet indexer with transactional checkpoints, advisory-lock single writer, block-lineage checks and rule-based alerts | Python · FastAPI · PostgreSQL | Prototype |
 | [AlphaPulse](https://github.com/ChuLiYu/alphapulse) | Financial data APIs, Airflow pipelines and a bounded LLM tool-calling agent; previously deployed to OCI with Terraform | Python · FastAPI · Airflow · React | Portfolio demo |
 | [Chainy](https://github.com/ChuLiYu/chainy-backend) | AWS serverless URL shortener with JWT auth and Terraform | TypeScript · Lambda · DynamoDB | Portfolio project |
-| [Fraud Decision Service](https://github.com/ChuLiYu/fraud-decision-service) | Taking an ML fraud model to production with versioned policy and safe rollout | Java · Python · Kafka (planned) | Planning |
 
 Verification details and limitations live in each repository's README.
 

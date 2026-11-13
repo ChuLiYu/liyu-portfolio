@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Li-Yu Chu | Java / Spring Boot Backend Engineer in Vancouver</title>
   <meta name="description" content="Backend engineer in Vancouver with three years building internet banking software in Java and Spring Boot. Applies the same controls to AI tools and distributed systems. Available mid-December 2026." />
-  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform" />
+  <meta name="keywords" content="Li-Yu Chu, Liyu, Software Engineer, Backend Engineer, Java Developer, Fintech, Java, Spring Boot, AI tools, LLM, Claude, Go, Python, TypeScript, PostgreSQL, Raft, MCP, AWS, Terraform, Fraud detection, Machine learning, LightGBM" />
   <meta name="author" content="Li-Yu Chu" />
   <link rel="canonical" href="https://luichu.dev/" />
   <link rel="alternate" hreflang="en" href="https://luichu.dev/" />
@@ -39,7 +39,7 @@
     "https://github.com/ChuLiYu",
     "https://linkedin.com/in/chuliyu"
   ],
-  "knowsAbout": ["Java", "Spring Boot", "Hibernate", "SQL", "Banking applications", "Large language model tools", "Claude", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform"]
+  "knowsAbout": ["Java", "Spring Boot", "Hibernate", "SQL", "Banking applications", "Large language model tools", "Claude", "Go", "Python", "TypeScript", "PostgreSQL", "Distributed systems", "Model Context Protocol", "AWS", "Terraform", "Fraud detection", "Machine learning in production", "LightGBM"]
 }
   </script>
 </head>
@@ -91,6 +91,7 @@
                 <button type="button" aria-pressed="true" data-scenario-button="0">Bank payment</button>
                 <button type="button" aria-pressed="false" data-scenario-button="1">AI edit</button>
                 <button type="button" aria-pressed="false" data-scenario-button="2">Server crash</button>
+                <button type="button" aria-pressed="false" data-scenario-button="3">Fraud check</button>
               </div>
             </div>
             <div class="recovery-content" data-recovery-content>
@@ -131,6 +132,15 @@
               <p class="recovery-outcome"><b>Why it matters:</b> One server going down does not lose work that was already finished.</p>
               <p class="recovery-source"><a href="https://github.com/ChuLiYu/raft-recovery">Raft-Recovery</a></p>
             </template>
+            <template data-recovery-scenario="3">
+              <div class="recovery-lines">
+                <div class="recovery-line"><span>score $950.00 card payment</span><span class="recovery-state">SCORING</span></div>
+                <div class="recovery-line is-amber"><span>fraud model timed out</span><span class="recovery-state">TIMEOUT</span></div>
+                <div class="recovery-line is-green"><span>✓ sent to review, not approved</span><span class="recovery-state">REVIEW</span></div>
+              </div>
+              <p class="recovery-outcome"><b>Why it matters:</b> A model outage never lets an unchecked payment through.</p>
+              <p class="recovery-source"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></p>
+            </template>
           </article>
         </div>
         <div class="facts">
@@ -140,6 +150,7 @@
           <div class="fact"><div class="fact-icons"><span class="ico i-aws"></span><span class="ico i-terraform"></span></div><span class="fact-value">AWS SAA · Terraform</span><span class="fact-label">Certified</span></div>
         </div>
         <div class="controls-strip" aria-label="System controls">
+          <span>Model failure → review, never approve</span>
           <span>Idempotent retries</span>
           <span>Checkpoint in the same transaction</span>
           <span>AI read-only by default</span>
@@ -194,6 +205,52 @@
         <h2 class="section-title">Selected projects</h2>
         <p class="section-intro">Each card shows the design, what is verified, and what is not done yet.</p>
         <div class="projects-grid">
+
+          <article class="card project-card wide featured">
+            <div>
+              <div class="project-top">
+                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
+                <span class="status status-release">Runnable MVP</span>
+              </div>
+              <p class="project-tagline">Takes a LightGBM fraud model all the way to a decision API: every transaction gets an approve, review or decline answer traceable to a model and policy version.</p>
+            </div>
+            <div class="flow" role="list" aria-label="Architecture">
+              <div class="node" role="listitem">Transaction<small>validated, idempotency key</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node key" role="listitem">LightGBM score<small>same features as training</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Versioned policy<small>thresholds fitted on validation</small></div><span class="arrow" aria-hidden="true"></span>
+              <div class="node" role="listitem">Decision log<small>model, policy, latency</small></div>
+            </div>
+            <div class="project-result">
+              <figure class="project-figure">
+                <a href="https://github.com/ChuLiYu/fraud-decision-service/blob/main/ml/reports/decision/decision.md"><img src="assets/images/projects/fraud-decision-cost.webp" alt="Bar chart: cost per 1,000 test transactions by review capacity. Deciding with LightGBM probability times amount is cheapest at every capacity, $2,083 at 2% against $5,301 for approving everything." width="1200" height="660" loading="lazy"></a>
+                <figcaption>Cost per 1,000 held-out transactions under assumed fraud and review costs</figcaption>
+              </figure>
+              <div class="metrics">
+                <div class="metric"><span class="metric-value">−61%</span><span class="metric-label">loss and review cost vs approving everything, at 2% review capacity</span></div>
+                <div class="metric"><span class="metric-value">0.58</span><span class="metric-label">test PR-AUC for LightGBM, vs 0.36 logistic regression and 0.43 MLP</span></div>
+                <div class="metric"><span class="metric-value">88,581</span><span class="metric-label">held-out transactions, split by time, never seen in tuning</span></div>
+              </div>
+            </div>
+            <ul class="guards" aria-label="Guarantees">
+              <li>Model error or timeout → review, never approve</li>
+              <li>Replayed request → one stored decision</li>
+              <li>Every decision names its model and policy version</li>
+              <li>Negative results published</li>
+            </ul>
+            <p class="proof"><span><b>✓ Verified:</b> CI runs tests, builds the Docker image and runs the demo; savings hold under a 95% bootstrap interval (<a href="https://github.com/ChuLiYu/fraud-decision-service/blob/main/ml/reports/decision/decision.md">report</a>)</span><span class="limit">Costs are assumptions on public IEEE-CIS data; Java and Kafka phases planned</span></p>
+            <div class="project-foot">
+              <div class="techs">
+                <span class="tech"><span class="ico i-python"></span>Python</span>
+                <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+                <span class="tech">LightGBM</span>
+                <span class="tech">scikit-learn</span>
+                <span class="tech"><span class="ico i-pandas"></span>pandas</span>
+                <span class="tech"><span class="ico i-docker"></span>Docker</span>
+                <span class="tech"><span class="ico i-githubactions"></span>GitHub Actions</span>
+              </div>
+              <a class="project-link" href="https://github.com/ChuLiYu/fraud-decision-service">Source, reports and model card →</a>
+            </div>
+          </article>
 
           <article class="card project-card wide">
             <div>
@@ -352,27 +409,6 @@
             </div>
           </article>
 
-          <article class="card project-card building">
-            <div>
-              <div class="project-top">
-                <h3 class="project-title"><a href="https://github.com/ChuLiYu/fraud-decision-service">Fraud Decision Service</a></h3>
-                <span class="status status-plan">Planning · no code yet</span>
-              </div>
-              <p class="project-tagline">Taking an ML fraud model to production with auditable approve / review / decline decisions.</p>
-            </div>
-            <div class="flow" role="list" aria-label="Planned architecture">
-              <div class="node planned" role="listitem">Decision API<small>Spring Boot</small></div><span class="arrow" aria-hidden="true"></span>
-              <div class="node planned" role="listitem">Model scoring<small>Python, MLflow</small></div><span class="arrow" aria-hidden="true"></span>
-              <div class="node planned" role="listitem">Outbox → Kafka<small>decision log</small></div>
-            </div>
-            <div class="project-foot">
-              <div class="techs">
-                <span class="tech"><span class="ico i-java"></span>Java</span>
-                <span class="tech"><span class="ico i-springboot"></span>Spring Boot</span>
-                <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -416,6 +452,8 @@
               <span class="tech"><span class="ico i-go"></span>Go</span>
               <span class="tech"><span class="ico i-python"></span>Python</span>
               <span class="tech"><span class="ico i-fastapi"></span>FastAPI</span>
+              <span class="tech">LightGBM</span>
+              <span class="tech">scikit-learn</span>
               <span class="tech"><span class="ico i-postgresql"></span>PostgreSQL</span>
               <span class="tech"><span class="ico i-redis"></span>Redis</span>
               <span class="tech"><span class="ico i-airflow"></span>Airflow</span>
